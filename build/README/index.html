@@ -55,16 +55,88 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 <div class="content">
 <div class="path">README.md</div>
 <h1 id="sarahs-lubricant-business-strategy-launch-kit">Sarah's Lubricant Business — Strategy &amp; Launch Kit</h1>
-<p><strong>Status:</strong> P0 — strategy, research, and intake questionnaire complete. Awaiting Sarah's questionnaire responses to unblock P1 (legal/cost basis) and P2 (brand/launch).
-<strong>Last updated:</strong> June 19, 2026</p>
+<p><strong>Last updated:</strong> June 19, 2026</p>
 <hr />
-<h2 id="what-this-repo-is">🌐 What this repo is</h2>
+<h2 id="live-preview">🌐 Live (preview)</h2>
+<p>🔗 <strong>https://sarah.paragu-ai.com</strong> — read-only strategy &amp; questionnaire site (deployed to Cloudflare Pages).</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home (navigation hub)</td>
+<td>https://sarah.paragu-ai.com/</td>
+</tr>
+<tr>
+<td><strong>Questionnaire (Sarah's homework)</strong></td>
+<td>https://sarah.paragu-ai.com/questionnaire</td>
+</tr>
+<tr>
+<td>Start here (5 min)</td>
+<td>https://sarah.paragu-ai.com/start-here</td>
+</tr>
+<tr>
+<td>Product catalog (12 SKUs)</td>
+<td>https://sarah.paragu-ai.com/catalog</td>
+</tr>
+<tr>
+<td>Market snapshot</td>
+<td>https://sarah.paragu-ai.com/market</td>
+</tr>
+<tr>
+<td>DINAVISA legal</td>
+<td>https://sarah.paragu-ai.com/legal</td>
+</tr>
+<tr>
+<td>MERCOSUR tariffs</td>
+<td>https://sarah.paragu-ai.com/mercosur</td>
+</tr>
+<tr>
+<td>3 business models</td>
+<td>https://sarah.paragu-ai.com/models</td>
+</tr>
+<tr>
+<td>Sexitive AR contact</td>
+<td>https://sarah.paragu-ai.com/supplier</td>
+</tr>
+<tr>
+<td>Freight AR→PY</td>
+<td>https://sarah.paragu-ai.com/freight</td>
+</tr>
+<tr>
+<td>5 competitors</td>
+<td>https://sarah.paragu-ai.com/competition</td>
+</tr>
+<tr>
+<td>Payments (Tigo, bank, MP)</td>
+<td>https://sarah.paragu-ai.com/payments</td>
+</tr>
+<tr>
+<td>Brand names</td>
+<td>https://sarah.paragu-ai.com/brand</td>
+</tr>
+<tr>
+<td>Operations SOP</td>
+<td>https://sarah.paragu-ai.com/operations</td>
+</tr>
+<tr>
+<td>Full index</td>
+<td>https://sarah.paragu-ai.com/COMPLETE-INDEX</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Local source repo:</strong> <code>/root/sarah-lubricants/</code> (this is the strategy + content source of truth)
+<strong>Build output:</strong> <code>build/</code> (auto-rendered to HTML from all <code>.md</code> files)
+<strong>Deploy:</strong> <code>tools/deploy.sh</code> → Cloudflare Pages project <code>sarah-lubricants</code></p>
 <p>This is the <strong>strategic source of truth</strong> for launching Sarah's intimate-wellness distribution business in Paraguay. It is <strong>not</strong> the runtime code — when we get to that point, the website will live in <code>Ai-Whisperers/paragu-ai-platform</code> (or a fresh repo if Sarah prefers full white-label).</p>
 <p><strong>Source product:</strong> Sexitive (Argentina) — 12 SKUs across 4 categories: stimulants, lubricants, sensory/ambiance, wellness.</p>
 <p><strong>Working hypothesis:</strong> Sarah imports Sexitive products from Buenos Aires and resells in Paraguay, either as authorized distributor, independent reseller, or private-label rebrand (decision pending — see <code>01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md</code> Section 2).</p>
 <hr />
 <h2 id="why-this-repo-exists">Why this repo exists</h2>
-<p>Three reasons:</p>
 <ol>
 <li><strong>Single source of truth</strong> — the Sexitive catalog is real but spans 12 SKUs in 4 regulatory categories. If we don't centralize the product data, we'll misclassify something at the customs or DINAVISA stage and lose money.</li>
 <li><strong>Intake before build</strong> — intimate-wellness import is a regulated business. We cannot write code before Sarah answers ~30 questions on legal model, costs, brand, and ops. The questionnaire is in <code>01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md</code>.</li>

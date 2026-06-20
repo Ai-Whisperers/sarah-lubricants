@@ -186,6 +186,7 @@
 | `REPO-WORK-PLAN.md` | Phased execution plan |
 | `glossary.md` | Sexitive-specific terms (Bitchie, Wet, more sex, etc.) |
 | `references.md` | All external sources cited in this repo |
+| **`anakyze-maskarada-fun4me.md`** | **Analysis of existing fleet (maskarada + fun4me) with reusable patterns, pricing benchmarks, and bug-list-as-pre-mortem for Sarah** |
 
 ## tools/
 

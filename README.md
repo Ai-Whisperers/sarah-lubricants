@@ -1,11 +1,34 @@
 # Sarah's Lubricant Business — Strategy & Launch Kit
 
-**Status:** P0 — strategy, research, and intake questionnaire complete. Awaiting Sarah's questionnaire responses to unblock P1 (legal/cost basis) and P2 (brand/launch).
 **Last updated:** June 19, 2026
 
 ---
 
-## 🌐 What this repo is
+## 🌐 Live (preview)
+
+🔗 **https://sarah.paragu-ai.com** — read-only strategy & questionnaire site (deployed to Cloudflare Pages).
+
+| Section | URL |
+|---------|-----|
+| Home (navigation hub) | https://sarah.paragu-ai.com/ |
+| **Questionnaire (Sarah's homework)** | https://sarah.paragu-ai.com/questionnaire |
+| Start here (5 min) | https://sarah.paragu-ai.com/start-here |
+| Product catalog (12 SKUs) | https://sarah.paragu-ai.com/catalog |
+| Market snapshot | https://sarah.paragu-ai.com/market |
+| DINAVISA legal | https://sarah.paragu-ai.com/legal |
+| MERCOSUR tariffs | https://sarah.paragu-ai.com/mercosur |
+| 3 business models | https://sarah.paragu-ai.com/models |
+| Sexitive AR contact | https://sarah.paragu-ai.com/supplier |
+| Freight AR→PY | https://sarah.paragu-ai.com/freight |
+| 5 competitors | https://sarah.paragu-ai.com/competition |
+| Payments (Tigo, bank, MP) | https://sarah.paragu-ai.com/payments |
+| Brand names | https://sarah.paragu-ai.com/brand |
+| Operations SOP | https://sarah.paragu-ai.com/operations |
+| Full index | https://sarah.paragu-ai.com/COMPLETE-INDEX |
+
+**Local source repo:** `/root/sarah-lubricants/` (this is the strategy + content source of truth)
+**Build output:** `build/` (auto-rendered to HTML from all `.md` files)
+**Deploy:** `tools/deploy.sh` → Cloudflare Pages project `sarah-lubricants`
 
 This is the **strategic source of truth** for launching Sarah's intimate-wellness distribution business in Paraguay. It is **not** the runtime code — when we get to that point, the website will live in `Ai-Whisperers/paragu-ai-platform` (or a fresh repo if Sarah prefers full white-label).
 
@@ -16,8 +39,6 @@ This is the **strategic source of truth** for launching Sarah's intimate-wellnes
 ---
 
 ## Why this repo exists
-
-Three reasons:
 
 1. **Single source of truth** — the Sexitive catalog is real but spans 12 SKUs in 4 regulatory categories. If we don't centralize the product data, we'll misclassify something at the customs or DINAVISA stage and lose money.
 2. **Intake before build** — intimate-wellness import is a regulated business. We cannot write code before Sarah answers ~30 questions on legal model, costs, brand, and ops. The questionnaire is in `01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md`.
