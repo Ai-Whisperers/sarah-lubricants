@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AR → PY Freight — Options, Costs, Lead Times — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/logistics-supplier/ar-py-freight-options.md</div>
+<h1 id="ar-py-freight-options-costs-lead-times">AR → PY Freight — Options, Costs, Lead Times</h1>
+<p><strong>Purpose:</strong> Document the freight and customs clearance options for Sexitive AR → Paraguay.
+<strong>Last verified:</strong> June 19, 2026</p>
+<hr />
+<h2 id="three-freight-modes">Three freight modes</h2>
+<h3 id="mode-1-international-courier-dhl-fedex-ups-arca-courier">Mode 1 — International courier (DHL, FedEx, UPS, ARCA courier)</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Best for</strong></td>
+<td>First small order (5–20 kg), market testing, samples</td>
+</tr>
+<tr>
+<td><strong>Lead time</strong></td>
+<td>7–15 days door-to-door</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>USD 8–15/kg + customs clearance fee</td>
+</tr>
+<tr>
+<td><strong>Pros</strong></td>
+<td>Fast, simple, door-to-door, low minimums</td>
+</tr>
+<tr>
+<td><strong>Cons</strong></td>
+<td>Expensive per kg, may not be discreet, courier customs handling is rough</td>
+</tr>
+<tr>
+<td><strong>Recommended for</strong></td>
+<td>First 1–3 orders while DINAVISA registration is in progress</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mode-2-consolidated-freight-forwarder-maritima-courier-consolidado">Mode 2 — Consolidated freight forwarder (Maritima / courier consolidado)</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Regular orders 50–500 kg</td>
+</tr>
+<tr>
+<td><strong>Lead time</strong></td>
+<td>15–30 days end-to-end (BUENOS AIRES → ASUNCIÓN)</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>USD 4–8/kg + clearance + storage</td>
+</tr>
+<tr>
+<td><strong>Pros</strong></td>
+<td>Cheaper per kg, more flexible, can negotiate discreet handling</td>
+</tr>
+<tr>
+<td><strong>Cons</strong></td>
+<td>Slower, requires more coordination, warehouse consolidation</td>
+</tr>
+<tr>
+<td><strong>Recommended for</strong></td>
+<td>Ongoing supply, post-Model-1 transition</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mode-3-air-freight-forwarder-cargolux-lan-cargo-etc">Mode 3 — Air freight forwarder (Cargolux, LAN Cargo, etc.)</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Time-sensitive orders 100+ kg</td>
+</tr>
+<tr>
+<td><strong>Lead time</strong></td>
+<td>5–10 days</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>USD 6–12/kg + clearance</td>
+</tr>
+<tr>
+<td><strong>Pros</strong></td>
+<td>Faster than consolidated, can move pallet quantities</td>
+</tr>
+<tr>
+<td><strong>Cons</strong></td>
+<td>Still needs customs broker, not door-to-door</td>
+</tr>
+<tr>
+<td><strong>Recommended for</strong></td>
+<td>Restocking hot SKUs, promotions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="freight-cost-example-illustrative-100-kg-shipment-model-2">Freight cost example (illustrative, 100 kg shipment, Model 2)</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>USD</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Products at AR wholesale (100 kg, ~$5–8/kg landed AR wholesale)</td>
+<td>500–800</td>
+<td>Per sexitive-catalog-master.md</td>
+</tr>
+<tr>
+<td>Freight AR→PY (consolidated)</td>
+<td>400–800</td>
+<td>100 kg × $4–8/kg</td>
+</tr>
+<tr>
+<td>Insurance (0.5% of CIF)</td>
+<td>5–8</td>
+<td></td>
+</tr>
+<tr>
+<td>Customs clearance (despachante)</td>
+<td>130–250 (Gs 800K–1.5M)</td>
+<td>Per shipment</td>
+</tr>
+<tr>
+<td>DINAVISA inspection (if required)</td>
+<td>50–100</td>
+<td>Per shipment</td>
+</tr>
+<tr>
+<td><strong>Landed cost</strong></td>
+<td><strong>1,085–1,958</strong></td>
+<td><strong>Range USD 11–20/kg</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>At retail, with 100% markup, this becomes USD 22–40/kg at customer. Per-SKU retail math: a 75 ml Wet tube (≈ 80g with packaging) costs Sarah ~Gs 1,500–2,500 landed, retails at Gs 80,000–150,000 in PY market. Margin works.</strong></p>
+<p><strong>Confirm with real numbers after Sarah's first cost-basis conversation with Sexitive.</strong></p>
+<hr />
+<h2 id="customs-broker-despachante-what-to-look-for">Customs broker (Despachante) — what to look for</h2>
+<table>
+<thead>
+<tr>
+<th>Quality</th>
+<th>What it looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registered with DNA</td>
+<td>Verify at www.aduana.gov.py</td>
+</tr>
+<tr>
+<td>Experience with cosmetics / DINAVISA</td>
+<td>Ask specifically</td>
+</tr>
+<tr>
+<td>Bilingual (Spanish + English)</td>
+<td>Helps if Sexitive is English-speaking</td>
+</tr>
+<tr>
+<td>Responsive on WhatsApp</td>
+<td>Critical for time-sensitive shipments</td>
+</tr>
+<tr>
+<td>Transparent fee structure</td>
+<td>Should quote despachante fee upfront</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A good despachante is the difference between a 15-day clearance and a 60-day one. Don't pick the cheapest; pick the most reliable.</strong></p>
+<hr />
+<h2 id="discreet-packaging-intimate-products">Discreet packaging (intimate products)</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sexitive ships in unmarked outer carton</strong></td>
+<td>No one at courier knows contents</td>
+<td>Sexitive may charge extra or not offer</td>
+</tr>
+<tr>
+<td><strong>Sarah re-packages in plain cartons at AR consolidation warehouse</strong></td>
+<td>Full control</td>
+<td>Adds labor cost, requires warehouse access</td>
+</tr>
+<tr>
+<td><strong>Custom discreet outer packaging from day 1</strong></td>
+<td>Best long-term</td>
+<td>Higher upfront design cost</td>
+</tr>
+<tr>
+<td><strong>No special handling, rely on shipping label</strong></td>
+<td>Simplest</td>
+<td>Risk of neighbor/courier seeing "Sexitive" on label</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended:</strong> Negotiate with Sexitive AR for unmarked outer cartons for first 3 shipments. If they can do it, great. If not, plan a re-pack step at the AR consolidation warehouse.</p>
+<p><strong>Critical for the customer:</strong> The product arrives in a plain carton with no external marking indicating "Sexitive" or "intimate products." Inner packaging is the Sexitive retail box (which is itself discreetly designed).</p>
+<hr />
+<h2 id="storage-in-py">Storage in PY</h2>
+<p>Once the shipment arrives:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Cost (Gs/month)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah's home (start)</td>
+<td>0</td>
+<td>Up to ~50 kg of stock; legal for personal storage but not commercial</td>
+</tr>
+<tr>
+<td>Sarah's dedicated room / garage</td>
+<td>0</td>
+<td>Same as above, just bigger space</td>
+</tr>
+<tr>
+<td>3PL warehouse in Asunción</td>
+<td>300K – 1M</td>
+<td>Professional, scalable, invoice-able</td>
+</tr>
+<tr>
+<td>MercadoLibre PY fulfillment</td>
+<td>TBD</td>
+<td>MercadoLibre has restrictions on adult content — likely won't work</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation:</strong> Start at home, transition to 3PL when monthly revenue exceeds Gs 5M or inventory exceeds 100 kg.</p>
+<hr />
+<h2 id="what-sarah-should-ask-the-freight-forwarder">What Sarah should ask the freight forwarder</h2>
+<ol>
+<li><strong>"¿Cuánto cuesta un envío consolidado de 50 kg de Buenos Aires a Asunción con despacho aduanero incluido?"</strong></li>
+<li><strong>"¿Pueden manejar productos cosméticos con registro DINAVISA? ¿Tienen experiencia?"</strong></li>
+<li><strong>"¿Cuánto tiempo de punta a punta, desde que despachamos en Buenos Aires hasta que tengo la mercadería en mi depósito?"</strong></li>
+<li><strong>"¿Pueden consolidar mi carga con un cartón exterior neutro, sin marca visible?"</strong></li>
+<li><strong>"¿Tienen almacén en Buenos Aires para consolidar mis pedidos antes del envío consolidado?"</strong></li>
+<li><strong>"¿Pueden emitir factura de transporte internacional?"</strong></li>
+</ol>
+</div>
+</div>
+</body>
+</html>
