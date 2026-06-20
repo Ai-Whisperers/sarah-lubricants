@@ -79,10 +79,12 @@
 | Doc | Purpose |
 |-----|---------|
 | `00-index.md` | Brand research index |
-| `naming-options.md` | 3 name directions + domain availability |
-| `tone-of-voice-options.md` | TBD — 3 voice directions |
+| `naming-options.md` | 3 name directions + domain availability (Lúmina, Volare, etc.) |
+| **`kinky-store-assessment.md`** | **Sarah's chosen name "Kinky Store" — trademark, ad-policy, domain, visual direction** |
+| **`launch-SKU-list-3-SKUs.md`** | **Provisional 2 or 3-SKU launch list, with Pink Sexy Pill regulatory blocker** |
+| `tone-of-voice-options.md` | TBD — 3 voice directions (pending visual direction choice) |
 | `visual-references-moodboard.md` | TBD — Pinterest/Are.na style boards |
-
+| `logo-direction-shortlist.md` | TBD — pending Sarah's brand name verification |
 ### operations/
 
 | Doc | Purpose |
@@ -97,7 +99,8 @@
 | Doc | Purpose |
 |-----|---------|
 | `00-index.md` | Meeting archive index |
-| *(meeting notes TBD)* | |
+| **`2026-06-20-questionnaire-response.md`** | **Sarah's 30-question intake — processed, 3 blockers identified** |
+| **`2026-06-20-clarifying-questions.md`** | **5 questions back to Sarah — Pink Sexy Pill, Kinky Store, Sexitive AR** |
 
 ## 03_LAUNCH/
 

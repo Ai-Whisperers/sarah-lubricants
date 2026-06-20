@@ -2,7 +2,8 @@
 
 | Doc | Status | Notes |
 |-----|--------|-------|
-| `canonical-pricing-reference-v1.md` | 🔴 Blocked | Needs §3 (cost basis) + DINAVISA + freight costs from questionnaire |
+| `financial-pricing/canonical-pricing-reference-v1.md` | 🔴 Blocked | Needs §3 (cost basis) + DINAVISA + freight costs from questionnaire |
+| **`financial-pricing/launch-budget-under-10M.md`** | ✅ Drafted | Budget model for Sarah's < Gs 10M constraint — Options A, B, C laid out |
 | `pricing-strategy.md` | 🔴 Blocked | Will land here after canonical pricing exists |
 | `unit-economics-per-SKU.md` | 🔴 Blocked | Will run after §4 (SKU list) is locked |
 

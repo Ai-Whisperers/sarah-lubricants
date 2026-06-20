@@ -18,6 +18,7 @@ SLUGS = {
     "payments":      "01_RESEARCH/payments/tigo-money-mercado-pago-bank",
     "brand":         "01_RESEARCH/brand-identity/naming-options",
     "operations":    "01_RESEARCH/operations/fulfillment-returns-customer-service",
+    "anakyze":       "docs/anakyze-maskarada-fun4me",
 }
 
 PAGE_CSS = """

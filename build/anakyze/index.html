@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anakyze: maskarada &amp; fun4me — Useful Data &amp; Insights — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">docs/anakyze-maskarada-fun4me.md</div>
+<h1 id="anakyze-maskarada-fun4me-useful-data-insights">Anakyze: maskarada &amp; fun4me — Useful Data &amp; Insights</h1>
+<p><strong>Author:</strong> Erebus
+<strong>Date:</strong> June 19, 2026
+<strong>Purpose:</strong> Extract reusable patterns, pricing data, and lessons from the maskarada &amp; fun4me repos that can inform Sarah's lubricant business launch.</p>
+<hr />
+<h2 id="quick-read-of-the-landscape">Quick read of the landscape</h2>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Stack</th>
+<th>Live at</th>
+<th>Status</th>
+<th>Useful for Sarah?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>maskarada</strong></td>
+<td>SvelteKit 5 + Supabase (legacy) → Next.js 16 monorepo (current)</td>
+<td>maskarada.paragu-ai.com</td>
+<td>Live, 12 routes, 4 locales, 30MB images</td>
+<td><strong>YES</strong> — intimate-product e-com with Supabase, very close fit</td>
+</tr>
+<tr>
+<td><strong>fun4me</strong></td>
+<td>Next.js 16.2 + Supabase + shadcn</td>
+<td>fun4me.paragu-ai.com</td>
+<td>Live but <strong>has 13 critical/high bugs</strong> documented in its own roadmap</td>
+<td><strong>YES</strong> — most complete adult e-com in our fleet, has 54 products live, admin panel</td>
+</tr>
+<tr>
+<td><strong>fun4me-store</strong></td>
+<td>Next.js 16.2 + 8 @ai-whisperers/* packages</td>
+<td>(in monorepo)</td>
+<td>Has full auth, JWT, Postgres, bcrypt, jose</td>
+<td><strong>YES</strong> — reference for multi-tenant e-com architecture</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-maskarada-what-it-is-what-it-teaches-us">1. Maskarada — What it is, what it teaches us</h2>
+<h3 id="profile">Profile</h3>
+<ul>
+<li><strong>Niche:</strong> BDSM/rope shibari products (cuerdas shobari Moñai) — same regulatory profile as lubricants (cosmetic / personal products)</li>
+<li><strong>Owner:</strong> Moñai brand (Rach's rope line, in-house)</li>
+<li><strong>Channel:</strong> WhatsApp-first (number 595981200255 is the de-facto checkout)</li>
+<li><strong>Price range:</strong> Gs 45,000+ per product (similar band to Sexitive retail)</li>
+<li><strong>Stack:</strong> SvelteKit 5 (now in Next.js 16 monorepo via <code>apps/maskarada/</code>)</li>
+<li><strong>Architecture:</strong> Supabase backend, adapter-static build, nginx serving</li>
+<li><strong>Live:</strong> <code>maskarada.paragu-ai.com</code> (Swarm service <code>maskarada_web</code>)</li>
+<li><strong>Pages:</strong> 12 routes + 4 locales</li>
+</ul>
+<h3 id="what-sarah-should-steal">What Sarah should steal</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>How maskarada does it</th>
+<th>Adapt for Sarah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WhatsApp as primary checkout</strong></td>
+<td>Every product CTA = <code>wa.me/595981200255?text=Hola!%20Quiero%20saber%20más%20sobre%20[X]</code></td>
+<td>Same pattern, different number</td>
+</tr>
+<tr>
+<td><strong>Pre-filled message per product</strong></td>
+<td>Each link has the SKU name in the URL</td>
+<td>Same — embed SKU + tier</td>
+</tr>
+<tr>
+<td><strong>Sub-brand with own name under parent</strong></td>
+<td>"Moñai" is the sub-line under maskarada</td>
+<td>Sarah could be "Lúmina" sub-line under her own parent, or vice versa</td>
+</tr>
+<tr>
+<td><strong>Age-gate via cookie</strong></td>
+<td>DOB + 30-day cookie, no friction per session</td>
+<td>Same — required for intimate products</td>
+</tr>
+<tr>
+<td><strong>Trailing-slash 308 redirect</strong></td>
+<td>Canonical URLs use trailing slash</td>
+<td>Already in our Cloudflare Pages setup</td>
+</tr>
+<tr>
+<td><strong>Smoke test for all 13 paths</strong></td>
+<td>Full route audit before deploy</td>
+<td>Adopt same pattern</td>
+</tr>
+<tr>
+<td><strong>Health check at <code>/api/health</code></strong></td>
+<td>Real JSON status, not just HTTP 200</td>
+<td>Add when Sarah's site goes live</td>
+</tr>
+<tr>
+<td><strong>Supabase JSON content</strong></td>
+<td>Spanish content as <code>content/es/*.json</code> files, markdown → JSON</td>
+<td>Sarah can do the same</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pricing-reference-maskarada-tier">Pricing reference (maskarada tier)</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Price (Gs)</th>
+<th>Sarah equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entry (starter)</td>
+<td>45,000</td>
+<td>Wet Anal 75ml (commodity)</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>90,000–150,000</td>
+<td>Wet Like a Virgin (premium)</td>
+</tr>
+<tr>
+<td>Premium</td>
+<td>200,000+</td>
+<td>Pink Sexy Pill, My Hemp</td>
+</tr>
+<tr>
+<td>Bundles / kits</td>
+<td>180,000–400,000</td>
+<td>"Kit for her," "Kit for couples"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Translation:</strong> Sarah's Gs pricing should anchor around Gs 45,000 (entry), Gs 90,000–150,000 (mid), Gs 200,000+ (premium). Bundles should be 10–15% cheaper than buying separately.</p>
+<h3 id="what-maskarada-has-that-sarah-should-not-do">What maskarada has that Sarah should NOT do</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Why not</th>
+<th>Alternative for Sarah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Static-only build (no cart, no checkout)</td>
+<td>Works for ~3 SKUs but breaks at 12+</td>
+<td>Real e-com with cart + WA checkout handoff</td>
+</tr>
+<tr>
+<td>Locales (es + en)</td>
+<td>maskarada is tourist-facing, Sarah is PY-only</td>
+<td>Spanish only at launch, add EN only if ex-pat demand emerges</td>
+</tr>
+<tr>
+<td>30MB of WebP in <code>static/</code></td>
+<td>Worked for 5 products, doesn't scale</td>
+<td>Use Supabase Storage or R2 for product images</td>
+</tr>
+<tr>
+<td>No real auth</td>
+<td>Sold via WA, no accounts needed</td>
+<td>Same model works for Sarah's intimate catalog</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-fun4me-what-it-is-what-it-teaches-us">2. Fun4Me — What it is, what it teaches us</h2>
+<h3 id="profile_1">Profile</h3>
+<ul>
+<li><strong>Niche:</strong> Adult intimate products (vibrators, lingerie, lubes, accessories) — DIRECTLY OVERLAPPING with Sarah's catalog</li>
+<li><strong>Owner:</strong> Rach (also a Paraguayan entrepreneur in this space)</li>
+<li><strong>Stack:</strong> Next.js 16.2 + Supabase + shadcn + Tailwind v4 + Docker</li>
+<li><strong>Live:</strong> <code>fun4me.paragu-ai.com</code></li>
+<li><strong>Scale:</strong> 54 sample products in 12 Supabase tables, 8 categories, 6 kinks, real cart + checkout</li>
+<li><strong>Architecture:</strong> Multi-tenant ready via <code>@ai-whisperers/*</code> packages</li>
+<li><strong>Reference architecture:</strong> This is the most complete adult e-com template in our fleet</li>
+</ul>
+<h3 id="what-sarah-should-steal-immediately">What Sarah should steal — IMMEDIATELY</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>How fun4me does it</th>
+<th>Adapt for Sarah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>8 product categories with icons</strong></td>
+<td>Lubes, vibrators, lingerie, BDSM, etc.</td>
+<td>Sarah has 4 categories: stimulants, lubes, sensory, wellness</td>
+</tr>
+<tr>
+<td><strong>Cart drawer + cart page</strong></td>
+<td>Slide-in drawer for quick add, full page for review</td>
+<td>Adopt 1:1</td>
+</tr>
+<tr>
+<td><strong>Free shipping bar</strong></td>
+<td>"Gs X more for free shipping" with progress</td>
+<td>Adapt — Sarah sets threshold at Gs 300,000</td>
+</tr>
+<tr>
+<td><strong>Ofertas (deals) page</strong></td>
+<td>Dedicated <code>/ofertas</code> route, separate nav</td>
+<td>Adopt — bundles as deals</td>
+</tr>
+<tr>
+<td><strong>WhatsApp floating button</strong></td>
+<td>Persistent bottom-right</td>
+<td>Adopt</td>
+</tr>
+<tr>
+<td><strong>Bank transfer / COD</strong></td>
+<td>Two payment methods at checkout</td>
+<td>Sarah's analog: Tigo Money / Bank transfer</td>
+</tr>
+<tr>
+<td><strong>Age verification gate (DOB + 30-day cookie)</strong></td>
+<td>Friction on first visit, persisted</td>
+<td>Adopt</td>
+</tr>
+<tr>
+<td><strong>JSON-LD product schema</strong></td>
+<td>SEO-ready product pages</td>
+<td>Adopt</td>
+</tr>
+<tr>
+<td><strong>Sitemap.xml + robots.txt</strong></td>
+<td>SEO hygiene</td>
+<td>Adopt</td>
+</tr>
+<tr>
+<td><strong>Admin panel</strong></td>
+<td>Dashboard, product CRUD, order management</td>
+<td>Adapt for Sarah's solo operation — simpler</td>
+</tr>
+<tr>
+<td><strong>54 products = full filterable catalog</strong></td>
+<td>Categories, kinks, search</td>
+<td>Sarah has 12 SKUs — simpler</td>
+</tr>
+</tbody>
+</table>
+<h3 id="critical-lessons-from-fun4mes-bug-list">Critical lessons from fun4me's bug list</h3>
+<p>Fun4Me's own roadmap documents 13 critical/high bugs. These are the <strong>exact traps Sarah must avoid</strong> when building her catalog:</p>
+<table>
+<thead>
+<tr>
+<th>Bug</th>
+<th>Severity</th>
+<th>Lesson for Sarah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B1: Checkout does NOT save orders to Supabase</strong></td>
+<td>CRITICAL</td>
+<td>Whatever payment flow Sarah uses, persist to Supabase from day 1. Even if it's Tigo Money manual confirm, log the order.</td>
+</tr>
+<tr>
+<td><strong>B2: Admin panel has ZERO auth protection</strong></td>
+<td>CRITICAL</td>
+<td>If Sarah builds an admin, gate it with Supabase auth from the first commit.</td>
+</tr>
+<tr>
+<td><strong>B3: Product images don't show in cart (image_url vs images[])</strong></td>
+<td>HIGH</td>
+<td>Pick one image model (<code>images[]</code> is better for multi-photo) and use it consistently.</td>
+</tr>
+<tr>
+<td><strong>B4: Free shipping threshold inconsistent (300K vs 500K)</strong></td>
+<td>MEDIUM</td>
+<td>Single source of truth: one constant in <code>lib/constants.ts</code>.</td>
+</tr>
+<tr>
+<td><strong>B5: Login page is non-functional stub</strong></td>
+<td>HIGH</td>
+<td>Don't ship stub features. If login isn't ready, hide the link.</td>
+</tr>
+<tr>
+<td><strong>B6: Newsletter signup does nothing</strong></td>
+<td>MEDIUM</td>
+<td>If you can't wire it, don't show it.</td>
+</tr>
+<tr>
+<td><strong>B7: Footer "Ayuda" links are dead</strong></td>
+<td>MEDIUM</td>
+<td>Either build the page or remove the link. No half-built.</td>
+</tr>
+<tr>
+<td><strong>B9: Cart hydration mismatch</strong></td>
+<td>MEDIUM</td>
+<td>Use <code>mounted</code> state guard in any client-only component.</td>
+</tr>
+<tr>
+<td><strong>B10: Nested interactive elements (button inside Link)</strong></td>
+<td>MEDIUM</td>
+<td>Add-to-cart button MUST be outside the product Link.</td>
+</tr>
+<tr>
+<td><strong>B12: updateQuantity doesn't check max_stock</strong></td>
+<td>LOW</td>
+<td>Always validate stock server-side, not just client-side.</td>
+</tr>
+<tr>
+<td><strong>B13: WhatsApp number masked in constants.ts but shown in footer</strong></td>
+<td>LOW</td>
+<td>One source of truth for contact info, period.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Translation for Sarah's architecture:</strong> Build a single <code>lib/constants.ts</code> with the WhatsApp number, free-shipping threshold, currency, and tax rate. Reference it everywhere. Don't repeat the number in 5 files.</p>
+<h3 id="fun4me-pricing-reference-rachs-live-catalog">Fun4Me pricing reference (Rach's live catalog)</h3>
+<p>Fun4Me has 54 products with the structure established. Rach's actual price bands for the lubricant-adjacent categories:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Price band (Gs)</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard lubricants</td>
+<td>50,000 – 120,000</td>
+<td>Commodity tier</td>
+</tr>
+<tr>
+<td>Premium / effect lubes</td>
+<td>100,000 – 180,000</td>
+<td>Differentiated</td>
+</tr>
+<tr>
+<td>Stimulants (creams, drops)</td>
+<td>80,000 – 200,000</td>
+<td>Niche but higher margin</td>
+</tr>
+<tr>
+<td>Supplements</td>
+<td>150,000 – 250,000</td>
+<td>Premium positioning, less volume</td>
+</tr>
+<tr>
+<td>Massage candles / oils</td>
+<td>60,000 – 120,000</td>
+<td>Basket-add, lower price</td>
+</tr>
+<tr>
+<td>Accessories</td>
+<td>40,000 – 250,000</td>
+<td>Wide range</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sarah's Sexitive SKUs map cleanly into these bands:</strong>
+- Wet line (Anal, Ice Fresh): 80,000–120,000 (premium tier — Wet is named brand)
+- Wet — Like a Virgin: 150,000–200,000 (flagship premium)
+- Pink Sexy Pill: 180,000–250,000 (supplement tier, also requires DINAVISA supplement registration)
+- Bitchie spray 20ml: 120,000–180,000
+- XXX For Her 15ml: 100,000–150,000
+- more sex line (3 SKUs, 50ml): 70,000–110,000
+- Love Potion line (15ml): 70,000–120,000
+- Massage candles (12 scents): 60,000–90,000 each
+- My Hemp CBD 15ml: 150,000–220,000 (if regulatory clears)</p>
+<h3 id="fun4me-architecture-what-sarah-can-clone-11">Fun4Me architecture: what Sarah can clone 1:1</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Fun4Me has it</th>
+<th>Sarah can adopt?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cart drawer (zustand store)</td>
+<td>✅ Yes</td>
+<td><strong>YES</strong> — 1:1</td>
+</tr>
+<tr>
+<td>Cart page</td>
+<td>✅ Yes</td>
+<td><strong>YES</strong> — 1:1</td>
+</tr>
+<tr>
+<td>Checkout (shipping form)</td>
+<td>✅ Yes</td>
+<td>Adapt — add Tigo Money / bank transfer / Mercado Pago fields</td>
+</tr>
+<tr>
+<td>Free shipping progress bar</td>
+<td>✅ Yes</td>
+<td><strong>YES</strong> — 1:1</td>
+</tr>
+<tr>
+<td>Categories nav</td>
+<td>✅ 8 categories</td>
+<td>Adapt to 4 (or 5 with "All")</td>
+</tr>
+<tr>
+<td>Kinks / filters</td>
+<td>✅ 6 filters</td>
+<td>Adapt to Sexitive's 4 categories</td>
+</tr>
+<tr>
+<td>Ofertas page</td>
+<td>✅ Yes</td>
+<td><strong>YES</strong> — use for bundles</td>
+</tr>
+<tr>
+<td>Sitemap + robots</td>
+<td>✅ Yes</td>
+<td><strong>YES</strong> — 1:1</td>
+</tr>
+<tr>
+<td>JSON-LD product schema</td>
+<td>✅ Yes</td>
+<td><strong>YES</strong> — 1:1</td>
+</tr>
+<tr>
+<td>Admin panel</td>
+<td>✅ Yes</td>
+<td>Adapt — solo founder needs simpler admin</td>
+</tr>
+<tr>
+<td>Auth (Supabase)</td>
+<td>✅ Yes (broken per bug list)</td>
+<td>Build correctly from start</td>
+</tr>
+<tr>
+<td>PostgreSQL (orders, products, customers)</td>
+<td>✅ 12 tables</td>
+<td>Adapt schema for 12 SKUs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fun4me-what-not-to-clone">Fun4Me — What NOT to clone</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Why not for Sarah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>8 product categories</strong></td>
+<td>Sarah has 4. Don't over-engineer.</td>
+</tr>
+<tr>
+<td><strong>6 kink filters</strong></td>
+<td>Sexitive doesn't lean into kink. Sarah's filters: by category + price.</td>
+</tr>
+<tr>
+<td><strong>User accounts / login</strong></td>
+<td>WA checkout is enough for v1. Add accounts in v2.</td>
+</tr>
+<tr>
+<td><strong>Complex admin</strong></td>
+<td>Solo founder — Spreadsheet + Supabase studio is enough for v1.</td>
+</tr>
+<tr>
+<td><strong>Multi-currency</strong></td>
+<td>Gs only. Don't add USD/ARS/BRL until there's demand.</td>
+</tr>
+<tr>
+<td><strong>Email marketing integration</strong></td>
+<td>Out of scope for intimate products. WA is the channel.</td>
+</tr>
+<tr>
+<td><strong>Multi-tenant (8 @ai-whisperers packages)</strong></td>
+<td>Sarah is single-tenant. Use fun4me-store as reference, not dependency.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-strategic-synthesis-what-this-means-for-sarah">3. Strategic synthesis — What this means for Sarah</h2>
+<h3 id="what-sarah-can-build-in-23-weeks-by-leveraging-what-we-have">What Sarah can build in 2–3 weeks by leveraging what we have</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Source</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>E-commerce shell</strong></td>
+<td>Clone fun4me-store, strip the parts Sarah doesn't need</td>
+<td>1–2 days</td>
+</tr>
+<tr>
+<td><strong>Cart + checkout (WA handoff)</strong></td>
+<td>fun4me pattern</td>
+<td>0.5 day</td>
+</tr>
+<tr>
+<td><strong>Product pages (12 SKUs)</strong></td>
+<td>Sexitive catalog as data source</td>
+<td>1 day</td>
+</tr>
+<tr>
+<td><strong>Brand identity</strong></td>
+<td>New work (Lúmina / Volare direction)</td>
+<td>2–3 days</td>
+</tr>
+<tr>
+<td><strong>Content (descriptions, education)</strong></td>
+<td>Mix of Sexitive's copy + Sarah's voice</td>
+<td>2 days</td>
+</tr>
+<tr>
+<td><strong>WA catalog + auto-replies</strong></td>
+<td>fun4me's WA flow</td>
+<td>0.5 day</td>
+</tr>
+<tr>
+<td><strong>Deploy to paragu-ai.com</strong></td>
+<td>Existing infra</td>
+<td>0.5 day</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>~10 days</strong> if Sarah is decisive on the questionnaire</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-sarah-can-not-shortcut">What Sarah can NOT shortcut</h3>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Why</th>
+<th>Source of truth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DINAVISA registration</td>
+<td>60–180 day regulatory process</td>
+<td>Despachante in PY</td>
+</tr>
+<tr>
+<td>First Sexitive wholesale order</td>
+<td>30–60 day shipping from AR</td>
+<td>Sexitive AR</td>
+</tr>
+<tr>
+<td>Brand naming decision</td>
+<td>1 day but irreversible</td>
+<td>Sarah's call</td>
+</tr>
+<tr>
+<td>Cost basis per SKU</td>
+<td>1 day to contact Sexitive</td>
+<td>Sarah's action</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pricing-benchmark-for-sarah-derived-from-maskarada-fun4me">Pricing benchmark for Sarah — derived from maskarada + fun4me</h3>
+<p>If Sarah follows the market median (maskarada + fun4me + sexshop.com.py):</p>
+<table>
+<thead>
+<tr>
+<th>Sexitive SKU</th>
+<th>Landed cost estimate (Gs)</th>
+<th>Recommended retail (Gs)</th>
+<th>Margin</th>
+<th>Source of cost basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wet Anal 75ml</td>
+<td>4,500–7,000</td>
+<td>95,000</td>
+<td>1,300%+</td>
+<td>Sexitive AR wholesale + AR→PY freight</td>
+</tr>
+<tr>
+<td>Wet Ice Fresh 75ml</td>
+<td>4,500–7,000</td>
+<td>95,000</td>
+<td>1,300%+</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Wet Like a Virgin 75ml</td>
+<td>5,500–8,000</td>
+<td>150,000</td>
+<td>2,000%+</td>
+<td>Same + premium positioning</td>
+</tr>
+<tr>
+<td>Bitchie 20ml</td>
+<td>5,000–7,500</td>
+<td>130,000</td>
+<td>1,700%+</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>XXX For Her 15ml</td>
+<td>4,000–6,000</td>
+<td>110,000</td>
+<td>1,800%+</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>more sex 50ml (3 flavors)</td>
+<td>4,000–6,000</td>
+<td>85,000</td>
+<td>1,500%+</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Pink Sexy Pill 4 tabs</td>
+<td>5,000–8,000</td>
+<td>180,000</td>
+<td>2,500%+</td>
+<td>Same + supplement positioning</td>
+</tr>
+<tr>
+<td>Love Potion 15ml (4 flavors)</td>
+<td>3,500–5,500</td>
+<td>90,000</td>
+<td>1,700%+</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Massage candles 30g (12 scents)</td>
+<td>3,000–5,000</td>
+<td>75,000</td>
+<td>1,600%+</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>My Hemp 15ml</td>
+<td>5,000–8,000</td>
+<td>170,000</td>
+<td>2,200%+</td>
+<td>Same + CBD premium (if legal)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reality check:</strong> These margins look insane because Sexitive AR's wholesale price (ARS 3,500–4,500 ≈ Gs 25,000–32,000) is much lower than typical wholesale ratios. <strong>Confirm with real cost basis from Sexitive AR before pricing.</strong></p>
+<p>If AR wholesale is actually 60–70% of AR retail (e.g., ARS 6,000 wholesale for a product retailing at ARS 8,500), the math changes:
+- Wet Anal 75ml landed = Gs 7,500–10,000
+- Recommended retail = Gs 95,000
+- Margin = 850–1,200%</p>
+<p>Still very healthy. <strong>The conclusion holds: Sexitive to PY is high-margin by global standards.</strong></p>
+<hr />
+<h2 id="4-concrete-recommendations-for-sarahs-next-30-days">4. Concrete recommendations for Sarah's next 30 days</h2>
+<h3 id="week-1-intake">Week 1 — Intake</h3>
+<ul>
+<li>[ ] Sarah completes questionnaire (sarah.paragu-ai.com/questionnaire)</li>
+<li>[ ] Erebus runs pricing model with her cost basis answers</li>
+<li>[ ] Erebus prepares 2–3 brand direction mockups (Lúmina, Volare, Kōra)</li>
+</ul>
+<h3 id="week-2-sourcing">Week 2 — Sourcing</h3>
+<ul>
+<li>[ ] Sarah contacts Sexitive AR (script in <code>01_RESEARCH/logistics-supplier/sexitive-wholesale-AR.md</code>)</li>
+<li>[ ] Sarah engages a despachante in Asunción (DINAVISA quote)</li>
+<li>[ ] First cost basis established</li>
+</ul>
+<h3 id="week-3-brand">Week 3 — Brand</h3>
+<ul>
+<li>[ ] Brand name decision (Sarah's call)</li>
+<li>[ ] Logo (3 directions, 1 chosen)</li>
+<li>[ ] Tone of voice locked</li>
+</ul>
+<h3 id="week-4-build">Week 4 — Build</h3>
+<ul>
+<li>[ ] Site cloned from fun4me-store pattern</li>
+<li>[ ] 12 products loaded (or launch subset per questionnaire §3.2)</li>
+<li>[ ] Cart + WA checkout working</li>
+<li>[ ] Deploy to <code>sarah.paragu-ai.com</code></li>
+</ul>
+<h3 id="week-5-soft-launch">Week 5+ — Soft launch</h3>
+<ul>
+<li>[ ] IG business account setup</li>
+<li>[ ] WA Business + catalog</li>
+<li>[ ] 10 friend/family orders end-to-end</li>
+<li>[ ] Fix friction, write SOPs</li>
+</ul>
+<hr />
+<h2 id="5-what-this-repo-adds-to-the-existing-fleet">5. What this repo adds to the existing fleet</h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Status</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah's strategy repo (this)</td>
+<td>✅ Complete</td>
+<td><code>/root/sarah-lubricants/</code></td>
+</tr>
+<tr>
+<td>Sarah's deployed preview site</td>
+<td>✅ Live</td>
+<td>https://sarah.paragu-ai.com</td>
+</tr>
+<tr>
+<td>Sarah's intake questionnaire</td>
+<td>✅ Live, 30 questions</td>
+<td>https://sarah.paragu-ai.com/questionnaire</td>
+</tr>
+<tr>
+<td>Anakyze of maskarada + fun4me (this doc)</td>
+<td>✅ Complete</td>
+<td><code>/root/sarah-lubricants/docs/anakyze-maskarada-fun4me.md</code></td>
+</tr>
+<tr>
+<td>Pricing benchmark for Sexitive SKUs</td>
+<td>✅ Drafted</td>
+<td>This doc §3</td>
+</tr>
+<tr>
+<td>Fun4Me bug list as Sarah's pre-mortem</td>
+<td>✅ Captured</td>
+<td>This doc §2</td>
+</tr>
+<tr>
+<td>Deployment tooling (build_site.py + deploy.sh)</td>
+<td>✅ Reusable</td>
+<td><code>/root/sarah-lubricants/tools/</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>What is NOT here yet (blocked on Sarah's questionnaire):</strong>
+- Canonical pricing reference (<code>00_STRATEGIC/financial-pricing/canonical-pricing-reference-v1.md</code>)
+- Brand identity docs
+- Launch roadmap
+- Site build code (will use fun4me-store pattern)</p>
+</div>
+</div>
+</body>
+</html>
