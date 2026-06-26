@@ -3,7 +3,7 @@
 **Live site (preview):** https://sarah.paragu-ai.com
 **Repo:** https://github.com/Ai-Whisperers/sarah-lubricants
 **Status:** Strategy + research phase — e-commerce site NOT YET BUILT
-**Last updated:** June 26, 2026
+**Last updated:** June 26, 2026 (Session 7 — research wave 2 complete)
 
 ---
 
@@ -97,10 +97,21 @@ See [`00_STRATEGIC/financial-pricing/canonical-pricing-reference-v1.md`](./00_ST
 | Sales channels ranked (15) | [`01_RESEARCH/marketing/sales-channels-matrix.md`](./01_RESEARCH/marketing/sales-channels-matrix.md) |
 | Sales scripts + objection handling | [`01_RESEARCH/marketing/competitor-battle-cards.md`](./01_RESEARCH/marketing/competitor-battle-cards.md) |
 | 30-day IG launch calendar | [`06_MARKETING/instagram-launch-calendar-30d.md`](./06_MARKETING/instagram-launch-calendar-30d.md) |
+| SEO content pillar (38 blog posts) | [`06_MARKETING/seo-content-pillar.md`](./06_MARKETING/seo-content-pillar.md) |
 | Customer survey (Typeform) | [`01_RESEARCH/market/customer-survey-typeform.md`](./01_RESEARCH/market/customer-survey-typeform.md) |
 | E-commerce platform decision | [`01_RESEARCH/operations/ecom-platform-decision.md`](./01_RESEARCH/operations/ecom-platform-decision.md) |
+| Email platform decision (Brevo) | [`01_RESEARCH/operations/email-platform-decision.md`](./01_RESEARCH/operations/email-platform-decision.md) |
 | Fulfillment + courier options | [`01_RESEARCH/logistics-supplier/py-fulfillment-options.md`](./01_RESEARCH/logistics-supplier/py-fulfillment-options.md) |
+| PY packaging suppliers (6 imprentas) | [`01_RESEARCH/logistics-supplier/py-packaging-suppliers.md`](./01_RESEARCH/logistics-supplier/py-packaging-suppliers.md) |
 | Keyword research + Google Trends PY | [`01_RESEARCH/marketing/keyword-demand-py.md`](./01_RESEARCH/marketing/keyword-demand-py.md) |
+| PY micro-influencer list (50 creators) | [`01_RESEARCH/marketing/py-micro-influencer-list.md`](./01_RESEARCH/marketing/py-micro-influencer-list.md) |
+| LatAm competitive landscape | [`01_RESEARCH/market/latam-intimate-competitive-landscape.md`](./01_RESEARCH/market/latam-intimate-competitive-landscape.md) |
+| Modelo viajero strategy | [`01_RESEARCH/operations/modelo-viajero-strategy.md`](./01_RESEARCH/operations/modelo-viajero-strategy.md) |
+| WhatsApp Business setup guide | [`08_WHATSAPP/whatsapp-business-setup.md`](./08_WHATSAPP/whatsapp-business-setup.md) |
+| WhatsApp catalog content (trio) | [`08_WHATSAPP/whatsapp-catalog-launch-trio.md`](./08_WHATSAPP/whatsapp-catalog-launch-trio.md) |
+| Customer message templates | [`09_TEMPLATES/customer-messages.md`](./09_TEMPLATES/customer-messages.md) |
+| Executive summary (Ivan/Kiki) | [`docs/executive-summary.md`](./docs/executive-summary.md) |
+| Glossary (Sexitive/PY terms) | [`docs/glossary.md`](./docs/glossary.md) |
 | Sarah's intake form | [`01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md`](./01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md) |
 | Sarah's questionnaire response | [`02_MEETINGS/2026-06-20-questionnaire-response.md`](./02_MEETINGS/2026-06-20-questionnaire-response.md) |
 | 5 clarifying questions to Sarah | [`02_MEETINGS/2026-06-20-clarifying-questions.md`](./02_MEETINGS/2026-06-20-clarifying-questions.md) |
@@ -164,4 +175,4 @@ When blockers clear, launch is feasible in 3–4 weeks.
 
 ---
 
-*Last updated: 2026-06-26 — research wave complete (28 artifacts built/updated)*
+*Last updated: 2026-06-26 — 60 markdown docs, 9,200+ LOC, 74 HTML build files, 2 commits pushed today*

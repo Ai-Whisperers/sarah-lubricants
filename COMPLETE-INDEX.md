@@ -39,6 +39,7 @@
 | `sexitive-competitors-py.md` | Direct comparison: Sexitive SKUs vs what PY competitors stock |
 | **`py-sex-shop-directory.md`** | **Directory of 23 PY sex shops + B2B outreach priority list** |
 | **`customer-survey-typeform.md`** | **15-question Typeform survey for 30 Enki followers** |
+| **`latam-intimate-competitive-landscape.md`** | **Brazil/AR/UY/BO/CL market analysis with competitor URLs + expansion roadmap** |
 
 ### legal-regulatory/
 
@@ -58,6 +59,7 @@
 | `sexitive-wholesale-AR.md` | How to buy from Sexitive AR |
 | `ar-py-freight-options.md` | Freight AR→PY: carriers, costs, lead times |
 | **`py-fulfillment-options.md`** | **3PL + couriers (AR→PY import + domestic PY delivery)** |
+| **`py-packaging-suppliers.md`** | **6 PY imprentas with real prices (La República, Pixxel, FullColor, Print&Pack, etc.)** |
 
 ### competition/
 
@@ -92,6 +94,7 @@
 | `fulfillment-returns-customer-service.md` | Fulfillment + returns + customer service |
 | **`ecom-platform-decision.md`** | **E-commerce platform comparison: Shopify vs Woo vs Next.js vs Tienda Nube vs WA-only** |
 | **`modelo-viajero-strategy.md`** | **Personal luggage import strategy (saves 28–32% per shipment)** |
+| **`email-platform-decision.md`** | **Email platform comparison: Brevo vs Mailchimp vs ActiveCampaign vs Mailrelay** |
 
 ### marketing/
 
@@ -101,6 +104,7 @@
 | **`sales-channels-matrix.md`** | **15 sales channels ranked by priority + recommended rollout** |
 | **`competitor-battle-cards.md`** | **Sales scripts + objection handling per launch SKU** |
 | **`keyword-demand-py.md`** | **PY keyword research + Google Trends + IG hashtag strategy** |
+| **`py-micro-influencer-list.md`** | **Top 50 PY Instagram creators with engagement rates, contacts, niche** |
 
 ## 02_MEETINGS/
 
@@ -130,20 +134,32 @@
 |-----|---------|
 | `00-index.md` | Marketing index |
 | **`instagram-launch-calendar-30d.md`** | **30-day Instagram launch calendar (4–5 posts/week + daily stories)** |
+| **`seo-content-pillar.md`** | **38 blog post templates across 6 SEO pillars (lubricants, couples, stimulants, wellness, transactional, lifestyle)** |
 
 ## 07_DESIGN/ — placeholder (TBD)
 
-## 08_WHATSAPP/ — placeholder (TBD)
+## 08_WHATSAPP/
 
-## 09_TEMPLATES/ — placeholder (TBD)
+| Doc | Purpose |
+|-----|---------|
+| `00-index.md` | WhatsApp index |
+| **`whatsapp-business-setup.md`** | **Full WA Business profile + catalog + quick replies + labels setup** |
+| **`whatsapp-catalog-launch-trio.md`** | **WA catalog content ready-to-paste for launch trio + bundles** |
+
+## 09_TEMPLATES/
+
+| Doc | Purpose |
+|-----|---------|
+| `00-index.md` | Templates index |
+| **`customer-messages.md`** | **12 customer-facing message templates (welcome, order confirm, shipping, complaints, etc.)** |
 
 ## docs/
 
 | Doc | Purpose |
 |-----|---------|
-| `executive-summary.md` | One-pager for Ivan / Sarah |
+| **`executive-summary.md`** | **One-pager for Ivan / Kiki (project overview, key numbers, blockers, next steps)** |
 | `REPO-WORK-PLAN.md` | Phased execution plan |
-| `glossary.md` | Sexitive-specific terms |
+| **`glossary.md`** | **All Sexitive-specific, DINAVISA-specific, PY-market-specific terms defined** |
 | `references.md` | All external sources cited |
 | `anakyze-maskarada-fun4me.md` | Analysis of existing fleet with reusable patterns |
 

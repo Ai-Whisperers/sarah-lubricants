@@ -25,19 +25,28 @@ Legend: ✅ Done · 🟡 In progress · 🔴 Blocked · ⚪ Not started
 | 0.13 | Provisional launch SKU list (Bitchie + XXX + Wet Anal) | Erebus | ✅ |
 | 0.14 | Launch budget under Gs 10M | Erebus | ✅ |
 | 0.15 | Push all session docs to GitHub | Erebus | ✅ (commit 31776ed) |
-| **0.16** | **Research wave: scraped 5 PY competitors + 158 Sexitive AR products + 23 PY shops** | **Erebus** | **✅ June 26** |
+| **0.16** | **Research wave 1: scraped 5 PY competitors + 158 Sexitive AR products + 23 PY shops** | **Erebus** | **✅ June 26** |
 | **0.17** | **Built canonical pricing reference v1** | **Erebus** | **✅ June 26** |
 | **0.18** | **Built launch budget v2 (3-SKU math + margin scenarios)** | **Erebus** | **✅ June 26** |
 | **0.19** | **Built Enki brand assessment (replaces Kinky)** | **Erebus** | **✅ June 26** |
 | **0.20** | **Built competitor pricing battle cards** | **Erebus** | **✅ June 26** |
 | **0.21** | **Built sales channels matrix (15 channels)** | **Erebus** | **✅ June 26** |
-| **0.22** | **Built Instagram 30-day launch calendar** | **Erebus** | **✅ June 26** |
+| **0.22** | **Built IG 30-day launch calendar** | **Erebus** | **✅ June 26** |
 | **0.23** | **Built PY compliance roadmap (DINAVISA + SET + Ley 4868 + Ley 7.593)** | **Erebus** | **✅ June 26** |
 | **0.24** | **Built e-com platform decision doc** | **Erebus** | **✅ June 26** |
 | **0.25** | **Built PY fulfillment options doc** | **Erebus** | **✅ June 26** |
 | **0.26** | **Built customer survey (Typeform-ready, 15 questions)** | **Erebus** | **✅ June 26** |
 | **0.27** | **Built PY sex shop directory + B2B outreach list (23 shops)** | **Erebus** | **✅ June 26** |
 | **0.28** | **Built keyword research + Google Trends PY data** | **Erebus** | **✅ June 26** |
+| **0.29** | **Research wave 2: LatAm competitive landscape (BR/AR/UY/BO/CL)** | **Erebus** | **✅ June 26** |
+| **0.30** | **Built PY micro-influencer list (50 creators from Modash/StarNgage)** | **Erebus** | **✅ June 26** |
+| **0.31** | **Built PY packaging suppliers (6 imprentas with real prices)** | **Erebus** | **✅ June 26** |
+| **0.32** | **Built email platform decision (Brevo recommended)** | **Erebus** | **✅ June 26** |
+| **0.33** | **Built SEO content pillar (38 blog posts across 6 pillars)** | **Erebus** | **✅ June 26** |
+| **0.34** | **Built WhatsApp Business setup guide + catalog content** | **Erebus** | **✅ June 26** |
+| **0.35** | **Built customer message templates (12 templates)** | **Erebus** | **✅ June 26** |
+| **0.36** | **Built glossary + executive summary** | **Erebus** | **✅ June 26** |
+| **0.37** | **Cleaned up: removed old clone, confirmed custom domain mapping** | **Erebus** | **✅ June 26** |
 
 ## P1 — Unblock (depends on Sarah's responses)
 
