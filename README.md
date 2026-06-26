@@ -1,107 +1,167 @@
-# Sarah's Lubricant Business — Strategy & Launch Kit
+# README — Sarah's Lubricant Business (Ai-Whisperers)
 
-**Last updated:** June 19, 2026
-
----
-
-## 🌐 Live (preview)
-
-🔗 **https://sarah.paragu-ai.com** — read-only strategy & questionnaire site (deployed to Cloudflare Pages).
-
-| Section | URL |
-|---------|-----|
-| Home (navigation hub) | https://sarah.paragu-ai.com/ |
-| **Questionnaire (Sarah's homework)** | https://sarah.paragu-ai.com/questionnaire |
-| Start here (5 min) | https://sarah.paragu-ai.com/start-here |
-| Product catalog (12 SKUs) | https://sarah.paragu-ai.com/catalog |
-| Market snapshot | https://sarah.paragu-ai.com/market |
-| DINAVISA legal | https://sarah.paragu-ai.com/legal |
-| MERCOSUR tariffs | https://sarah.paragu-ai.com/mercosur |
-| 3 business models | https://sarah.paragu-ai.com/models |
-| Sexitive AR contact | https://sarah.paragu-ai.com/supplier |
-| Freight AR→PY | https://sarah.paragu-ai.com/freight |
-| 5 competitors | https://sarah.paragu-ai.com/competition |
-| Payments (Tigo, bank, MP) | https://sarah.paragu-ai.com/payments |
-| Brand names | https://sarah.paragu-ai.com/brand |
-| Operations SOP | https://sarah.paragu-ai.com/operations |
-| Full index | https://sarah.paragu-ai.com/COMPLETE-INDEX |
-
-**Local source repo:** `/root/sarah-lubricants/` (this is the strategy + content source of truth)
-**Build output:** `build/` (auto-rendered to HTML from all `.md` files)
-**Deploy:** `tools/deploy.sh` → Cloudflare Pages project `sarah-lubricants`
-
-This is the **strategic source of truth** for launching Sarah's intimate-wellness distribution business in Paraguay. It is **not** the runtime code — when we get to that point, the website will live in `Ai-Whisperers/paragu-ai-platform` (or a fresh repo if Sarah prefers full white-label).
-
-**Source product:** Sexitive (Argentina) — 12 SKUs across 4 categories: stimulants, lubricants, sensory/ambiance, wellness.
-
-**Working hypothesis:** Sarah imports Sexitive products from Buenos Aires and resells in Paraguay, either as authorized distributor, independent reseller, or private-label rebrand (decision pending — see `01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md` Section 2).
+**Live site (preview):** https://sarah.paragu-ai.com
+**Repo:** https://github.com/Ai-Whisperers/sarah-lubricants
+**Status:** Strategy + research phase — e-commerce site NOT YET BUILT
+**Last updated:** June 26, 2026
 
 ---
 
-## Why this repo exists
+## What this is
 
-1. **Single source of truth** — the Sexitive catalog is real but spans 12 SKUs in 4 regulatory categories. If we don't centralize the product data, we'll misclassify something at the customs or DINAVISA stage and lose money.
-2. **Intake before build** — intimate-wellness import is a regulated business. We cannot write code before Sarah answers ~30 questions on legal model, costs, brand, and ops. The questionnaire is in `01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md`.
-3. **Pre-mortem before launch** — the PY market has at least 5 established sex-shop retailers (sexshop.com.py, Rivia, Intimos Placeres, As Bajo La Manga, Sex Shop Paraguay). The strategy must differentiate or Sarah competes on price against incumbents.
+This repository is the **strategic source of truth** for Sarah Roig's intimate-wellness distribution business in Paraguay. Sarah is the operator; Ai-Whisperers (Erebus) provides strategy, research, and tooling.
 
----
+The actual e-commerce site will live in the `paragu-ai-platform` monorepo when build time comes. This repo contains:
 
-## Quick Start
-
-1. **START HERE:** `start-here.md` (5 min)
-2. **Questionnaire for Sarah:** `01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md` (Sarah's homework, ~30 min)
-3. **Product catalog:** `01_RESEARCH/market/sexitive-catalog-master.md` (Sexitive's 12 SKUs)
-4. **Market snapshot:** `01_RESEARCH/market/paraguay-market-snapshot.md` (competition + sizing)
-5. **Legal roadmap:** `01_RESEARCH/legal-regulatory/dinavisa-import-requirements.md` (DINAVISA + customs)
+- 📊 Market research (competitor analysis, PY pricing, demand data)
+- 📋 Business strategy (launch plan, budget, pricing model)
+- 📝 Sarah's intake responses + our follow-up questions
+- 🔬 Vendor + legal + tax research
+- 🛠️ Static site build (the preview at sarah.paragu-ai.com)
 
 ---
 
-## Project Summary
+## The business in one paragraph
 
-Sarah is bringing Sexitive (Argentine intimate-wellness brand) to Paraguay. The catalog has 12 SKUs across 4 categories. The business is feasible but has 3 hard dependencies before any code:
-
-1. **Legal model** — authorized distributor, independent reseller, or private label.
-2. **Cost basis** — what Sarah actually pays for each SKU at her tier (wholesale? direct from Sexitive? via MercadoLibre AR arbitrage?).
-3. **Regulatory** — DINAVISA classification per SKU, import permits, supplement registration for Pink Sexy Pill, CBD handling for My Hemp.
-
-If those three are answered, the rest (brand, web, marketing, ops) is execution. If they're not, we build on sand.
+Sarah Roig (RUC 4978694-6, @enkistore IG with 20K followers) is launching **Enki Store + Kinky** as an intimate-wellness brand in Paraguay, distributing **Sexitive Argentina products** (158 SKUs across lubricants, stimulants, perfumes, massage oils, candles, lingerie, kits, and games). Launch trio: **Bitchie 20ml + XXX For Her 15ml + Wet Anal 75ml**. Target margin: 100–150%. 90-day launch budget: < Gs 10M. Channels: WhatsApp Business (primary) + Instagram organic (secondary) + B2B wholesale to PY sex shops (largest lever).
 
 ---
 
-## Directory Structure
+## Brand architecture
 
-| Folder | Content |
-|--------|---------|
-| `00_STRATEGIC/` | Strategic, financials, positioning |
-| `01_RESEARCH/` | Market, legal, competition, supplier, payments, brand |
-| `02_MEETINGS/` | Sarah sessions, intake prep, archives |
-| `03_LAUNCH/` | Roadmap, sales playbooks, website |
-| `04_SALES/` | Sales scripts, pricing strategy |
-| `05_OPERATIONS/` | Fulfillment, returns, customer service |
-| `06_MARKETING/` | Digital presence, content calendar |
-| `07_DESIGN/` | Brand + website |
-| `08_WHATSAPP/` | WhatsApp catalog + automation |
-| `09_TEMPLATES/` | Client / customer templates |
-| `docs/` | Planning, indexes, executive summary |
-| Root MD | README, TODO, start-here, agents |
+```
+ENKI STORE (parent brand)
+├── Kinky (sub-brand / sección interna)
+│   ├── Lubricantes
+│   ├── Estimulantes
+│   └── Suplementos (v2)
+├── Enki Lencería (existing)
+└── Enki Juguetes (Sexitive toy line — v2)
+```
 
----
+**Decision history:**
+- June 19: Provisional name "Kinky Store" considered
+- June 22: Sarah confirmed (Q3) = **"Enki Store" is the registered brand**; "Kinky" is sub-brand
+- June 26: Architecture locked
 
-## Entry Points
-
-| Doc | Purpose |
-|-----|---------|
-| `start-here.md` | Project overview + option summary |
-| `docs/executive-summary.md` | Current status and next block |
-| `TODO.md` | Phase tracker (P0–P5) |
-| `docs/REPO-WORK-PLAN.md` | Phased execution plan |
-| `01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md` | **Sarah's homework — 30 questions, 6 sections** |
+See [`01_RESEARCH/brand-identity/enki-store-assessment.md`](./01_RESEARCH/brand-identity/enki-store-assessment.md).
 
 ---
 
-## Status legend
+## Launch trio (LOCKED June 22, 2026)
 
-- ✅ Complete
-- 🟡 In progress
-- 🔴 Blocked (waiting on Sarah or external)
-- ⚪ Not started
+| SKU | Product | Size | DINAVISA |
+|-----|---------|------|----------|
+| **SEFB** | Bitchie Spray multiorgásmico | 20ml | Cosmético NSO |
+| **XXX01** | XXX For Her óleo orgasmico | 15ml | Cosmético NSO |
+| **WET02** | Wet Gel Lubricante Anal | 75ml | Cosmético NSO |
+
+**Sarah's decisions (Q1–Q4, June 22):**
+- Q1 (a): Drop Pink Sexy Pill from v1 (register from revenue month 3–6)
+- Q2: Wet Anal (not Like a Virgin) — volume-over-differentiation trade-off
+- Q3: Brand = Enki Store, Kinky = sección
+- Q4: Has Distribuidor Mayorista pricing (verbal, PDF pending)
+
+See [`01_RESEARCH/brand-identity/launch-SKU-list-3-SKUs.md`](./01_RESEARCH/brand-identity/launch-SKU-list-3-SKUs.md).
+
+---
+
+## Key numbers (canonical pricing v1)
+
+| Metric | Value |
+|--------|------:|
+| Launch trio cost (30u each, 90 units) | Gs 2,386,200 |
+| Total landed (with DINAVISA + despachante + freight) | Gs 6,265,000 |
+| Recommended retail (100% margin) | Gs 125K–145K per SKU |
+| Stretch retail (150% margin) | Gs 157K–218K per SKU |
+| Month 3 target (80 units) | Gs 10.65M revenue / Gs 5.27M margin |
+| 6-month stretch (200 units/mo) | Gs 57M+ revenue |
+
+See [`00_STRATEGIC/financial-pricing/canonical-pricing-reference-v1.md`](./00_STRATEGIC/financial-pricing/canonical-pricing-reference-v1.md).
+
+---
+
+## Quick orientation
+
+| If you want... | Read this |
+|----------------|-----------|
+| Understand the whole project | [`start-here.md`](./start-here.md) |
+| See all docs (file-by-file) | [`COMPLETE-INDEX.md`](./COMPLETE-INDEX.md) |
+| Check what's done / what's next | [`TODO.md`](./TODO.md) |
+| Understand the launch math | [`00_STRATEGIC/financial-pricing/launch-budget-under-10M.md`](./00_STRATEGIC/financial-pricing/launch-budget-under-10M.md) |
+| See the master product catalog (158 SKUs) | [`01_RESEARCH/market/sexitive-catalog-master.md`](./01_RESEARCH/market/sexitive-catalog-master.md) |
+| See scraped competitor data | [`01_RESEARCH/competition/competitor-pricing-scraped.md`](./01_RESEARCH/competition/competitor-pricing-scraped.md) |
+| See B2B wholesale targets | [`01_RESEARCH/market/py-sex-shop-directory.md`](./01_RESEARCH/market/py-sex-shop-directory.md) |
+| Brand architecture decision | [`01_RESEARCH/brand-identity/enki-store-assessment.md`](./01_RESEARCH/brand-identity/enki-store-assessment.md) |
+| Compliance roadmap (DINAVISA + SET + tax) | [`01_RESEARCH/legal-regulatory/py-compliance-roadmap.md`](./01_RESEARCH/legal-regulatory/py-compliance-roadmap.md) |
+| Sales channels ranked (15) | [`01_RESEARCH/marketing/sales-channels-matrix.md`](./01_RESEARCH/marketing/sales-channels-matrix.md) |
+| Sales scripts + objection handling | [`01_RESEARCH/marketing/competitor-battle-cards.md`](./01_RESEARCH/marketing/competitor-battle-cards.md) |
+| 30-day IG launch calendar | [`06_MARKETING/instagram-launch-calendar-30d.md`](./06_MARKETING/instagram-launch-calendar-30d.md) |
+| Customer survey (Typeform) | [`01_RESEARCH/market/customer-survey-typeform.md`](./01_RESEARCH/market/customer-survey-typeform.md) |
+| E-commerce platform decision | [`01_RESEARCH/operations/ecom-platform-decision.md`](./01_RESEARCH/operations/ecom-platform-decision.md) |
+| Fulfillment + courier options | [`01_RESEARCH/logistics-supplier/py-fulfillment-options.md`](./01_RESEARCH/logistics-supplier/py-fulfillment-options.md) |
+| Keyword research + Google Trends PY | [`01_RESEARCH/marketing/keyword-demand-py.md`](./01_RESEARCH/marketing/keyword-demand-py.md) |
+| Sarah's intake form | [`01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md`](./01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md) |
+| Sarah's questionnaire response | [`02_MEETINGS/2026-06-20-questionnaire-response.md`](./02_MEETINGS/2026-06-20-questionnaire-response.md) |
+| 5 clarifying questions to Sarah | [`02_MEETINGS/2026-06-20-clarifying-questions.md`](./02_MEETINGS/2026-06-20-clarifying-questions.md) |
+| 21 Round 2 questions (A-F) | [`02_MEETINGS/2026-06-22-round-2-questions.md`](./02_MEETINGS/2026-06-22-round-2-questions.md) |
+| Audio prompt pack for Sarah | [`02_MEETINGS/2026-06-22-audio-prompt-pack.md`](./02_MEETINGS/2026-06-22-audio-prompt-pack.md) |
+
+---
+
+## Build / deploy
+
+This repo has a static site generator at `tools/build_site.py` that compiles the markdown to HTML at `build/`. The site is deployed to Cloudflare Pages at `sarah.paragu-ai.com` (preview only — NOT customer-facing).
+
+```bash
+cd /root/repos/sarah-lubricants
+python3 tools/build_site.py    # Build HTML
+bash tools/deploy.sh           # Deploy to Cloudflare
+```
+
+---
+
+## Repo structure
+
+```
+sarah-lubricants/
+├── 00_STRATEGIC/         # Strategy + financial planning
+├── 01_RESEARCH/          # Market, competitor, legal, brand, operations, payments, marketing research
+├── 02_MEETINGS/          # All conversation logs with Sarah
+├── 03_LAUNCH/            # Launch roadmap + checklists (TBD)
+├── 04_SALES/             # Sales scripts, objection handling (TBD)
+├── 05_OPERATIONS/        # Pack-ship SOPs, inventory (TBD)
+├── 06_MARKETING/         # IG strategy, content calendar
+├── 07_DESIGN/            # Brand assets, logo (TBD)
+├── 08_WHATSAPP/          # WA Business setup, broadcasts (TBD)
+├── 09_TEMPLATES/         # Customer-facing templates (TBD)
+├── docs/                 # Anakyze of fleet, glossary, references
+├── tools/                # Static site builder + deploy scripts
+├── content/              # (TBD) Source content for static site
+└── build/                # Auto-generated HTML output
+```
+
+---
+
+## Active blockers
+
+1. 🔴 **Q5 PDF from Sexitive AR** — Sarah hasn't sent the official wholesale price list
+2. 🔴 **DINAPI Enki classes verified** — Sarah hasn't confirmed classes 3, 5, 35
+3. 🔴 **Contador engaged** — RUC + tax compliance unverified
+4. 🔴 **Despachante engaged** — DINAVISA + import process not started
+
+When blockers clear, launch is feasible in 3–4 weeks.
+
+---
+
+## Repository rules (AGENTS.md)
+
+- Every session doc persists to `/02_MEETINGS/` with date stamp
+- Decisions go to `/00_STRATEGIC/` or topic-specific `/01_RESEARCH/`
+- TBD docs are placeholder index entries — fill or remove
+- Never invent SKUs not in Sexitive catalog
+- Sarah's responses always quoted verbatim from WhatsApp
+
+---
+
+*Last updated: 2026-06-26 — research wave complete (28 artifacts built/updated)*
