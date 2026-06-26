@@ -6,6 +6,7 @@ ROOT = pathlib.Path("/root/repos/sarah-lubricants")
 OUT  = ROOT / "build"
 
 SLUGS = {
+    "sarah": "sarah-questionnaire-hub",
     "questionnaire": "01_RESEARCH/legal-regulatory/validacion-cliente-sarah",
     "catalog":       "01_RESEARCH/market/sexitive-catalog-master",
     "market":        "01_RESEARCH/market/paraguay-market-snapshot",
@@ -77,7 +78,7 @@ def make_input_form_html(md_path: pathlib.Path, content_html: str) -> str:
 
 def render(md_path: pathlib.Path) -> None:
     raw = md_path.read_text(encoding="utf-8")
-    is_questionnaire = "validacion-cliente-sarah" in str(md_path)
+    is_questionnaire = "validacion-cliente-sarah" in str(md_path) or "sarah-questionnaire-hub" in str(md_path)
 
     md = markdown.Markdown(extensions=["extra", "sane_lists", "tables", "fenced_code", "toc"])
     rendered = md.convert(raw)
@@ -104,10 +105,11 @@ def render(md_path: pathlib.Path) -> None:
 </head>
 <body>
 <div class="topbar">
-<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<a href="/sarah-questionnaire-hub" class="home">✨ Sarah's Hub</a>
 <div>
-<a href="/index" style="margin-right:14px">📚 Index</a>
-<a href="/questionnaire">📋 Questionnaire</a>
+<a href="/sarah-questionnaire-hub" style="margin-right:14px">📋 Questionnaire</a>
+<a href="/start-here" style="margin-right:14px">📚 Repo</a>
+<a href="/index">Index</a>
 </div>
 </div>
 <div class="wrap">
@@ -152,7 +154,7 @@ def main():
         else:
             print(f"  WARNING: slug {slug} -> {target} not found in rendered files")
 
-    for top in ["README", "start-here", "COMPLETE-INDEX", "AGENTS", "TODO"]:
+    for top in ["README", "start-here", "COMPLETE-INDEX", "AGENTS", "TODO", "sarah-questionnaire-hub"]:
         if top in rendered:
             src_html = rendered[top]
             slug_dir = OUT / top
