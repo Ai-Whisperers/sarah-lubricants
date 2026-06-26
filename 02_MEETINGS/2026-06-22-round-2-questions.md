@@ -235,7 +235,7 @@ If you want me to ship any of these, just say "sí, hacé el [X]".
 | Questionnaire response (your answers to the original 30 questions) | https://github.com/Ai-Whisperers/sarah-lubricants/blob/main/02_MEETINGS/2026-06-20-questionnaire-response.md |
 | Sexitive catalog (188 SKUs, June 22) | https://github.com/Ai-Whisperers/sarah-lubricants/blob/main/01_RESEARCH/market/sexitive-catalog-master.md |
 | DINAVISA import requirements | https://github.com/Ai-Whisperers/sarah-lubricants/blob/main/01_RESEARCH/legal-regulatory/dinavisa-import-requirements.md |
-| Kinky Store assessment (will be rewritten) | https://github.com/Ai-Whisperers/sarah-lubricants/blob/main/01_RESEARCH/brand-identity/kinky-store-assessment.md |
+| Kinky Store assessment (will be rewritten) | https://github.com/Ai-Whisperers/sarah-lubricants/blob/main/01_RESEARCH/brand-identity/kinky-store-assessment.md (⚠️ ARCHIVED — see enki-store-assessment.md) |
 | Launch SKU list (3 options, will be updated to confirmed trio) | https://github.com/Ai-Whisperers/sarah-lubricants/blob/main/01_RESEARCH/brand-identity/launch-SKU-list-3-SKUs.md |
 | Launch budget under Gs 10M (will be updated) | https://github.com/Ai-Whisperers/sarah-lubricants/blob/main/00_STRATEGIC/financial-pricing/launch-budget-under-10M.md |
 

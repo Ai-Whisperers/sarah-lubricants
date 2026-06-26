@@ -1,7 +1,7 @@
 # Enki Store + Kinky Sub-brand — Assessment
 
 **Status:** Decision document, June 22, 2026 (Sarah's Q3 confirmed)
-**Date:** June 26, 2026 — supersedes `kinky-store-assessment.md` (pre-June 22)
+**Date:** June 26, 2026 — supersedes `kinky-store-assessment.md (⚠️ ARCHIVED — see enki-store-assessment.md)` (pre-June 22)
 **Brand architecture:** Enki Store (parent) + Kinky (sub-brand / sección interna)
 
 > **CHANGE LOG:**
@@ -179,4 +179,4 @@ ENKI STORE (parent brand)
 
 ---
 
-*Last updated: 2026-06-26 — supersedes kinky-store-assessment.md*
+*Last updated: 2026-06-26 — supersedes kinky-store-assessment.md (⚠️ ARCHIVED — see enki-store-assessment.md)*

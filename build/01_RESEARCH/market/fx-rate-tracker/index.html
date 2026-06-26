@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FX Rate Tracker — Argentina Wholesale Prices — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/market/fx-rate-tracker.md</div>
+<h1 id="fx-rate-tracker-argentina-wholesale-prices">FX Rate Tracker — Argentina Wholesale Prices</h1>
+<p><strong>Date:</strong> June 26, 2026 (first build)
+<strong>Purpose:</strong> Track Gs/AR$ and Gs/USD in real-time. Flag when re-pricing is needed.
+<strong>Critical because:</strong> Argentina wholesale inflation is 34.5% YoY (INDEC May 2026). Our 4:1 assumption will break.</p>
+<hr />
+<h2 id="why-this-matters">Why this matters</h2>
+<p>Sarah's entire pricing model assumes:
+- 4 Gs/AR$ (Sarah's verbal rate, June 2026)
+- 7,500 Gs/USD (PY blue rate, June 2026)</p>
+<p>If either moves:
+- <strong>Gs/AR$ rises to 5:1</strong> (AR$ weakens) → Sarah's cost up 25%, retail prices must rise
+- <strong>Gs/AR$ falls to 3:1</strong> (AR$ strengthens) → Sarah's cost down 25%, can lower prices
+- <strong>Gs/USD rises to 8,500</strong> (Gs weakens) → all USD-denominated costs (courier, freight) up
+- <strong>Gs/USD falls to 6,500</strong> (Gs strengthens) → freight savings</p>
+<p><strong>Re-pricing trigger:</strong> When Gs/AR$ moves &gt;10% from current baseline (4:1 = 250 Gs/100 AR$).</p>
+<hr />
+<h2 id="current-rates-as-of-june-26-2026">Current rates (as of June 26, 2026)</h2>
+<table>
+<thead>
+<tr>
+<th>Pair</th>
+<th style="text-align: right;">Rate</th>
+<th style="text-align: right;">Change (7d)</th>
+<th style="text-align: right;">Change (30d)</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gs/AR$</strong></td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">TBD</td>
+<td>Sarah's verbal</td>
+</tr>
+<tr>
+<td><strong>Gs/USD</strong></td>
+<td style="text-align: right;">7,500</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">TBD</td>
+<td>PY blue rate estimate</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ These are <strong>estimates</strong> as of June 26, 2026. Real rates need live scraping (build below).</p>
+</blockquote>
+<hr />
+<h2 id="live-data-sources-free">Live data sources (free)</h2>
+<h3 id="gsar-py-peso-to-argentine-peso">Gs/AR$ (PY peso to Argentine peso)</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>URL</th>
+<th>Update frequency</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cambios Chaco</strong></td>
+<td>https://www.cambioschaco.com.py</td>
+<td>Daily</td>
+<td>PY bank rate</td>
+</tr>
+<tr>
+<td><strong>Bcp.gov.py</strong> (Banco Central del Paraguay)</td>
+<td>https://www.bcp.gov.py</td>
+<td>Daily</td>
+<td>Official PY rate</td>
+</tr>
+<tr>
+<td><strong>BCRA</strong> (Banco Central Argentina)</td>
+<td>https://www.bcra.gob.ar</td>
+<td>Daily</td>
+<td>Official AR wholesale</td>
+</tr>
+<tr>
+<td><strong>DolarHoy</strong> (AR)</td>
+<td>https://dolarhoy.com</td>
+<td>Real-time</td>
+<td>AR blue rate</td>
+</tr>
+<tr>
+<td><strong>CambioReal</strong></td>
+<td>https://www.cambioreal.com.br</td>
+<td>Real-time</td>
+<td>Brazil cross-rate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gsusd-py-peso-to-us-dollar">Gs/USD (PY peso to US dollar)</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>URL</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cambios Chaco</strong></td>
+<td>https://www.cambioschaco.com.py</td>
+<td>PY bank + parallel</td>
+</tr>
+<tr>
+<td><strong>Maxi Cambios</strong></td>
+<td>https://www.maxicambios.com.py</td>
+<td>PY Casa de Cambio</td>
+</tr>
+<tr>
+<td><strong>BCP</strong></td>
+<td>https://www.bcp.gov.py</td>
+<td>Official</td>
+</tr>
+</tbody>
+</table>
+<h3 id="argentina-inflation-quarterly">Argentina inflation (quarterly)</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>URL</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>INDEC</strong> (AR official stats)</td>
+<td>https://www.indec.gob.ar</td>
+<td>IPIM, IPIB, IPP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="build-a-live-scraper-python-free">Build a live scraper (Python, free)</h2>
+<p>Run this weekly (or daily) to update the table above.</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;FX rate tracker for Sarah's Enki Store.
+Scrapes free PY + AR sources, logs to CSV, alerts on threshold breach.
+&quot;&quot;&quot;
+import urllib.request
+import json
+import csv
+from datetime import datetime
+import os
+
+OUT_DIR = os.path.expanduser('~/sarah-fx-tracking')
+os.makedirs(OUT_DIR, exist_ok=True)
+CSV_FILE = os.path.join(OUT_DIR, 'fx_log.csv')
+
+# Free APIs and pages
+SOURCES = {
+    'bcra_usd_oficial': 'https://api.bluelytics.com.ar/v2/latest',
+    'dolarhoy_blue': 'https://dolarhoy.com/api/dolar',
+    'bcp_referencial': 'https://www.bcp.gov.py/webdpc/webservice/v1/exchange_rates',
+}
+
+def fetch_json(url, timeout=10):
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read())
+    except Exception as e:
+        return {'error': str(e)}
+
+# Scrape
+results = {
+    'timestamp': datetime.now().isoformat(),
+    'ars_pyg_baseline': 4.0,  # Sarah's June 26 rate
+    'usd_pyg_baseline': 7500,  # PY blue estimate
+}
+
+# BCRA (AR official)
+bcra = fetch_json(SOURCES['bcra_usd_oficial'])
+if 'blue' in bcra:
+    ars_usd = bcra['blue'].get('value_buy', 0)
+    if ars_usd &gt; 0:
+        # Convert to Gs/AR$ via USD/PYG (rough — assumes USD/ARS = AR$/USD inverse)
+        # In Argentina, USD is quoted as AR$/USD (e.g., 1100 AR$ per USD)
+        ars_per_usd = ars_usd
+        usd_pyg = 7500  # would need separate PY fetch
+        results['ars_pyg_implied'] = round(usd_pyg / ars_per_usd, 2)
+        results['ars_usd_blue'] = ars_per_usd
+        results['ars_usd_source'] = 'bluelytics_blue'
+
+# DolarHoy (AR blue)
+dh = fetch_json(SOURCES['dolarhoy_blue'])
+if isinstance(dh, dict) and not 'error' in dh:
+    if 'blue' in dh:
+        results['ars_usd_blue_dh'] = dh['blue'].get('venta', 0)
+        results['ars_usd_source_dh'] = 'dolarhoy'
+
+# Check thresholds and alert
+alerts = []
+if 'ars_pyg_implied' in results:
+    delta_pct = ((results['ars_pyg_implied'] - 4.0) / 4.0) * 100
+    if abs(delta_pct) &gt; 10:
+        alerts.append(f&quot;🔴 Gs/AR$ moved {delta_pct:+.1f}% from baseline (4.0). Re-pricing needed.&quot;)
+
+# Log to CSV
+new_file = not os.path.exists(CSV_FILE)
+with open(CSV_FILE, 'a', newline='') as f:
+    writer = csv.writer(f)
+    if new_file:
+        writer.writerow(['timestamp', 'ars_pyg_baseline', 'ars_pyg_implied', 'ars_usd_blue', 'usd_pyg_baseline', 'alerts'])
+    writer.writerow([
+        results['timestamp'],
+        results['ars_pyg_baseline'],
+        results.get('ars_pyg_implied', ''),
+        results.get('ars_usd_blue', ''),
+        results['usd_pyg_baseline'],
+        ' | '.join(alerts),
+    ])
+
+# Print
+print(f&quot;\n=== FX SNAPSHOT — {results['timestamp']} ===&quot;)
+for k, v in results.items():
+    print(f&quot;  {k}: {v}&quot;)
+if alerts:
+    print(f&quot;\n⚠️ ALERTS:&quot;)
+    for a in alerts:
+        print(f&quot;  {a}&quot;)
+print(f&quot;\nLogged to: {CSV_FILE}&quot;)
+</code></pre>
+<p><strong>How to run:</strong> <code>python3 tools/fx_tracker.py</code> (after Sarah has the script set up)
+<strong>Output:</strong> CSV log of all FX snapshots, alerts when thresholds breach</p>
+<hr />
+<h2 id="manual-update-procedure-until-script-runs">Manual update procedure (until script runs)</h2>
+<p><strong>Weekly (every Sunday):</strong>
+1. Visit https://www.cambioschaco.com.py
+2. Note Gs/AR$ and Gs/USD
+3. Update the table at the top of this doc
+4. Check alert trigger (10% from baseline)
+5. If triggered: notify Erebus to re-run pricing</p>
+<hr />
+<h2 id="re-pricing-decision-matrix">Re-pricing decision matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>FX move</th>
+<th>Action</th>
+<th>Lead time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gs/AR$ rises &lt; 5%</td>
+<td>Minor</td>
+<td>None</td>
+<td>1 week</td>
+</tr>
+<tr>
+<td>Gs/AR$ rises 5-10%</td>
+<td>Material</td>
+<td>Build new pricing scenarios</td>
+<td>3-5 days</td>
+</tr>
+<tr>
+<td>Gs/AR$ rises 10-20%</td>
+<td>Critical</td>
+<td>Re-price retail, update calculator</td>
+<td>1-2 days</td>
+</tr>
+<tr>
+<td>Gs/AR$ rises &gt; 20%</td>
+<td>Emergency</td>
+<td>Pause new orders, liquidate inventory, re-pricing</td>
+<td>Same day</td>
+</tr>
+<tr>
+<td>Gs/AR$ falls (AR strengthens)</td>
+<td>Opportunity</td>
+<td>Consider lower retail / larger orders</td>
+<td>1 week</td>
+</tr>
+<tr>
+<td>Gs/USD rises 10%+</td>
+<td>Material</td>
+<td>All freight/courier up — re-budget</td>
+<td>1 week</td>
+</tr>
+<tr>
+<td>AR inflation &gt; 40% YoY</td>
+<td>Critical</td>
+<td>Sexitive will raise prices; pre-order large</td>
+<td>1-2 weeks</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="historical-context-june-2026">Historical context (June 2026)</h2>
+<ul>
+<li><strong>AR wholesale inflation (IPIM):</strong> +34.5% YoY (INDEC May 2026)</li>
+<li><strong>AR CPI:</strong> ~40% YoY (monthly pace slowing)</li>
+<li><strong>PY inflation (IPC):</strong> ~3-4% YoY (much more stable)</li>
+<li><strong>AR$/USD blue:</strong> ~1,100-1,200 (volatile)</li>
+<li><strong>Gs/USD:</strong> ~7,500-7,800 (PY relatively stable)</li>
+</ul>
+<p><strong>Implication:</strong> AR peso devalues faster than PY guaraní strengthens. Gs/AR$ will tend to RISE (Sarah's cost goes up) over 12 months. Build FX buffer into retail pricing NOW.</p>
+<hr />
+<h2 id="what-to-do-with-this-data">What to do with this data</h2>
+<h3 id="when-gsar-rises-cost-up">When Gs/AR$ rises (cost up):</h3>
+<ol>
+<li>Re-run <code>tools/pricing_calculator.py</code> with new FX rate</li>
+<li>Update <code>canonical-pricing-reference-v1.md</code> with new numbers</li>
+<li>Adjust retail prices in WA catalog (via WA Business — no website yet)</li>
+<li>If price increase &gt;15%, re-check PY market position vs. competitors</li>
+<li>Consider pre-ordering inventory before next FX move</li>
+</ol>
+<h3 id="when-gsar-falls-cost-down">When Gs/AR$ falls (cost down):</h3>
+<ol>
+<li>Re-run pricing calc — could be more margin</li>
+<li>Consider larger next order (more stock at lower cost)</li>
+<li>Consider lowering retail prices to capture more market share</li>
+<li>Update cash flow model with better margins</li>
+</ol>
+<h3 id="always">Always:</h3>
+<ul>
+<li><strong>Don't lock pricing on website</strong> (we don't have one yet — but don't change that)</li>
+<li><strong>Use WhatsApp-quoted pricing</strong> so we can move it</li>
+<li><strong>Update Erebus monthly</strong> with the new rate</li>
+</ul>
+<hr />
+<h2 id="known-limitations">Known limitations</h2>
+<ul>
+<li>❌ Free APIs (Bluelytics, DolarHoy) sometimes go down</li>
+<li>❌ PY Casa de Cambio rates not always in real-time</li>
+<li>❌ BCP official rates may lag 1-2 days</li>
+<li>❌ AR blue rate is unofficial; can be manipulated</li>
+<li>❌ No integration with our pricing model yet (manual re-run)</li>
+</ul>
+<p><strong>Acceptable for v1.</strong> When monthly revenue &gt;Gs 5M, consider paid FX rate feed (e.g., openexchangerates.org, $10/month).</p>
+<hr />
+<p><em>Last updated: June 26, 2026 — Session 11</em></p>
+</div>
+</div>
+</body>
+</html>

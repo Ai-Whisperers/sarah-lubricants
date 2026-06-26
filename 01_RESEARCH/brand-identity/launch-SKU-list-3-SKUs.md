@@ -115,7 +115,7 @@ Based on competitor gap analysis (`01_RESEARCH/competition/competitor-pricing-sc
 | File | Change | Status |
 |------|--------|--------|
 | `01_RESEARCH/market/sexitive-catalog-master.md` | Updated to 158 SKUs (June 26, supersedes 12-SKU) | ✅ DONE |
-| `01_RESEARCH/brand-identity/kinky-store-assessment.md` | Renamed to `enki-store-assessment.md` | ✅ DONE |
+| `01_RESEARCH/brand-identity/kinky-store-assessment.md (⚠️ ARCHIVED — see enki-store-assessment.md)` | Renamed to `enki-store-assessment.md` | ✅ DONE |
 | `01_RESEARCH/brand-identity/launch-SKU-list-3-SKUs.md` | Updated to trio (Bitchie + XXX + Wet Anal) | ✅ DONE (this file) |
 | `00_STRATEGIC/financial-pricing/launch-budget-under-10M.md` | Updated to 3-SKU math | ✅ DONE |
 | `00_STRATEGIC/financial-pricing/canonical-pricing-reference-v1.md` | Built | ✅ DONE |

@@ -109,7 +109,7 @@ Sarah has a registered business, RUC `4978694-6`, a direct contact at Sexitive A
 ## Decisions I can make NOW without further input
 
 - ✅ Update repo's `01_RESEARCH/market/sexitive-catalog-master.md` launch list to flag Pink Sexy Pill as **regulatory-blocked** unless Sarah has ANMAT paperwork.
-- ✅ Add a new doc `01_RESEARCH/brand-identity/kinky-store-assessment.md` with the trademark + ad-policy analysis.
+- ✅ Add a new doc `01_RESEARCH/brand-identity/kinky-store-assessment.md (⚠️ ARCHIVED — see enki-store-assessment.md)` with the trademark + ad-policy analysis.
 - ✅ Update `00_STRATEGIC/financial-pricing/` to use 150% margin target and < Gs 10M capital constraint.
 - ✅ Draft 2 mockup directions for "Kinky Store" logo + visual identity (pending Sarah's confirmation on name).
 - ✅ Update `01_RESEARCH/logistics-supplier/` with bank-transfer-only payment flow simplification.
@@ -123,7 +123,7 @@ Sarah has a registered business, RUC `4978694-6`, a direct contact at Sexitive A
 | # | File | Status |
 |---|------|--------|
 | 1 | `02_MEETINGS/2026-06-20-questionnaire-response.md` (THIS FILE) | ✅ Written |
-| 2 | `01_RESEARCH/brand-identity/kinky-store-assessment.md` | 🟡 Pending — needs DINAPI verification first |
+| 2 | `01_RESEARCH/brand-identity/kinky-store-assessment.md (⚠️ ARCHIVED — see enki-store-assessment.md)` | 🟡 Pending — needs DINAPI verification first |
 | 3 | `01_RESEARCH/brand-identity/launch-SKU-list-3-SKUs.md` | 🟡 Pending — depends on Pink Sexy Pill answer |
 | 4 | `00_STRATEGIC/financial-pricing/launch-budget-under-10M.md` | 🟡 Pending — can draft now with assumptions |
 | 5 | `00_STRATEGIC/financial-pricing/canonical-pricing-reference-v1.md` | 🔴 Blocked on Sarah's cost-basis PDF |
