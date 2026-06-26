@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>90-Day Post-Launch KPI Dashboard — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">03_LAUNCH/90-day-kpi-dashboard.md</div>
+<h1 id="90-day-post-launch-kpi-dashboard">90-Day Post-Launch KPI Dashboard</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Scope:</strong> Sarah's tracking system for first 90 days post-launch
+<strong>Tool:</strong> Google Sheets (free) or Brevo/Excel</p>
+<hr />
+<h2 id="dashboard-structure-5-categories-of-kpis">Dashboard structure (5 categories of KPIs)</h2>
+<h3 id="1-acquisition-kpis-how-customers-find-us">1. Acquisition KPIs (how customers find us)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th style="text-align: right;">Target</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IG impressions</strong></td>
+<td>Total views of IG content</td>
+<td style="text-align: right;">10K/week</td>
+<td>IG analytics</td>
+</tr>
+<tr>
+<td><strong>IG reach</strong></td>
+<td>Unique accounts reached</td>
+<td style="text-align: right;">5K/week</td>
+<td>IG analytics</td>
+</tr>
+<tr>
+<td><strong>IG engagement rate</strong></td>
+<td>(likes + comments + saves + shares) / followers × 100</td>
+<td style="text-align: right;">&gt;3%</td>
+<td>IG analytics</td>
+</tr>
+<tr>
+<td><strong>IG new followers</strong></td>
+<td>Net new followers per week</td>
+<td style="text-align: right;">+100/week</td>
+<td>IG analytics</td>
+</tr>
+<tr>
+<td><strong>Bio link clicks</strong></td>
+<td>Clicks to WA or subdomain</td>
+<td style="text-align: right;">200/week</td>
+<td>UTM tracked</td>
+</tr>
+<tr>
+<td><strong>TikTok views</strong> (Month 3+)</td>
+<td>Total video views</td>
+<td style="text-align: right;">5K/video</td>
+<td>TikTok analytics</td>
+</tr>
+<tr>
+<td><strong>Email list growth</strong></td>
+<td>New Brevo subscribers</td>
+<td style="text-align: right;">+30/week</td>
+<td>Brevo</td>
+</tr>
+<tr>
+<td><strong>B2B outreach visits</strong></td>
+<td>In-person shop visits</td>
+<td style="text-align: right;">2-3/week</td>
+<td>Manual log</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-conversion-kpis-how-they-become-customers">2. Conversion KPIs (how they become customers)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th style="text-align: right;">Target</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WA messages received</strong></td>
+<td>Total inbound WA messages</td>
+<td style="text-align: right;">30/week</td>
+<td>WA Business</td>
+</tr>
+<tr>
+<td><strong>WA → inquiry → order rate</strong></td>
+<td>% of WA messages that convert to order</td>
+<td style="text-align: right;">&gt;30%</td>
+<td>Manual log</td>
+</tr>
+<tr>
+<td><strong>Average response time</strong></td>
+<td>Avg time from customer message to Sarah's reply</td>
+<td style="text-align: right;">&lt;1 hour</td>
+<td>WA Business</td>
+</tr>
+<tr>
+<td><strong>Cart abandonment</strong></td>
+<td>% of customers who asked price but didn't order</td>
+<td style="text-align: right;">&lt;50%</td>
+<td>Manual log</td>
+</tr>
+<tr>
+<td><strong>AOV</strong></td>
+<td>Average order value</td>
+<td style="text-align: right;">&gt;Gs 130K</td>
+<td>Manual log</td>
+</tr>
+<tr>
+<td><strong>First-order rate</strong></td>
+<td>% of IG impressions → first order</td>
+<td style="text-align: right;">&gt;0.5%</td>
+<td>Calculated</td>
+</tr>
+<tr>
+<td><strong>Bundle attach rate</strong></td>
+<td>% of orders that include a bundle</td>
+<td style="text-align: right;">&gt;25%</td>
+<td>Manual log</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-retention-kpis-how-they-stay-customers">3. Retention KPIs (how they stay customers)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th style="text-align: right;">Target</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Repeat purchase rate (30d)</strong></td>
+<td>% of customers who buy again within 30 days</td>
+<td style="text-align: right;">&gt;15%</td>
+<td>Manual log</td>
+</tr>
+<tr>
+<td><strong>Repeat purchase rate (90d)</strong></td>
+<td>% who buy again within 90 days</td>
+<td style="text-align: right;">&gt;25%</td>
+<td>Manual log</td>
+</tr>
+<tr>
+<td><strong>Customer LTV (90d)</strong></td>
+<td>Avg revenue per customer in first 90 days</td>
+<td style="text-align: right;">&gt;Gs 150K</td>
+<td>Calculated</td>
+</tr>
+<tr>
+<td><strong>Email engagement</strong></td>
+<td>Open rate / click rate</td>
+<td style="text-align: right;">&gt;25% / &gt;3%</td>
+<td>Brevo</td>
+</tr>
+<tr>
+<td><strong>WA response rate</strong></td>
+<td>% of WA broadcasts opened</td>
+<td style="text-align: right;">&gt;70%</td>
+<td>WA Business</td>
+</tr>
+<tr>
+<td><strong>Referral rate</strong></td>
+<td>% of customers who refer someone</td>
+<td style="text-align: right;">&gt;15%</td>
+<td>Manual ask</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-operational-kpis-how-well-we-execute">4. Operational KPIs (how well we execute)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th style="text-align: right;">Target</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Orders processed per day</strong></td>
+<td>Avg daily order volume</td>
+<td style="text-align: right;">5-10 by Month 3</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td><strong>Pack + ship time</strong></td>
+<td>Avg time from order to ship</td>
+<td style="text-align: right;">&lt;24 hours</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td><strong>Pack + ship time (full)</strong></td>
+<td>Order to delivery</td>
+<td style="text-align: right;">&lt;72 hours Asunción</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td><strong>Returns rate</strong></td>
+<td>% of orders returned</td>
+<td style="text-align: right;">&lt;5%</td>
+<td>Returns SOP</td>
+</tr>
+<tr>
+<td><strong>Complaints per month</strong></td>
+<td># of complaints received</td>
+<td style="text-align: right;">&lt;3/month</td>
+<td>Returns SOP</td>
+</tr>
+<tr>
+<td><strong>Inventory accuracy</strong></td>
+<td>% of orders fulfilled without stockout</td>
+<td style="text-align: right;">&gt;98%</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td><strong>Customer satisfaction (NPS)</strong></td>
+<td>Would recommend?</td>
+<td style="text-align: right;">&gt;40 NPS</td>
+<td>Quarterly survey</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-financial-kpis-the-bottom-line">5. Financial KPIs (the bottom line)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th style="text-align: right;">Target</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monthly revenue</strong></td>
+<td>Total sales</td>
+<td style="text-align: right;">Gs 2.6M (M1) → Gs 14M (M6)</td>
+<td>Manual log</td>
+</tr>
+<tr>
+<td><strong>Monthly COGS</strong></td>
+<td>Total cost of goods sold</td>
+<td style="text-align: right;">38% of revenue</td>
+<td>Calculator</td>
+</tr>
+<tr>
+<td><strong>Gross margin</strong></td>
+<td>Revenue - COGS</td>
+<td style="text-align: right;">&gt;49%</td>
+<td>Calculator</td>
+</tr>
+<tr>
+<td><strong>Monthly net profit</strong></td>
+<td>After all costs</td>
+<td style="text-align: right;">&gt;0 by Month 3</td>
+<td>Cash flow model</td>
+</tr>
+<tr>
+<td><strong>Cumulative cash</strong></td>
+<td>Total cash in bank</td>
+<td style="text-align: right;">&gt;0 by Month 6</td>
+<td>Cash flow model</td>
+</tr>
+<tr>
+<td><strong>Burn rate</strong></td>
+<td>Monthly cash burn (if negative)</td>
+<td style="text-align: right;">&lt;Gs 5M</td>
+<td>Cash flow model</td>
+</tr>
+<tr>
+<td><strong>CAC</strong></td>
+<td>Customer Acquisition Cost</td>
+<td style="text-align: right;">&lt;Gs 30K</td>
+<td>Calculated</td>
+</tr>
+<tr>
+<td><strong>LTV/CAC ratio</strong></td>
+<td>LTV divided by CAC</td>
+<td style="text-align: right;">&gt;3:1</td>
+<td>Calculated</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="weekly-review-template">Weekly review template</h2>
+<pre><code>WEEK: [date]
+REVENUE THIS WEEK: Gs ___
+ORDERS THIS WEEK: ___
+NEW CUSTOMERS: ___
+REPEAT CUSTOMERS: ___
+CUMULATIVE ORDERS: ___
+
+ACQUISITION:
+- IG impressions: ___
+- Bio link clicks: ___
+- WA messages: ___
+
+CONVERSION:
+- Orders / WA messages: ___%
+- AOV: Gs ___
+- Bundle rate: ___%
+
+OPERATIONAL:
+- Avg pack+ship time: ___
+- Returns: ___
+- Stockouts: ___
+
+WINS:
+1. ___
+2. ___
+
+ISSUES:
+1. ___
+2. ___
+
+NEXT WEEK FOCUS:
+1. ___
+2. ___
+</code></pre>
+<hr />
+<h2 id="monthly-review-template">Monthly review template</h2>
+<pre><code>MONTH: ___
+REVENUE: Gs ___ (target: Gs ___)
+ORDERS: ___ (target: ___)
+NEW CUSTOMERS: ___
+REPEAT RATE (30d): ___%
+LTV: Gs ___
+CAC: Gs ___
+LTV/CAC: ___
+
+KPIs vs TARGET:
+- Revenue: ___% of target (🔴 &lt;80%, 🟡 80-100%, 🟢 &gt;100%)
+- Orders: ___% of target
+- AOV: ___% of target
+- Repeat: ___% of target
+
+WINS:
+1. ___
+ISSUES:
+1. ___
+ACTIONS:
+1. ___
+ADJUST FORECAST: Yes / No
+</code></pre>
+<hr />
+<h2 id="tracking-spreadsheet-google-sheets-template">Tracking spreadsheet (Google Sheets template)</h2>
+<h3 id="sheet-1-daily-tracker">Sheet 1: "Daily Tracker"</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th style="text-align: right;">Orders</th>
+<th style="text-align: right;">Units</th>
+<th style="text-align: right;">Revenue Gs</th>
+<th style="text-align: right;">WA msgs</th>
+<th style="text-align: right;">IG followers</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07-15</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">650K</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">+12</td>
+<td>Soft launch OK</td>
+</tr>
+<tr>
+<td>2026-07-16</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1,040K</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">+18</td>
+<td>Bitchie testimonial</td>
+</tr>
+<tr>
+<td>...</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sheet-2-customer-database">Sheet 2: "Customer Database"</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Customer</th>
+<th>Phone</th>
+<th>Order #</th>
+<th>SKU</th>
+<th>Quantity</th>
+<th style="text-align: right;">Revenue Gs</th>
+<th>Status</th>
+<th>Repeat?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-07-15</td>
+<td>María</td>
+<td>0981...</td>
+<td>001</td>
+<td>SEFB</td>
+<td>1</td>
+<td style="text-align: right;">130K</td>
+<td>Shipped</td>
+<td>No</td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sheet-3-kpi-weekly">Sheet 3: "KPI Weekly"</h3>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th style="text-align: right;">Revenue</th>
+<th style="text-align: right;">Orders</th>
+<th style="text-align: right;">AOV</th>
+<th style="text-align: right;">WA msgs</th>
+<th style="text-align: right;">Conv%</th>
+<th style="text-align: right;">IG new</th>
+<th style="text-align: right;">TikTok views</th>
+<th style="text-align: right;">Returns</th>
+<th style="text-align: right;">NPS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>...</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sheet-4-competitor-watch">Sheet 4: "Competitor Watch"</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Competitor</th>
+<th>SKU</th>
+<th style="text-align: right;">Their Price Gs</th>
+<th style="text-align: right;">Our Price Gs</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weekly</td>
+<td>SexShop.com.py</td>
+<td>Wet Anal</td>
+<td style="text-align: right;">~80K</td>
+<td style="text-align: right;">125K</td>
+<td>Their privacy claim</td>
+</tr>
+<tr>
+<td>Weekly</td>
+<td>Rivia</td>
+<td>Bitchie</td>
+<td style="text-align: right;">(no)</td>
+<td style="text-align: right;">130K</td>
+<td>We have unique product</td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sheet-5-inventory">Sheet 5: "Inventory"</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>SKU</th>
+<th style="text-align: right;">Stock in</th>
+<th style="text-align: right;">Stock out</th>
+<th style="text-align: right;">Stock on hand</th>
+<th>Reorder trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td>When &lt; 30 units</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="90-day-milestone-tracker">90-day milestone tracker</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Milestone</th>
+<th style="text-align: right;">Target</th>
+<th style="text-align: right;">Actual</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14</td>
+<td>Soft launch complete</td>
+<td style="text-align: right;">20 orders</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Public launch</td>
+<td style="text-align: right;">50 orders</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>First month end</td>
+<td style="text-align: right;">80 orders, Gs 10.4M revenue</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td>First micro-influencer collab</td>
+<td style="text-align: right;">+50 WA msgs</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>60</td>
+<td>Two months end</td>
+<td style="text-align: right;">150 orders, Gs 19.5M revenue</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>75</td>
+<td>TikTok @kinky_py launched</td>
+<td style="text-align: right;">1K followers</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>90</td>
+<td>Quarter end</td>
+<td style="text-align: right;">300 orders, Gs 39M revenue</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="forecasting-vs-actuals">Forecasting vs actuals</h2>
+<p><strong>At end of each month:</strong>
+1. Calculate actual revenue vs forecast (from <code>cash-flow-model-12mo.md</code>)
+2. If actual &lt;80% of forecast → trigger Plan B (Conservative scenario)
+3. If actual &gt;120% of forecast → trigger Plan C (Stretch scenario)
+4. Adjust all future months' forecast based on trajectory</p>
+<p><strong>Forecast tracking table:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Forecast (Gs)</th>
+<th style="text-align: right;">Actual (Gs)</th>
+<th style="text-align: right;">% of target</th>
+<th>Trajectory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.6M</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.9M</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6.5M</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9.1M</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11.7M</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">14.3M</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="variance-alerts">Variance alerts</h2>
+<p>When any KPI deviates by &gt;30% from target for 2 consecutive weeks:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orders down 30%+</td>
+<td>Check: stock, IG engagement, WA response time, competitor launch</td>
+</tr>
+<tr>
+<td>AOV down 30%+</td>
+<td>Check: bundle pricing, bundle visibility, mix shift</td>
+</tr>
+<tr>
+<td>Returns up 30%+</td>
+<td>Check: product quality, shipping damage, customer expectations</td>
+</tr>
+<tr>
+<td>New followers down 30%+</td>
+<td>Check: IG content quality, hashtag strategy, posting cadence</td>
+</tr>
+<tr>
+<td>Cash burn &gt; Gs 1M/mo</td>
+<td>Check: model旅行者 viability, despachante costs, marketing spend</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="reporting-cadence">Reporting cadence</h2>
+<table>
+<thead>
+<tr>
+<th>When</th>
+<th>What</th>
+<th>To whom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily</td>
+<td>Quick metrics check (orders, WA msgs)</td>
+<td>Sarah solo</td>
+</tr>
+<tr>
+<td>Weekly</td>
+<td>Weekly review template (fill)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>Monthly review + forecast vs actual</td>
+<td>Sarah + Kiki</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>KPI dashboard full review + strategy adjust</td>
+<td>Sarah + Kiki + Erebus</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tools-to-use">Tools to use</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Cost</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Google Sheets</strong></td>
+<td>Free</td>
+<td>All KPI tracking</td>
+</tr>
+<tr>
+<td><strong>IG Analytics</strong></td>
+<td>Free</td>
+<td>IG metrics</td>
+</tr>
+<tr>
+<td><strong>TikTok Analytics</strong></td>
+<td>Free</td>
+<td>TikTok metrics</td>
+</tr>
+<tr>
+<td><strong>Brevo</strong></td>
+<td>Free up to 300/day</td>
+<td>Email metrics</td>
+</tr>
+<tr>
+<td><strong>WhatsApp Business</strong></td>
+<td>Free</td>
+<td>WA metrics</td>
+</tr>
+<tr>
+<td><strong>Pricing calculator</strong> (this repo)</td>
+<td>Free</td>
+<td>Landed cost + margin</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Last updated: 2026-06-26 | Sarah: print + reference weekly</em></p>
+</div>
+</div>
+</body>
+</html>

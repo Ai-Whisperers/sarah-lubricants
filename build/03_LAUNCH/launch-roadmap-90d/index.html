@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Launch Roadmap — First 90 Days (Week-by-Week Gantt) — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">03_LAUNCH/launch-roadmap-90d.md</div>
+<h1 id="launch-roadmap-first-90-days-week-by-week-gantt">Launch Roadmap — First 90 Days (Week-by-Week Gantt)</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Scope:</strong> Sarah's pre-launch + soft launch + public launch + 60-day post-launch
+<strong>Format:</strong> Gantt-style weekly breakdown</p>
+<blockquote>
+<p>Assumes Sarah unblocks the 3 critical items (Q5 PDF, DINAPI, contador/despachante) by end of Week 1.</p>
+</blockquote>
+<hr />
+<h2 id="pre-launch-weeks-3-to-1-foundation">Pre-Launch (Weeks -3 to -1): Foundation</h2>
+<h3 id="week-3-3-weeks-before-launch">Week -3 (3 weeks before launch)</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Task</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>Review all repo docs (this file, pricing, brand, channel matrix)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Engage contador (top 3 from <code>py-vendor-shortlist.md</code>)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>Engage despachante (top 3 from same)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>Request Sexitive AR order + ask for Mayorista PDF (Q5)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>Verify DINAPI Enki (screenshot + classes 3, 5, 35)</td>
+<td>Sarah</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output:</strong> Contador + despachante engaged. Sexitive AR order initiated. DINAPI verified.</p>
+<h3 id="week-2-2-weeks-before-launch">Week -2 (2 weeks before launch)</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Task</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>File DINAVISA NSO for 3 SKUs (Bitchie, XXX, Wet Anal)</td>
+<td>Despachante</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Receive NSO confirmation (or ETA)</td>
+<td>Despachante</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>Order packaging from imprentas (La República / Pixxel / FullColor)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>Download WhatsApp Business + complete setup per <code>whatsapp-business-setup.md</code></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>Create 3 product cards in WA catalog</td>
+<td>Sarah</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output:</strong> DINAVISA in motion. Packaging ordered. WA Business live.</p>
+<h3 id="week-1-1-week-before-launch">Week -1 (1 week before launch)</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Task</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>Receive Sexitive AR shipment (modelo旅行者 or DHL)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Quality check + photograph products for IG + WA</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>Apply bilingual stickers (DINAVISA + importador info)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>Test full order flow end-to-end (1 sample order)</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>Schedule soft launch with 10 friends/family</td>
+<td>Sarah</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output:</strong> Stock on hand. IG content ready. Test order processed successfully.</p>
+<hr />
+<h2 id="soft-launch-weeks-12-validation">Soft Launch (Weeks 1–2): Validation</h2>
+<h3 id="week-1-test-with-trusted-audience">Week 1 — Test with trusted audience</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Task</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>Send soft-launch WA broadcast to 10 friends/family</td>
+<td>Validate WA funnel</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Process + ship 5-10 orders</td>
+<td>Test pack-ship SOP</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>Send Day 3 follow-up to first buyers</td>
+<td>Test retention message</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>IG post 1: trio launch announcement (organic, no paid)</td>
+<td>Test IG engagement</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>IG post 2: educational (lubricante 101)</td>
+<td>Test content resonance</td>
+</tr>
+<tr>
+<td>Sat</td>
+<td>IG stories (3-5): daily behind-the-scenes</td>
+<td>Build story cadence</td>
+</tr>
+<tr>
+<td>Sun</td>
+<td>OFF (or just 1 story)</td>
+<td>Rest</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Week 1 targets:</strong>
+- 10 orders processed
+- 5 IG posts published
+- 20+ IG stories
+- 30+ WA messages received
+- 1 customer testimonial captured</p>
+<h3 id="week-2-refine-based-on-feedback">Week 2 — Refine based on feedback</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Task</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>Review Week 1 metrics (orders, WA response time, IG engagement)</td>
+<td>Identify friction</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Fix pack-ship SOP gaps</td>
+<td>Operational excellence</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>First reorder if needed (modelo旅行者 30u of best sellers)</td>
+<td>Stock continuity</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>IG post 3: customer testimonial (with consent)</td>
+<td>Social proof</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>IG post 4: bundle pitch (trio)</td>
+<td>Cross-sell</td>
+</tr>
+<tr>
+<td>Sat</td>
+<td>Stories: FAQ format, polls</td>
+<td>Engagement</td>
+</tr>
+<tr>
+<td>Sun</td>
+<td>OFF</td>
+<td>Rest</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Week 2 targets:</strong>
+- 20 cumulative orders
+- 4 IG posts cumulative (8 total)
+- 60+ WA messages cumulative
+- 5+ customer reviews collected
+- SOPs documented</p>
+<hr />
+<h2 id="public-launch-weeks-34-marketing-push">Public Launch (Weeks 3–4): Marketing push</h2>
+<h3 id="week-3-public-announcement">Week 3 — Public announcement</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Task</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>Public launch post on IG (announcement + trio)</td>
+<td>Reach existing 20K audience</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Stories: "We launched!" + behind-the-scenes</td>
+<td>Awareness</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>WA broadcast to IG followers (with consent)</td>
+<td>Drive traffic</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>Email blast (Brevo): "We launched" + 10% off code</td>
+<td>Email list activation</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>First B2B wholesale visit (As Bajo La Manga, top priority)</td>
+<td>B2B channel kickoff</td>
+</tr>
+<tr>
+<td>Sat</td>
+<td>TikTok first video (organic, no paid)</td>
+<td>Test platform</td>
+</tr>
+<tr>
+<td>Sun</td>
+<td>OFF</td>
+<td>Rest</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Week 3 targets:</strong>
+- 50 cumulative orders
+- 100+ WA messages cumulative
+- 1 B2B buyer signed
+- IG engagement &gt;3% on launch post
+- First TikTok video &gt;500 views</p>
+<h3 id="week-4-optimization">Week 4 — Optimization</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Task</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>Review Week 3 metrics</td>
+<td>Refine</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Adjust pricing if needed (based on demand)</td>
+<td>Margin optimization</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>IG carousel: educational content</td>
+<td>Organic reach</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>Email: 5-day launch update</td>
+<td>Nurture</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>Second B2B visit (SexShop.com.py)</td>
+<td>B2B expansion</td>
+</tr>
+<tr>
+<td>Sat</td>
+<td>IG Live Q&amp;A</td>
+<td>Audience engagement</td>
+</tr>
+<tr>
+<td>Sun</td>
+<td>OFF</td>
+<td>Rest</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Week 4 targets:</strong>
+- 80 cumulative orders
+- 3 B2B buyers signed (Tier 1)
+- 200+ IG followers gained (from launch push)
+- Brevo email list &gt;100 subscribers</p>
+<hr />
+<h2 id="post-launch-months-23-optimization-scale">Post-Launch Months 2–3: Optimization + Scale</h2>
+<h3 id="month-2-weeks-58">Month 2 (Weeks 5–8)</h3>
+<p><strong>Focus:</strong> Optimize + grow DTC, expand B2B</p>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Optimize WA response time, add more quick replies, refine catalog</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Run first micro-influencer collaboration (per <code>py-micro-influencer-list.md</code>)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Add 1-2 new SKUs (Wet Like a Virgin, FH01 For Him)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>First retargeting campaign (email + IG) for non-converters</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Month 2 targets:</strong>
+- 150 cumulative orders
+- Revenue Gs 19.5M
+- 3-5 B2B buyers
+- 2 micro-influencer collabs done
+- 2 new SKUs in catalog</p>
+<h3 id="month-3-weeks-912">Month 3 (Weeks 9–12)</h3>
+<p><strong>Focus:</strong> TikTok launch + email automation + referral program</p>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>Launch @kinky_py TikTok account (per <code>tiktok-py-audit.md</code>)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Build email automation (Brevo): welcome, abandoned cart, post-purchase</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Set up MercadoLibre PY listing (test 1 SKU, per <code>sales-channels-matrix.md</code>)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Launch referral program (10% off for both referrer + referee)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Month 3 targets:</strong>
+- 300 cumulative orders
+- Revenue Gs 39M
+- 5-7 B2B buyers
+- TikTok @kinky_py at 1K followers
+- 200+ email subscribers</p>
+<hr />
+<h2 id="critical-milestones-90-day-markers">Critical milestones (90-day markers)</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Milestone</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Day 0</td>
+<td>Repo docs complete (strategy + ops + marketing)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Day -7</td>
+<td>Stock arrives, WA Business live, soft launch prep</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>Day 0</td>
+<td>Soft launch with 10 friends/family</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>Day 14</td>
+<td>Public launch (IG announcement + WA broadcast)</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>Day 30</td>
+<td>80 cumulative orders, 3 B2B buyers</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>Day 60</td>
+<td>150 cumulative orders, TikTok launch, email automation</td>
+<td>⏳</td>
+</tr>
+<tr>
+<td>Day 90</td>
+<td>300 cumulative orders, 5-7 B2B buyers, Month 3 run-rate Gs 6.5M/mo</td>
+<td>⏳</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dependencies">Dependencies</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Depends on</th>
+<th>Risk if delayed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DINAVISA NSO</td>
+<td>Despachante engaged</td>
+<td>Delays launch 2-4 weeks</td>
+</tr>
+<tr>
+<td>Sexitive AR shipment</td>
+<td>Order + payment + travel</td>
+<td>Delays launch 2-3 weeks</td>
+</tr>
+<tr>
+<td>Packaging</td>
+<td>Imprentas turnaround</td>
+<td>Delays launch 1-2 weeks</td>
+</tr>
+<tr>
+<td>Logo (optional)</td>
+<td>Designer turnaround</td>
+<td>Not blocking (can launch without)</td>
+</tr>
+<tr>
+<td>DINAPI verification</td>
+<td>Sarah's DINAPI paperwork</td>
+<td>If issue: 30-60d amendment</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="backup-plans">Backup plans</h2>
+<table>
+<thead>
+<tr>
+<th>Plan A (normal)</th>
+<th>Plan B (delayed DINAVISA)</th>
+<th>Plan C (no DINAVISA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full launch Week 4</td>
+<td>Launch Week 6-8 with caution</td>
+<td>Modelo旅行者 only, 3-6 shipments max</td>
+</tr>
+<tr>
+<td>Full marketing push</td>
+<td>Reduced paid, organic focus</td>
+<td>Only personal WA network</td>
+</tr>
+<tr>
+<td>All 3 SKUs at launch</td>
+<td>Launch with 1 SKU (Bitchie first)</td>
+<td>Launch with 1 SKU</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-success-looks-like-at-each-checkpoint">What "success" looks like at each checkpoint</h2>
+<h3 id="day-30-success">Day 30 success</h3>
+<ul>
+<li>✅ Launched without major issues</li>
+<li>✅ 80+ orders processed</li>
+<li>✅ 3+ B2B buyers signed</li>
+<li>✅ Customer satisfaction &gt;90% (no major complaints)</li>
+<li>✅ Cash flow positive or break-even</li>
+</ul>
+<h3 id="day-60-success">Day 60 success</h3>
+<ul>
+<li>✅ 150+ orders processed</li>
+<li>✅ 5-7 B2B buyers active</li>
+<li>✅ TikTok @kinky_py launched (1K+ followers)</li>
+<li>✅ Email list growing</li>
+<li>✅ Repeat purchase rate &gt;20%</li>
+</ul>
+<h3 id="day-90-success">Day 90 success</h3>
+<ul>
+<li>✅ 300+ cumulative orders</li>
+<li>✅ Run-rate Gs 6.5M/month (Recommended scenario)</li>
+<li>✅ 2-3 new SKUs in catalog</li>
+<li>✅ Influencer collabs producing results</li>
+<li>✅ Clear path to Year 2 scale</li>
+</ul>
+<hr />
+<h2 id="sarahs-daily-checklist-post-launch">Sarah's daily checklist (post-launch)</h2>
+<pre><code>DAILY CHECKLIST (Mon-Sat)
+□ Respond to all WA messages (target: within 1h)
+□ Pack + ship today's orders
+□ Post 1 IG story (with product mention)
+□ Update order tracking spreadsheet
+□ Check payment receipts
+
+WEEKLY CHECKLIST (Sunday)
+□ Reconcile orders vs. payments
+□ Inventory check (what needs reorder?)
+□ Plan next week's content calendar
+□ Check IG/email metrics
+□ Refine SOPs based on friction
+
+MONTHLY CHECKLIST (first week of month)
+□ Bookkeeping (contador)
+□ IVA filing
+□ Review vs. forecast (cash-flow-model-12mo.md)
+□ Adjust strategy based on data
+□ Pay any vendors (despachante, imprentas, courier)
+</code></pre>
+<hr />
+<p><em>Last updated: 2026-06-26 | Sarah: print this + reference weekly</em></p>
+</div>
+</div>
+</body>
+</html>
