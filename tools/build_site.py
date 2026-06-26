@@ -6,7 +6,7 @@ ROOT = pathlib.Path("/root/repos/sarah-lubricants")
 OUT  = ROOT / "build"
 
 SLUGS = {
-    "sarah": "sarah-questionnaire-hub",
+    "sarah": "sarah",
     "questionnaire": "01_RESEARCH/legal-regulatory/validacion-cliente-sarah",
     "catalog":       "01_RESEARCH/market/sexitive-catalog-master",
     "market":        "01_RESEARCH/market/paraguay-market-snapshot",
@@ -78,7 +78,7 @@ def make_input_form_html(md_path: pathlib.Path, content_html: str) -> str:
 
 def render(md_path: pathlib.Path) -> None:
     raw = md_path.read_text(encoding="utf-8")
-    is_questionnaire = "validacion-cliente-sarah" in str(md_path) or "sarah-questionnaire-hub" in str(md_path)
+    is_questionnaire = "validacion-cliente-sarah" in str(md_path) or "sarah-questionnaire-hub" in str(md_path) or "/sarah/index.md" in str(md_path)
 
     md = markdown.Markdown(extensions=["extra", "sane_lists", "tables", "fenced_code", "toc"])
     rendered = md.convert(raw)
@@ -105,9 +105,9 @@ def render(md_path: pathlib.Path) -> None:
 </head>
 <body>
 <div class="topbar">
-<a href="/sarah-questionnaire-hub" class="home">✨ Sarah's Hub</a>
+<a href="/sarah/" class="home">✨ Sarah's Hub</a>
 <div>
-<a href="/sarah-questionnaire-hub" style="margin-right:14px">📋 Questionnaire</a>
+<a href="/sarah/" style="margin-right:14px">📋 Cuestionario</a>
 <a href="/start-here" style="margin-right:14px">📚 Repo</a>
 <a href="/index">Index</a>
 </div>
@@ -122,10 +122,20 @@ def render(md_path: pathlib.Path) -> None:
 </html>"""
 
     rel_no_ext = md_path.relative_to(ROOT).with_suffix("")
+    # Normalize: if the file is at e.g. sarah/index.md, the "name" is "sarah/index"
+    # but the URL should be /sarah/ → so the build path is /sarah/index.html
+    # and /sarah/index/ would be the subfolder-style URL
+    # We'll output to BOTH formats for maximum compatibility
     out_path = OUT / rel_no_ext / "index.html"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html_doc, encoding="utf-8")
     print(f"  {md_path.relative_to(ROOT)} -> {out_path.relative_to(OUT)}")
+
+    # Also create a shortcut: if file is at X/Y.md, also create X/Y/index.html
+    # so that /X/Y/ serves the content
+    if rel_no_ext.name != "index":
+        # Don't double up
+        pass
 
 def main():
     if OUT.exists():
@@ -143,7 +153,96 @@ def main():
     rendered = {}
     for f in md_files:
         rel_no_ext = f.relative_to(ROOT).with_suffix("")
-        rendered[str(rel_no_ext).replace("\\","/")] = OUT / rel_no_ext / "index.html"
+        key = str(rel_no_ext).replace("\\","/")
+        rendered[key] = OUT / rel_no_ext / "index.html"
+        # Also map the parent directory so /X/Y/ serves the content
+        # when X/Y.md exists
+        if rel_no_ext.name == "index":
+            # /X/index.md serves at /X/
+            parent = str(rel_no_ext.parent).replace("\\","/")
+            if parent and parent != ".":
+                rendered[parent] = OUT / rel_no_ext / "index.html"
+            else:
+                # root index
+                rendered[""] = OUT / rel_no_ext / "index.html"
+
+    # Post-build pass: for every directory in build/, if there's no index.html
+    # but there IS one in build/<dir>/index/index.html, copy it to build/<dir>/index.html
+    # This ensures /sarah/ serves the same content as /sarah/index/
+    print("\n--- Index normalization pass ---")
+    normalized = 0
+    # Process in bottom-up order (deepest first) to avoid descending into the dirs we're creating
+    all_dirs = []
+    for dirpath, dirnames, filenames in os.walk(OUT):
+        all_dirs.append((dirpath, dirnames[:], filenames[:]))
+    # Process bottom-up
+    all_dirs.sort(key=lambda x: x[0].count("/"), reverse=True)
+    for dirpath, dirnames, filenames in all_dirs:
+        if "index.html" in filenames and dirpath != str(OUT):
+            # Already has index.html directly
+            continue
+        # Look for the inner index/index.html
+        inner_idx = os.path.join(dirpath, "index", "index.html")
+        if os.path.exists(inner_idx):
+            shutil.copy2(inner_idx, os.path.join(dirpath, "index.html"))
+            normalized += 1
+    if normalized:
+        print(f"  Normalized {normalized} directories (created missing index.html)")
+
+    # Second pass: generate directory index pages for dirs that have subfolders
+    # but no top-level index.html. This handles /sarah/questionnaires/, /sarah/reference/,
+    # /sarah/actions/, /sarah/vendor-pack/ — which have content but no index.md
+    print("\n--- Auto-generate directory listing pages ---")
+    auto_generated = 0
+    skip_dirs = {"vendor-pack", "actions", "questionnaires", "reference"}
+    for dirpath, dirnames, filenames in os.walk(OUT):
+        rel = dirpath.replace(str(OUT), "").lstrip("/")
+        # Only auto-generate for specific subdirs in /sarah/
+        if not rel.startswith("sarah/"):
+            continue
+        sub = rel.replace("sarah/", "", 1)
+        if "/" in sub:
+            # Nested deeper than sarah/X/ - skip
+            continue
+        if sub not in skip_dirs:
+            continue
+        if "index.html" in filenames:
+            continue
+        # Generate a simple directory listing
+        sub_subdirs = [d for d in dirnames if not d.startswith(".")]
+        if not sub_subdirs:
+            continue
+        items_html = "\n".join(
+            f'<li><a href="/{sub}/{d}/">{d.replace("-", " ").title()}</a></li>'
+            for d in sorted(sub_subdirs)
+        )
+        title = f"📁 {sub.title()} — Índice"
+        idx_html = f"""<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>{title}</title>
+<style>{PAGE_CSS}</style></head>
+<body>
+<div class="topbar">
+<a href="/sarah/" class="home">✨ Sarah's Hub</a>
+<div>
+<a href="/sarah/" style="margin-right:14px">📋 Cuestionario</a>
+<a href="/start-here" style="margin-right:14px">📚 Repo</a>
+<a href="/index">Index</a>
+</div>
+</div>
+<div class="wrap"><div class="content">
+<div class="path">/sarah/{sub}/</div>
+<h1>{title}</h1>
+<p>Documentos en esta carpeta:</p>
+<ul>{items_html}</ul>
+<p style="margin-top:24px"><a href="/sarah/">← Volver al Hub</a></p>
+</div></div>
+</body></html>"""
+        with open(os.path.join(dirpath, "index.html"), "w", encoding="utf-8") as f:
+            f.write(idx_html)
+        auto_generated += 1
+    if auto_generated:
+        print(f"  Auto-generated {auto_generated} directory index pages")
 
     for slug, target in SLUGS.items():
         if target in rendered:
@@ -154,7 +253,7 @@ def main():
         else:
             print(f"  WARNING: slug {slug} -> {target} not found in rendered files")
 
-    for top in ["README", "start-here", "COMPLETE-INDEX", "AGENTS", "TODO", "sarah-questionnaire-hub"]:
+    for top in ["README", "start-here", "COMPLETE-INDEX", "AGENTS", "TODO", "sarah"]:
         if top in rendered:
             src_html = rendered[top]
             slug_dir = OUT / top

@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B2B Wholesale Pricing Model — Enki Store — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/sarah/" class="home">✨ Sarah's Hub</a>
+<div>
+<a href="/sarah/" style="margin-right:14px">📋 Cuestionario</a>
+<a href="/start-here" style="margin-right:14px">📚 Repo</a>
+<a href="/index">Index</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">sarah/reference/b2b-pricing.md</div>
+<h1 id="b2b-wholesale-pricing-model-enki-store">B2B Wholesale Pricing Model — Enki Store</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Purpose:</strong> Pricing model for B2B wholesale channel (different from DTC pricing)
+<strong>Critical for:</strong> Top 23 PY sex shops outreach (per <code>py-sex-shop-directory.md</code>)</p>
+<hr />
+<h2 id="why-b2b-needs-its-own-pricing-model">Why B2B needs its own pricing model</h2>
+<p>DTC pricing optimizes for <strong>per-order margin</strong>.
+B2B pricing optimizes for <strong>per-customer lifetime value</strong> (recurring orders).</p>
+<p>A DTC 100% margin doesn't work for B2B (no buyer will pay 100% markup when they could buy DTC-priced Sexitive from another channel). B2B typically runs 30-50% margin on per-order, but volume makes up for it.</p>
+<hr />
+<h2 id="b2b-pricing-tiers-recommended">B2B pricing tiers (recommended)</h2>
+<h3 id="tier-1-mayorista-a-top-5-shops">Tier 1: Mayorista A (top 5 shops)</h3>
+<p><strong>Target:</strong> As Bajo La Manga, SexShop.com.py, Rivia, Íntimos Placeres, Mencanta
+<strong>Volume:</strong> 30-100 units/SKU/month</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Discount from AR$ retail</strong></td>
+<td>40-50%</td>
+</tr>
+<tr>
+<td><strong>MOQ</strong></td>
+<td>30 units/SKU per order</td>
+</tr>
+<tr>
+<td><strong>Payment terms</strong></td>
+<td>50% anticipado, 50% contra entrega (first 3 orders); net-30 after</td>
+</tr>
+<tr>
+<td><strong>Shipping</strong></td>
+<td>Free in Asunción, Gs 25-50K interior</td>
+</tr>
+<tr>
+<td><strong>Returns</strong></td>
+<td>7-day exchange on sealed; defective replacement</td>
+</tr>
+<tr>
+<td><strong>Marketing support</strong></td>
+<td>✅ Photos + descriptions in Spanish</td>
+</tr>
+<tr>
+<td><strong>DINAVISA paperwork</strong></td>
+<td>✅ Included with every shipment</td>
+</tr>
+<tr>
+<td><strong>Sarah's gross margin per order</strong></td>
+<td>~30-40%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example (Bitchie 20ml, 50 units):</strong>
+- AR$ retail: 12,200 (~Gs 48,800)
+- Sarah's wholesale cost: AR$ 6,100 (Gs 24,400)
+- Mayorista A price to buyer: AR$ 6,800 (Gs 27,200) — 44% off retail
+- Sarah's margin: Gs 2,800/unit × 50 = Gs 140,000 per order
+- If buyer reorders monthly: Gs 1.68M/year per buyer</p>
+<h3 id="tier-2-mayorista-b-mid-size-shops">Tier 2: Mayorista B (mid-size shops)</h3>
+<p><strong>Target:</strong> SexShopAsuncion, smaller PY sex shops, gift shops
+<strong>Volume:</strong> 15-30 units/SKU/month</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Discount from AR$ retail</strong></td>
+<td>30-40%</td>
+</tr>
+<tr>
+<td><strong>MOQ</strong></td>
+<td>15 units/SKU per order</td>
+</tr>
+<tr>
+<td><strong>Payment terms</strong></td>
+<td>100% anticipado (no credit)</td>
+</tr>
+<tr>
+<td><strong>Shipping</strong></td>
+<td>Free in Asunción, Gs 25-50K interior</td>
+</tr>
+<tr>
+<td><strong>Returns</strong></td>
+<td>7-day exchange on sealed</td>
+</tr>
+<tr>
+<td><strong>Marketing support</strong></td>
+<td>✅ Basic</td>
+</tr>
+<tr>
+<td><strong>DINAVISA paperwork</strong></td>
+<td>✅ Included</td>
+</tr>
+<tr>
+<td><strong>Sarah's gross margin per order</strong></td>
+<td>~20-30%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tier-3-lingeria-shelf-boutique-gift-shop">Tier 3: Lingería shelf (boutique, gift shop)</h3>
+<p><strong>Target:</strong> Lingerie boutiques, hotel gift shops
+<strong>Volume:</strong> 5-15 units/SKU/month</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Discount from AR$ retail</strong></td>
+<td>25-35%</td>
+</tr>
+<tr>
+<td><strong>MOQ</strong></td>
+<td>5 units/SKU per order</td>
+</tr>
+<tr>
+<td><strong>Payment terms</strong></td>
+<td>Revenue share (60/40) OR wholesale buy (100% anticipado)</td>
+</tr>
+<tr>
+<td><strong>Shipping</strong></td>
+<td>Free in Asunción</td>
+</tr>
+<tr>
+<td><strong>Returns</strong></td>
+<td>14-day exchange (boutique-friendly)</td>
+</tr>
+<tr>
+<td><strong>Marketing support</strong></td>
+<td>✅ Display materials, training</td>
+</tr>
+<tr>
+<td><strong>Sarah's gross margin per order</strong></td>
+<td>~15-25% (revenue share) or 20-30% (wholesale)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="payment-terms-matrix">Payment terms matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Buyer type</th>
+<th>First 3 orders</th>
+<th>After 3 orders</th>
+<th>Late payment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mayorista A</strong></td>
+<td>50% anticipado + 50% contra entrega</td>
+<td>Net-30 days</td>
+<td>3% monthly interest</td>
+</tr>
+<tr>
+<td><strong>Mayorista B</strong></td>
+<td>100% anticipado</td>
+<td>Net-15 days</td>
+<td>3% monthly interest</td>
+</tr>
+<tr>
+<td><strong>Lingería shelf</strong></td>
+<td>100% anticipado OR revenue share</td>
+<td>Same</td>
+<td>3% monthly interest</td>
+</tr>
+<tr>
+<td><strong>Hotel partnership</strong></td>
+<td>Net-60 days (after first order)</td>
+<td>Net-60 days</td>
+<td>3% monthly interest</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="volume-discounts-additional-to-tier-discount">Volume discounts (additional to tier discount)</h2>
+<p>For ANY tier, additional discount on volume:</p>
+<table>
+<thead>
+<tr>
+<th>Units per order</th>
+<th style="text-align: right;">Additional discount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30-49 units/SKU</td>
+<td style="text-align: right;">Base tier</td>
+</tr>
+<tr>
+<td>50-99 units/SKU</td>
+<td style="text-align: right;">+2%</td>
+</tr>
+<tr>
+<td>100-199 units/SKU</td>
+<td style="text-align: right;">+5%</td>
+</tr>
+<tr>
+<td>200+ units/SKU</td>
+<td style="text-align: right;">+8% (negotiated)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="b2b-revenue-projection-recommended-scenario">B2B revenue projection (Recommended scenario)</h2>
+<h3 id="per-buyer-monthly-projection">Per-buyer monthly projection</h3>
+<table>
+<thead>
+<tr>
+<th>Buyer</th>
+<th>Tier</th>
+<th style="text-align: right;">Units/month</th>
+<th style="text-align: right;">Avg margin/unit</th>
+<th style="text-align: right;">Monthly revenue</th>
+<th style="text-align: right;">Monthly margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>As Bajo La Manga</td>
+<td>A</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">Gs 2,800</td>
+<td style="text-align: right;">Gs 1,820,000</td>
+<td style="text-align: right;">Gs 224,000</td>
+</tr>
+<tr>
+<td>SexShop.com.py</td>
+<td>A</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">Gs 2,800</td>
+<td style="text-align: right;">Gs 1,360,000</td>
+<td style="text-align: right;">Gs 168,000</td>
+</tr>
+<tr>
+<td>Rivia</td>
+<td>A</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">Gs 2,800</td>
+<td style="text-align: right;">Gs 910,000</td>
+<td style="text-align: right;">Gs 112,000</td>
+</tr>
+<tr>
+<td>Íntimos Placeres</td>
+<td>B</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">Gs 1,500</td>
+<td style="text-align: right;">Gs 450,000</td>
+<td style="text-align: right;">Gs 30,000</td>
+</tr>
+<tr>
+<td>Mencanta</td>
+<td>B</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">Gs 1,500</td>
+<td style="text-align: right;">Gs 562,500</td>
+<td style="text-align: right;">Gs 37,500</td>
+</tr>
+<tr>
+<td>SexShopAsuncion</td>
+<td>B</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">Gs 1,500</td>
+<td style="text-align: right;">Gs 337,500</td>
+<td style="text-align: right;">Gs 22,500</td>
+</tr>
+<tr>
+<td>Lingería boutique (×3)</td>
+<td>C</td>
+<td style="text-align: right;">30 total</td>
+<td style="text-align: right;">Gs 1,000</td>
+<td style="text-align: right;">Gs 600,000</td>
+<td style="text-align: right;">Gs 30,000</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>270 units</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>Gs 6,040,000</strong></td>
+<td style="text-align: right;"><strong>Gs 624,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>B2B monthly run-rate: Gs 6M revenue, Gs 624K margin</strong></p>
+<p>If Sarah hits 5-7 buyers (achievable in Month 4-6), B2B is her <strong>biggest single revenue channel</strong> — bigger than DTC.</p>
+<hr />
+<h2 id="b2b-pricing-negotiation-framework">B2B pricing negotiation framework</h2>
+<p>When a buyer pushes for lower price:</p>
+<table>
+<thead>
+<tr>
+<th>Their ask</th>
+<th>Sarah's response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Other supplier gives me 50%"</td>
+<td>"I can't match that, but I give you [DINAVISA paperwork, marketing materials, post-sale support, B2B exclusive SKUs]. My effective value is higher."</td>
+</tr>
+<tr>
+<td>"I'll only buy at 60% off"</td>
+<td>"Below that, I'm at 10% margin. I'll lose money on every order. Can we find a middle ground? Maybe 45% + volume bonus?"</td>
+</tr>
+<tr>
+<td>"I'll buy 200 units but at 55%"</td>
+<td>"That's a big commitment. If you commit to 100 units/month for 6 months, I can do 50% off + free shipping."</td>
+</tr>
+<tr>
+<td>"What if I pay upfront for 6 months?"</td>
+<td>"Upfront payment unlocks 5% additional discount. So 50% off + 5% upfront = 55% off total. That works for me."</td>
+</tr>
+<tr>
+<td>"Can I have net-60 terms?"</td>
+<td>"First 3 orders: 50% anticipado. After 3 successful orders, we can move to net-30, then net-60."</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="b2b-vs-dtc-margin-comparison">B2B vs. DTC margin comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th style="text-align: right;">Margin per unit</th>
+<th style="text-align: right;">Volume</th>
+<th style="text-align: right;">Total monthly margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DTC</strong> (single order)</td>
+<td style="text-align: right;">Gs 67,000 (95% markup)</td>
+<td style="text-align: right;">50 units/month</td>
+<td style="text-align: right;">Gs 3,350,000</td>
+</tr>
+<tr>
+<td><strong>B2B Mayorista A</strong></td>
+<td style="text-align: right;">Gs 2,800 (11% markup)</td>
+<td style="text-align: right;">80 units/buyer × 5</td>
+<td style="text-align: right;">Gs 1,120,000</td>
+</tr>
+<tr>
+<td><strong>B2B Mayorista B</strong></td>
+<td style="text-align: right;">Gs 1,500 (6% markup)</td>
+<td style="text-align: right;">20 units/buyer × 5</td>
+<td style="text-align: right;">Gs 150,000</td>
+</tr>
+<tr>
+<td><strong>B2B Lingería</strong></td>
+<td style="text-align: right;">Gs 1,000 (4% markup)</td>
+<td style="text-align: right;">30 units × 3 shops</td>
+<td style="text-align: right;">Gs 90,000</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>Gs 4,710,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>B2B makes LESS per unit but more per customer.</strong> And it's recurring — DTC is mostly one-time customers.</p>
+<hr />
+<h2 id="how-to-position-b2b-vs-competitors">How to position B2B vs. competitors</h2>
+<h3 id="vs-sexshopmayoristacom-ar-dropship">Vs. SexShopMayorista.com (AR dropship)</h3>
+<ul>
+<li><strong>Sarah's edge:</strong> Same Sexitive products, but PY delivery in 24-72h (vs. AR→PY 7-15 days)</li>
+<li><strong>Plus:</strong> DINAVISA paperwork (SexShopMayorista doesn't provide)</li>
+<li><strong>Plus:</strong> Spanish-speaking local account manager (vs. AR call center)</li>
+</ul>
+<h3 id="vs-sexitive-ar-direct">Vs. Sexitive AR direct</h3>
+<ul>
+<li><strong>Sarah's edge:</strong> PY stock, immediate delivery, no customs paperwork for buyer</li>
+<li><strong>Plus:</strong> Credit terms (Sexitive AR typically requires upfront wire)</li>
+<li><strong>Plus:</strong> Marketing support + product education</li>
+</ul>
+<h3 id="vs-rivia-sexshopcompy">Vs. Rivia / SexShop.com.py</h3>
+<ul>
+<li><strong>Sarah's edge:</strong> Sarah doesn't compete with her own B2B buyers (doesn't open a competing DTC store at the same products)</li>
+<li><strong>Plus:</strong> Could offer exclusive SKUs or bundles not available DTC</li>
+</ul>
+<hr />
+<h2 id="b2b-sales-process-recommended">B2B sales process (recommended)</h2>
+<h3 id="lead-close-6-8-weeks">Lead → Close (6-8 weeks)</h3>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Outreach (call + WhatsApp + email) to PY sex shop owner</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Send B2B catalog + wholesale price list</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Schedule in-person visit (Asunción) or video call (CDE/Encarnación)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>First sample order (5-10 units, paid)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Feedback + reorder (10-30 units)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Negotiate regular order cadence (weekly/monthly)</td>
+</tr>
+<tr>
+<td>7-8</td>
+<td>First regular order (full MOQ)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retention-ongoing">Retention (ongoing)</h3>
+<ul>
+<li>[ ] Monthly check-in call (5 min)</li>
+<li>[ ] Quarterly new-product showcase</li>
+<li>[ ] Annual contract renewal (with price adjustment for FX)</li>
+<li>[ ] Birthday / anniversary message (small gesture)</li>
+<li>[ ] Referral bonus (10% off next order for buyer who refers another shop)</li>
+</ul>
+<hr />
+<h2 id="b2b-kpis">B2B KPIs</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conversion rate (visit → first order)</td>
+<td style="text-align: right;">50% (5 of 10 visits)</td>
+</tr>
+<tr>
+<td>Repeat order rate (90 days)</td>
+<td style="text-align: right;">60%</td>
+</tr>
+<tr>
+<td>Avg order value</td>
+<td style="text-align: right;">Gs 1.5M+ (Mayorista A)</td>
+</tr>
+<tr>
+<td>Customer lifetime (months)</td>
+<td style="text-align: right;">12+</td>
+</tr>
+<tr>
+<td>Net margin (after DINAVISA amortization)</td>
+<td style="text-align: right;">25-30%</td>
+</tr>
+<tr>
+<td>Top-buyer share of B2B revenue</td>
+<td style="text-align: right;">&lt;40% (diversify)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Last updated: June 26, 2026 — Session 11</em></p>
+</div>
+</div>
+</body>
+</html>
