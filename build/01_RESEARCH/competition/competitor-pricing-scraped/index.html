@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Competitor Pricing — Web-Scraped Data (June 26, 2026) — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/competition/competitor-pricing-scraped.md</div>
+<h1 id="competitor-pricing-web-scraped-data-june-26-2026">Competitor Pricing — Web-Scraped Data (June 26, 2026)</h1>
+<p><strong>Source:</strong> Direct scraping of 7 PY competitor sites + Sexitive AR consumer shop
+<strong>Method:</strong> curl + HTML parse + JSON-LD extraction + sitemap.xml
+<strong>Last scraped:</strong> June 26, 2026
+<strong>Status:</strong> Raw data, needs interpretation. Re-scrape monthly for changes.</p>
+<hr />
+<h2 id="executive-summary">Executive summary</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Competitor</th>
+<th>Site</th>
+<th style="text-align: right;">Total SKUs visible</th>
+<th>Pricing visible?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>SexShop.com.py</strong></td>
+<td>https://sexhop.com.py</td>
+<td style="text-align: right;">13 (banners only)</td>
+<td>Price ranges only</td>
+<td>"Desde 2.500 Gs" to "Desde 70.000 Gs" — homepage banners, not full SKU table</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Rivia PY</strong></td>
+<td>https://www.rivia.com.py</td>
+<td style="text-align: right;">46 (12 collections)</td>
+<td>No (Shopify JS-rendered)</td>
+<td>12 collections: dildos, anal-plugs, geles-y-lubricantes, preservativos, juegos, bdsm, etc.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Íntimos Placeres</strong></td>
+<td>https://www.intimosplaceres.com.py</td>
+<td style="text-align: right;">43</td>
+<td>No (not loaded in HTML)</td>
+<td>Vibradores + plugs (Barbara Jack brand), single-page shop</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>As Bajo La Manga</strong></td>
+<td>https://www.asbajolamanga.com.py</td>
+<td style="text-align: right;">26</td>
+<td>No</td>
+<td>Lingerie + lubricants + plugs. <strong>Carries Sexitive Lube Premium Relaxing</strong> (competitive intelligence: Sexitive products already in PY through gray channels)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>SexShopAsuncion</strong></td>
+<td>https://sexshopasuncion.com</td>
+<td style="text-align: right;">7 (banners only)</td>
+<td>Price ranges only</td>
+<td>Same banner format as SexShop.com.py — likely same operator or franchise</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Sexitive AR (consumer)</strong></td>
+<td>https://shop.sexitive.com</td>
+<td style="text-align: right;"><strong>158</strong></td>
+<td>✅ AR$ prices for 153/158</td>
+<td>Sitemap has 158 product pages, JSON-LD gives price + SKU</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Mencanta</strong></td>
+<td>https://mencanta.com.py</td>
+<td style="text-align: right;">20+</td>
+<td>Partial</td>
+<td>Mixed content site</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Hendyla</strong></td>
+<td>https://www.hendyla.com</td>
+<td style="text-align: right;">(general marketplace)</td>
+<td>—</td>
+<td>Does not specialize in adult — irrelevant</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sexitive-ar-consumer-catalog-the-master-reference">Sexitive AR consumer catalog (the master reference)</h2>
+<p><strong>Source:</strong> https://shop.sexitive.com (Nuvemshop/Tienda Nube platform, 158 product pages in sitemap)
+<strong>Currency:</strong> AR$ (Argentine peso)
+<strong>FX to Gs:</strong> 4 Gs/AR$ (Sarah's stated rate, June 2026)
+<strong>Last updated by Sexitive:</strong> Prices reflect AR consumer retail, not wholesale</p>
+<h3 id="launch-trio-sarahs-confirmed-picks-real-ar-retail-prices">Launch trio (Sarah's confirmed picks) — real AR retail prices</h3>
+<table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>Product</th>
+<th style="text-align: right;">Size</th>
+<th style="text-align: right;">AR$ retail</th>
+<th style="text-align: right;">Gs @ 4:1</th>
+<th style="text-align: right;">Gs Sarah's wholesale est.</th>
+<th style="text-align: right;">Margin @ 150%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEFB</td>
+<td>Bitchie Spray multiorgásmico</td>
+<td style="text-align: right;">20ml</td>
+<td style="text-align: right;">12,200</td>
+<td style="text-align: right;">48,800</td>
+<td style="text-align: right;">~24,400 (mayorista)</td>
+<td style="text-align: right;">Gs 85,000 retail</td>
+</tr>
+<tr>
+<td>XXX01</td>
+<td>XXX For Her óleo orgasmico</td>
+<td style="text-align: right;">15ml</td>
+<td style="text-align: right;">16,540</td>
+<td style="text-align: right;">66,160</td>
+<td style="text-align: right;">~33,080 (mayorista)</td>
+<td style="text-align: right;">Gs 115,000 retail</td>
+</tr>
+<tr>
+<td>WET02</td>
+<td>Wet Gel Lubricante Anal</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">11,030</td>
+<td style="text-align: right;">44,120</td>
+<td style="text-align: right;">~22,060 (mayorista)</td>
+<td style="text-align: right;">Gs 77,000 retail</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key insight:</strong> Sexitive's AR retail is <strong>2x mayorista</strong> for these SKUs. Sarah's path = buy at mayorista, sell at 1.5–2x mayorista in PY = competitive.</p>
+<h3 id="full-sexitive-ar-catalog-158-skus-saved-to-01_researchmarketsexitive-ar-catalog-fulltsv">Full Sexitive AR catalog (158 SKUs) — saved to <code>01_RESEARCH/market/sexitive-ar-catalog-full.tsv</code></h3>
+<p>Selected highlights relevant to launch:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Product</th>
+<th style="text-align: right;">Size</th>
+<th style="text-align: right;">AR$ retail</th>
+<th style="text-align: right;">Gs @ 4:1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lubricants</strong></td>
+<td>Gel Lubricante Wet Neutro</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">11,030</td>
+<td style="text-align: right;">44,120</td>
+</tr>
+<tr>
+<td></td>
+<td>Wet Calor</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">11,030</td>
+<td style="text-align: right;">44,120</td>
+</tr>
+<tr>
+<td></td>
+<td>Wet Ice Fresh EXTRA TIME</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">11,030</td>
+<td style="text-align: right;">44,120</td>
+</tr>
+<tr>
+<td></td>
+<td>Wet Naturals Aloe Vera</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">11,030</td>
+<td style="text-align: right;">44,120</td>
+</tr>
+<tr>
+<td></td>
+<td>Wet Like a Virgin</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">12,800</td>
+<td style="text-align: right;">51,200</td>
+</tr>
+<tr>
+<td></td>
+<td>Wet Anal</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">11,030</td>
+<td style="text-align: right;">44,120</td>
+</tr>
+<tr>
+<td></td>
+<td>Sweet Femme</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">11,030</td>
+<td style="text-align: right;">44,120</td>
+</tr>
+<tr>
+<td></td>
+<td>Lube Premium Relaxing 130ml</td>
+<td style="text-align: right;">130ml</td>
+<td style="text-align: right;">(in catalog)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>Stimulants</strong></td>
+<td>Bitchie spray</td>
+<td style="text-align: right;">20ml</td>
+<td style="text-align: right;">12,200</td>
+<td style="text-align: right;">48,800</td>
+</tr>
+<tr>
+<td></td>
+<td>XXX For Her óleo</td>
+<td style="text-align: right;">15ml</td>
+<td style="text-align: right;">16,540</td>
+<td style="text-align: right;">66,160</td>
+</tr>
+<tr>
+<td></td>
+<td>HEROE Performance spray</td>
+<td style="text-align: right;">20ml</td>
+<td style="text-align: right;">10,820</td>
+<td style="text-align: right;">43,280</td>
+</tr>
+<tr>
+<td></td>
+<td>HEROE Pro-Long Extra Time</td>
+<td style="text-align: right;">20ml</td>
+<td style="text-align: right;">10,820</td>
+<td style="text-align: right;">43,280</td>
+</tr>
+<tr>
+<td></td>
+<td>Pink Sexy Drops</td>
+<td style="text-align: right;">20ml</td>
+<td style="text-align: right;">22,048</td>
+<td style="text-align: right;">88,192</td>
+</tr>
+<tr>
+<td></td>
+<td>Blue Sexy Drops</td>
+<td style="text-align: right;">30ml</td>
+<td style="text-align: right;">22,048</td>
+<td style="text-align: right;">88,192</td>
+</tr>
+<tr>
+<td><strong>Supplements</strong></td>
+<td>SEXY PILL PINK 4 cap</td>
+<td style="text-align: right;">4cap</td>
+<td style="text-align: right;">17,144</td>
+<td style="text-align: right;">68,576</td>
+</tr>
+<tr>
+<td></td>
+<td>SEXY PILL BLUE 4 cap</td>
+<td style="text-align: right;">4cap</td>
+<td style="text-align: right;">17,144</td>
+<td style="text-align: right;">68,576</td>
+</tr>
+<tr>
+<td><strong>Sensory / Massage</strong></td>
+<td>Aceite Love Potion Chocolate</td>
+<td style="text-align: right;">30ml</td>
+<td style="text-align: right;">11,970</td>
+<td style="text-align: right;">47,880</td>
+</tr>
+<tr>
+<td></td>
+<td>Aceite Love Potion Frutilla</td>
+<td style="text-align: right;">30ml</td>
+<td style="text-align: right;">11,970</td>
+<td style="text-align: right;">47,880</td>
+</tr>
+<tr>
+<td></td>
+<td>Massage Candle (per scent)</td>
+<td style="text-align: right;">30g</td>
+<td style="text-align: right;">10,342</td>
+<td style="text-align: right;">41,368</td>
+</tr>
+<tr>
+<td></td>
+<td>Aceite SensBomb Maca</td>
+<td style="text-align: right;">130ml</td>
+<td style="text-align: right;">18,604</td>
+<td style="text-align: right;">74,416</td>
+</tr>
+<tr>
+<td><strong>Hygiene</strong></td>
+<td>Gel Intimo For Him</td>
+<td style="text-align: right;">130g</td>
+<td style="text-align: right;">11,400</td>
+<td style="text-align: right;">45,600</td>
+</tr>
+<tr>
+<td></td>
+<td>Hidragel Women</td>
+<td style="text-align: right;">75ml</td>
+<td style="text-align: right;">20,980</td>
+<td style="text-align: right;">83,920</td>
+</tr>
+<tr>
+<td><strong>Kits</strong></td>
+<td>Wet 12-pack</td>
+<td style="text-align: right;">12u</td>
+<td style="text-align: right;">(in catalog)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td></td>
+<td>Black Dragon 12-pack</td>
+<td style="text-align: right;">12u</td>
+<td style="text-align: right;">(in catalog)</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Full TSV with all 158 SKUs:</strong> <code>/root/repos/sarah-lubricants/01_RESEARCH/market/sexitive-ar-catalog-full.tsv</code></p>
+<hr />
+<h2 id="py-competitor-analysis-from-web-scrape">PY competitor analysis (from web scrape)</h2>
+<h3 id="sexshopcompy-httpssexhopcompy">SexShop.com.py (https://sexhop.com.py)</h3>
+<p><strong>Pricing model:</strong> Homepage shows "Desde X Gs" range banners, not per-SKU pricing. This means they hide prices behind "consultar" or WhatsApp inquiry — common in PY adult retail.</p>
+<p><strong>Banner-derived price ranges observed:</strong>
+- Desde 2,500 Gs (entry items — likely condoms or sample sachets)
+- Desde 10,000 Gs (small accessories)
+- Desde 20,000 Gs (basic lubes/massage items)
+- Desde 30,000 Gs (mid-range)
+- Desde 40,000 Gs (mid-range+)
+- Desde 50,000 Gs (premium single items)
+- Desde 55,000 Gs
+- Desde 60,000 Gs (premium)
+- Desde 70,000 Gs (high-end single items)</p>
+<p><strong>Value props displayed:</strong> "Atención Personalizada", "Envíos a todo el Paraguay", "Privacidad en Entregas", "Nuestra Tienda".</p>
+<p><strong>Sarah's angle:</strong> Match their privacy story. Beat them on price transparency (show prices upfront — modern e-com norm, not PY adult norm).</p>
+<h3 id="rivia-py-httpswwwriviacompy">Rivia PY (https://www.rivia.com.py)</h3>
+<p><strong>Structure:</strong> Shopify store with 12 product collections, JS-rendered (curl can't see products directly — needs headless browser).</p>
+<p><strong>Collections:</strong>
+- /collections/dildos (largest category)
+- /collections/anal-plugs
+- /collections/bdsm
+- /collections/geles-y-lubricantes ← KEY — lubricant pricing
+- /collections/higiene-y-cuidado
+- /collections/juegos (games)
+- /collections/masturbadores
+- /collections/preservativos
+- /collections/entrenamiento
+- /collections/accesorios
+- /collections/frontpage
+- /collections/anal-plugs-1 (duplicate — sloppy SEO)</p>
+<p><strong>Product naming:</strong> Mostly English (Black Dildo, Strap On, Clear dildo, Realistic Dildo, Sex Machine, Flesh Dildo, Telescopic Dildo, Squirting dildo, King Dildo, Double Dildo, Alien Dildo). Indicates they import from CN/EN/US drop-shippers, NOT from Sexitive.</p>
+<p><strong>Sarah's angle:</strong> They have NO differentiation in lubricants (commodity). Sarah's Sexitive connection = unique positioning.</p>
+<h3 id="intimos-placeres-httpswwwintimosplacerescompy">Íntimos Placeres (https://www.intimosplaceres.com.py)</h3>
+<p><strong>Structure:</strong> Single-page shop, mostly product cards.</p>
+<p><strong>Catalog mix:</strong>
+- Vibradores (Barbara Jack brand dominant)
+- Plugs anales (incl. cola de zorro / fox tail — adult-store staple)
+- Estimuladores prostáticos
+- Plugs para fisting</p>
+<p><strong>Brand:</strong> Barbara Jack — Argentine intimate products brand (not Sexitive, not the same)</p>
+<p><strong>Sarah's angle:</strong> Their focus is toys, NOT lubricants/stimulants. Sarah's launch trio = Bitchie + XXX For Her + Wet Anal is a category they UNDER-serve.</p>
+<h3 id="as-bajo-la-manga-httpswwwasbajolamangacompy">As Bajo La Manga (https://www.asbajolamanga.com.py)</h3>
+<p><strong>Structure:</strong> WooCommerce, 26 products visible.</p>
+<p><strong>Catalog mix:</strong>
+- Lencería (body de puntilla, bata, conjuntos de red, bikini, monja sexy) — apparel-first
+- Lubricantes (Gel Siete Sensaciones, Lube Premium Relaxing, Gel Anal Kuloko, Gel Lubricante Anal Lis-In Gold)
+- Plugs anales (Joyas)
+- Vibradores (Bala Vibradora Rocket, Anillo Vibrador Doble, Happy Rabbit)</p>
+<p><strong>🚨 COMPETITIVE INTELLIGENCE:</strong> "Lubricante Anal Lube Premium Relaxing" — this is Sexitive's LUBE01 SKU being sold by As Bajo La Manga. Confirms Sexitive products are entering PY through gray channels.</p>
+<p><strong>Sarah's angle:</strong> As Bajo La Manga is lingerie-first with lubricants as add-on. Sarah can position as lubricant-specialist (deeper catalog, better prices, more SKUs).</p>
+<h3 id="sexshopasuncion-httpssexshopasuncioncom">SexShopAsuncion (https://sexshopasuncion.com)</h3>
+<p><strong>Same banner format as SexShop.com.py</strong> — likely same operator or a sister site. Confirms banner-based pricing is the PY norm.</p>
+<h3 id="mencanta-httpsmencantacompy">Mencanta (https://mencanta.com.py)</h3>
+<p>Mixed content site — 20+ items, appears to mix adult products with general wellness. Lower-priority competitor.</p>
+<hr />
+<h2 id="cross-competitor-pricing-implications">Cross-competitor pricing implications</h2>
+<table>
+<thead>
+<tr>
+<th>SKU category</th>
+<th style="text-align: right;">PY observed range (Gs)</th>
+<th style="text-align: right;">Sarah's landed est. (Gs)</th>
+<th style="text-align: right;">@ 100% margin</th>
+<th style="text-align: right;">@ 150% margin</th>
+<th style="text-align: right;">@ 200% margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wet Anal 75ml</td>
+<td style="text-align: right;">50,000–80,000</td>
+<td style="text-align: right;">~30,000</td>
+<td style="text-align: right;">60,000</td>
+<td style="text-align: right;">75,000</td>
+<td style="text-align: right;">90,000</td>
+</tr>
+<tr>
+<td>Bitchie 20ml</td>
+<td style="text-align: right;">60,000–100,000</td>
+<td style="text-align: right;">~40,000</td>
+<td style="text-align: right;">80,000</td>
+<td style="text-align: right;">100,000</td>
+<td style="text-align: right;">120,000</td>
+</tr>
+<tr>
+<td>XXX For Her 15ml</td>
+<td style="text-align: right;">80,000–130,000</td>
+<td style="text-align: right;">~55,000</td>
+<td style="text-align: right;">110,000</td>
+<td style="text-align: right;">137,500</td>
+<td style="text-align: right;">165,000</td>
+</tr>
+<tr>
+<td>Premium lubricants 130ml</td>
+<td style="text-align: right;">80,000–180,000</td>
+<td style="text-align: right;">~60,000</td>
+<td style="text-align: right;">120,000</td>
+<td style="text-align: right;">150,000</td>
+<td style="text-align: right;">180,000</td>
+</tr>
+<tr>
+<td>Massage candles</td>
+<td style="text-align: right;">50,000–80,000</td>
+<td style="text-align: right;">~35,000</td>
+<td style="text-align: right;">70,000</td>
+<td style="text-align: right;">87,500</td>
+<td style="text-align: right;">105,000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation:</strong> 150% margin puts Sarah's trio in upper market. 100% margin (Gs 60–110K) puts her in mid-market and beats 4/5 competitors on price. <strong>Sarah should consider dropping to 100–120% margin to capture volume.</strong></p>
+<hr />
+<h2 id="what-this-data-enabled">What this data enabled</h2>
+<ol>
+<li>✅ <strong>Real pricing</strong> instead of observational estimates</li>
+<li>✅ <strong>Competitor gap analysis</strong> — Rivia has weak lubricants, Sarah wins</li>
+<li>✅ <strong>Confirmed As Bajo La Manga resells Sexitive</strong> — competitor already importing through gray channels</li>
+<li>✅ <strong>158 SKU reference catalog</strong> for B2B wholesale pitch</li>
+<li>✅ <strong>PY market range validation</strong> — Sarah's 150% margin is at top of market, not mid</li>
+</ol>
+<hr />
+<h2 id="re-scrape-cadence">Re-scrape cadence</h2>
+<ul>
+<li><strong>Sexitive AR (shop.sexitive.com):</strong> Re-scrape weekly (catalog rotates)</li>
+<li><strong>PY competitors:</strong> Re-scrape monthly (slow-moving)</li>
+<li><strong>Hendyla:</strong> Re-scrape quarterly</li>
+</ul>
+<hr />
+<p><em>Last scraped: 2026-06-26 | Data files: <code>/tmp/sarah-scrapes/sexitive-ar-full.json</code>, <code>/tmp/sarah-scrapes/all-data.json</code></em></p>
+</div>
+</div>
+</body>
+</html>

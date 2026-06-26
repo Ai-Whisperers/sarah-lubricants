@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-commerce Platform Decision — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/operations/ecom-platform-decision.md</div>
+<h1 id="e-commerce-platform-decision">E-commerce Platform Decision</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Decision:</strong> Make by Week 2 of launch (before public site is needed)
+<strong>Author:</strong> Erebus
+<strong>Recommendation:</strong> <strong>Shopify Lite (Bsale) or Next.js custom (clone fun4me pattern)</strong> — see matrix</p>
+<hr />
+<h2 id="platform-options">Platform options</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>One-line fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shopify Lite / Bsale PY</strong></td>
+<td>1-week setup, payment integrated, host included</td>
+<td>2% transaction fee, monthly USD 29</td>
+<td>Fastest, vendor-locked</td>
+</tr>
+<tr>
+<td><strong>WooCommerce + NIC.py domain</strong></td>
+<td>Self-hosted, free, full control</td>
+<td>Setup 2–3 weeks, security burden, manual updates</td>
+<td>Tech-heavy, risky</td>
+</tr>
+<tr>
+<td><strong>Next.js custom (paragu-ai pattern)</strong></td>
+<td>Full control, no vendor lock, free hosting via Cloudflare</td>
+<td>3–4 week build, needs dev</td>
+<td>Best long-term, slowest start</td>
+</tr>
+<tr>
+<td><strong>WhatsApp-only (catalog + WA pay)</strong></td>
+<td>Gs 0 cost, fastest, proven PY pattern</td>
+<td>No SEO, no email capture, no analytics</td>
+<td>Valid v1, scale blocker</td>
+</tr>
+<tr>
+<td><strong>MercadoLibre</strong></td>
+<td>Built-in traffic, payment integrated</td>
+<td>13–16% commission, ML restrictions on intimate</td>
+<td>Backup channel only</td>
+</tr>
+<tr>
+<td><strong>Tienda Nube (LATAM Nuvemshop)</strong></td>
+<td>Sexitive uses it, LATAM-native, payment integrated</td>
+<td>USD 25/mo + 2% fee</td>
+<td>Sexitive-proven stack</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="recommendation-2-track-strategy">Recommendation: 2-track strategy</h2>
+<h3 id="track-1-v1-launch-week-14-whatsapp-first">Track 1 — V1 launch (Week 1–4): WhatsApp-first</h3>
+<p><strong>Use:</strong> WhatsApp Business catalog only
+<strong>Why:</strong> Fastest path to revenue. Zero setup. Matches all 5 PY competitors' style.
+<strong>Add:</strong> Paraguay-ai subdomain microsite (kinky.enki.com.py) — free, 1 week build, WA pre-filled links
+<strong>Cost:</strong> Gs 0 + Gs 50K domain if upgrade to enkystore.com.py</p>
+<h3 id="track-2-v2-scale-week-5-tienda-nube-or-nextjs">Track 2 — V2 scale (Week 5+): Tienda Nube or Next.js</h3>
+<p><strong>Decision:</strong> Based on V1 learnings
+- If revenue &lt; Gs 3M/month by week 8 → stick with WA-first, defer e-com
+- If revenue &gt; Gs 3M/month → invest in proper e-com platform</p>
+<p><strong>For Tienda Nube:</strong> Sexitive already uses it → tested for LATAM adult products
+<strong>For Next.js:</strong> Paragu-ai fleet has proven pattern (Nexa, Maskarada, Fun4Me all use Next.js 16 + Supabase + Tailwind v4)</p>
+<hr />
+<h2 id="detailed-comparison-matrix">Detailed comparison matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">Shopify Lite</th>
+<th style="text-align: right;">WooCommerce</th>
+<th style="text-align: right;">Next.js custom</th>
+<th style="text-align: right;">Tienda Nube</th>
+<th style="text-align: right;">WA-only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setup time</td>
+<td style="text-align: right;">1 week</td>
+<td style="text-align: right;">2–3 weeks</td>
+<td style="text-align: right;">3–4 weeks</td>
+<td style="text-align: right;">1 week</td>
+<td style="text-align: right;">Gs 0</td>
+</tr>
+<tr>
+<td>Monthly cost</td>
+<td style="text-align: right;">USD 29</td>
+<td style="text-align: right;">Gs 0 (hosting extra)</td>
+<td style="text-align: right;">Gs 0 (Cloudflare Pages)</td>
+<td style="text-align: right;">USD 25</td>
+<td style="text-align: right;">Gs 0</td>
+</tr>
+<tr>
+<td>Transaction fee</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">2%</td>
+<td style="text-align: right;">0% (bank)</td>
+</tr>
+<tr>
+<td>Payment integration</td>
+<td style="text-align: right;">✅ Built-in</td>
+<td style="text-align: right;">Manual</td>
+<td style="text-align: right;">Manual</td>
+<td style="text-align: right;">✅ Built-in</td>
+<td style="text-align: right;">Manual</td>
+</tr>
+<tr>
+<td>SEO</td>
+<td style="text-align: right;">Good</td>
+<td style="text-align: right;">Good</td>
+<td style="text-align: right;">Excellent</td>
+<td style="text-align: right;">Good</td>
+<td style="text-align: right;">None</td>
+</tr>
+<tr>
+<td>Email capture</td>
+<td style="text-align: right;">✅ Built-in</td>
+<td style="text-align: right;">✅ Plugin</td>
+<td style="text-align: right;">✅ Custom</td>
+<td style="text-align: right;">✅ Built-in</td>
+<td style="text-align: right;">❌ Manual</td>
+</tr>
+<tr>
+<td>Inventory mgmt</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅ Custom</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">❌ Spreadsheet</td>
+</tr>
+<tr>
+<td>Analytics</td>
+<td style="text-align: right;">✅ Built-in</td>
+<td style="text-align: right;">✅ Plugin</td>
+<td style="text-align: right;">✅ Custom</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">❌ Manual</td>
+</tr>
+<tr>
+<td>Mobile UX</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅ WA-native</td>
+</tr>
+<tr>
+<td>Multi-locale</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅ Plugin</td>
+<td style="text-align: right;">✅ Easy</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">❌</td>
+</tr>
+<tr>
+<td>Vendor lock-in</td>
+<td style="text-align: right;">🔴 High</td>
+<td style="text-align: right;">🟢 None</td>
+<td style="text-align: right;">🟢 None</td>
+<td style="text-align: right;">🔴 High</td>
+<td style="text-align: right;">🟢 None</td>
+</tr>
+<tr>
+<td>Adult content OK</td>
+<td style="text-align: right;">⚠️ May restrict</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅</td>
+<td style="text-align: right;">✅ (Sexitive uses)</td>
+<td style="text-align: right;">✅</td>
+</tr>
+<tr>
+<td>Maintenance burden</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">High</td>
+<td style="text-align: right;">Low (if built well)</td>
+<td style="text-align: right;">None</td>
+<td style="text-align: right;">None</td>
+</tr>
+<tr>
+<td>Paragu-ai pattern fit</td>
+<td style="text-align: right;">🟡</td>
+<td style="text-align: right;">🟡</td>
+<td style="text-align: right;">🟢</td>
+<td style="text-align: right;">🟡</td>
+<td style="text-align: right;">🟢</td>
+</tr>
+<tr>
+<td>Dev cost (one-time)</td>
+<td style="text-align: right;">Gs 0</td>
+<td style="text-align: right;">Gs 1–3M (hosting setup)</td>
+<td style="text-align: right;">Gs 3–6M (Erebus internal)</td>
+<td style="text-align: right;">Gs 0</td>
+<td style="text-align: right;">Gs 0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="detailed-cost-projection-12-months">Detailed cost projection (12 months)</h2>
+<h3 id="wa-first-approach-recommended-v1">WA-first approach (recommended V1)</h3>
+<ul>
+<li>Setup: Gs 0</li>
+<li>Monthly: Gs 0</li>
+<li>12-month total: <strong>Gs 0</strong></li>
+<li>Revenue ceiling: ~Gs 5–10M/month (manual order mgmt limit)</li>
+</ul>
+<h3 id="tienda-nube-recommended-v2">Tienda Nube (recommended V2)</h3>
+<ul>
+<li>Setup: Gs 0 (use Sexitive's existing template as reference)</li>
+<li>Monthly: USD 25 × 12 = USD 300 = Gs 2.25M</li>
+<li>Transaction: 2% × Gs 50M annual = Gs 1M</li>
+<li>12-month total: <strong>Gs 3.25M</strong></li>
+<li>Revenue ceiling: Unlimited</li>
+</ul>
+<h3 id="nextjs-custom-v3-if-scaling">Next.js custom (V3 if scaling)</h3>
+<ul>
+<li>Setup: Gs 4–6M (one-time dev, paragu-ai internal cost)</li>
+<li>Monthly: Gs 50K (Cloudflare Pages + Supabase free tier)</li>
+<li>Transaction: 0% (bank/Tigo/MP integration)</li>
+<li>12-month total: <strong>Gs 4.6–6.6M year 1, then ~Gs 600K/year</strong></li>
+<li>Revenue ceiling: Unlimited</li>
+<li>Bonus: Full SEO + email capture + WhatsApp pre-fill + reusable for v2/v3 SKUs</li>
+</ul>
+<hr />
+<h2 id="decision-criteria-which-to-choose">Decision criteria (which to choose)</h2>
+<table>
+<thead>
+<tr>
+<th>If...</th>
+<th>Then choose...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah wants revenue in 2 weeks</td>
+<td>WA-first + paragu-ai subdomain</td>
+</tr>
+<tr>
+<td>Sarah has Gs 5M+ dev budget</td>
+<td>Next.js custom (paragu-ai pattern)</td>
+</tr>
+<tr>
+<td>Sarah wants minimum ongoing cost</td>
+<td>Next.js custom (after setup)</td>
+</tr>
+<tr>
+<td>Sarah wants vendor-managed</td>
+<td>Shopify Lite or Tienda Nube</td>
+</tr>
+<tr>
+<td>Sarah plans B2B scale in 6 months</td>
+<td>Next.js custom (B2B portal easier)</td>
+</tr>
+<tr>
+<td>Sarah only plans DTC</td>
+<td>Tienda Nube (Sexitive-proven)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="paragu-ai-fleet-reference">Paragu-ai fleet reference</h2>
+<p>Existing Paragu-ai sites that use the Next.js pattern:
+- <strong>Nexa Paraguay</strong> (nexa.paragu-ai.com) — 13 pages × 4 locales, Supabase JSON content
+- <strong>Maskarada</strong> (maskarada.com.py) — 11+ pages, mature Next.js 16 + Supabase
+- <strong>Fun4Me</strong> (fun4me.com.py) — e-commerce reference, 12 SKUs, WhatsApp pre-fill</p>
+<p><strong>Pattern reusable:</strong> Copy fun4me's product catalog + checkout flow → ~1 week for Sarah's 3 SKUs.</p>
+<hr />
+<h2 id="payment-integration-per-platform">Payment integration (per platform)</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Recommended payment stack</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify Lite</td>
+<td>Shopify Payments (card) + Tigo Money + bank transfer</td>
+</tr>
+<tr>
+<td>WooCommerce</td>
+<td>Mercado Pago + bank transfer (Tigo Money via plugin)</td>
+</tr>
+<tr>
+<td>Next.js custom</td>
+<td>Mercado Pago SDK + SIPAP bank transfer + Tigo Money (manual recon)</td>
+</tr>
+<tr>
+<td>Tienda Nube</td>
+<td>Mercado Pago + bank transfer</td>
+</tr>
+<tr>
+<td>WA-first</td>
+<td>Bank transfer (primary) + Tigo Money + MP link (manual)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PY payment reality check:</strong> Mercado Pago charges 5–6% + buyer protection. Tigo Money 1–2% but requires cash loading. Bank transfer 0% but customer friction. Recommend: <strong>bank transfer as primary, Tigo Money as secondary, Mercado Pago only as last resort.</strong></p>
+<hr />
+<h2 id="my-recommendation-for-sarah">My recommendation for Sarah</h2>
+<p><strong>Week 1–4 (launch):</strong> WA-first + paragu-ai subdomain (Gs 0, immediate revenue)
+<strong>Week 5+ (decision point):</strong> Evaluate. If revenue &gt; Gs 3M/month, switch to Tienda Nube (Sexitive-proven). If &lt; Gs 3M, stay WA-first.
+<strong>Month 6+ (scale):</strong> If hitting Gs 10M+/month, invest in Next.js custom (paragu-ai pattern) for full SEO + B2B portal.</p>
+<hr />
+<h2 id="open-questions">Open questions</h2>
+<ol>
+<li>Does Sarah have bank account already? (needed for transfer integration)</li>
+<li>Does Sarah have Tigo Money Business account? (vs personal)</li>
+<li>Does Sarah have Mercado Pago cuenta negocio? (vs personal)</li>
+<li>What's her expected monthly volume? (drives platform ROI)</li>
+</ol>
+<hr />
+<p><em>Last updated: 2026-06-26 | Revisit Week 5 of launch</em></p>
+</div>
+</div>
+</body>
+</html>

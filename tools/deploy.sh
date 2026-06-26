@@ -6,5 +6,5 @@ set -e
 export CLOUDFLARE_API_TOKEN
 export CLOUDFLARE_ACCOUNT_ID
 
-cd /root/sarah-lubricants
+cd /root/repos/sarah-lubricants
 wrangler pages deploy build --project-name=sarah-lubricants --branch=main "$@"

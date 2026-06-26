@@ -2,7 +2,7 @@
 """Render every Sarah repo .md into build/<path>/index.html and also create short URL slugs."""
 import os, re, pathlib, html, markdown, shutil
 
-ROOT = pathlib.Path("/root/sarah-lubricants")
+ROOT = pathlib.Path("/root/repos/sarah-lubricants")
 OUT  = ROOT / "build"
 
 SLUGS = {
