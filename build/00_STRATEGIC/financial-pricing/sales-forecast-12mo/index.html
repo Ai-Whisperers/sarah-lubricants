@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sales Forecast Model — 12-Month Detail — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">00_STRATEGIC/financial-pricing/sales-forecast-12mo.md</div>
+<h1 id="sales-forecast-model-12-month-detail">Sales Forecast Model — 12-Month Detail</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Scope:</strong> Per-SKU monthly unit projection + revenue + margin
+<strong>Use:</strong> Monthly tracking + reorder decisions
+<strong>Companion to:</strong> <code>cash-flow-model-12mo.md</code></p>
+<hr />
+<h2 id="launch-trio-sarahs-confirmed-sku-list">Launch Trio (Sarah's confirmed SKU list)</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Product</th>
+<th>Size</th>
+<th style="text-align: right;">Recommended retail (Gs)</th>
+<th style="text-align: right;">Landed cost/unit (Gs)</th>
+<th style="text-align: right;">Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEFB</td>
+<td>Bitchie Spray</td>
+<td>20ml</td>
+<td style="text-align: right;">130,000</td>
+<td style="text-align: right;">65,400</td>
+<td style="text-align: right;">99%</td>
+</tr>
+<tr>
+<td>XXX01</td>
+<td>XXX For Her óleo</td>
+<td>15ml</td>
+<td style="text-align: right;">145,000</td>
+<td style="text-align: right;">73,800</td>
+<td style="text-align: right;">96%</td>
+</tr>
+<tr>
+<td>WET02</td>
+<td>Wet Anal</td>
+<td>75ml</td>
+<td style="text-align: right;">125,000</td>
+<td style="text-align: right;">63,000</td>
+<td style="text-align: right;">98%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weighted avg retail:</strong> Gs 130K
+<strong>Weighted avg landed:</strong> Gs 67K (using 30u first-order math)</p>
+<hr />
+<h2 id="recommended-scenario-monthly-sku-breakdown">Recommended Scenario — Monthly SKU Breakdown</h2>
+<h3 id="assumptions">Assumptions</h3>
+<ul>
+<li>DTC mix: 60% Bitchie, 30% XXX, 10% Wet Anal (initial assumption)</li>
+<li>Adjust as real data accumulates</li>
+<li>AOV target: Gs 130K+ (single SKU purchase)</li>
+<li>Bundle attach rate: 30%</li>
+</ul>
+<h3 id="month-by-month-projection">Month-by-month projection</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Total units</th>
+<th style="text-align: right;">Bitchie</th>
+<th style="text-align: right;">XXX</th>
+<th style="text-align: right;">Wet Anal</th>
+<th style="text-align: right;">Revenue</th>
+<th style="text-align: right;">Cost</th>
+<th style="text-align: right;">Net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2,600K</td>
+<td style="text-align: right;">1,340K</td>
+<td style="text-align: right;">1,260K</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3,900K</td>
+<td style="text-align: right;">2,010K</td>
+<td style="text-align: right;">1,890K</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6,500K</td>
+<td style="text-align: right;">3,350K</td>
+<td style="text-align: right;">3,150K</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9,100K</td>
+<td style="text-align: right;">4,690K</td>
+<td style="text-align: right;">4,410K</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11,700K</td>
+<td style="text-align: right;">6,030K</td>
+<td style="text-align: right;">5,670K</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">14,300K</td>
+<td style="text-align: right;">7,370K</td>
+<td style="text-align: right;">6,930K</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">16,900K</td>
+<td style="text-align: right;">8,710K</td>
+<td style="text-align: right;">8,190K</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">19,500K</td>
+<td style="text-align: right;">10,050K</td>
+<td style="text-align: right;">9,450K</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">22,100K</td>
+<td style="text-align: right;">11,390K</td>
+<td style="text-align: right;">10,710K</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">190</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">24,700K</td>
+<td style="text-align: right;">12,730K</td>
+<td style="text-align: right;">11,970K</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">126</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">27,300K</td>
+<td style="text-align: right;">14,070K</td>
+<td style="text-align: right;">13,230K</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">138</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">29,900K</td>
+<td style="text-align: right;">15,410K</td>
+<td style="text-align: right;">14,490K</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>Year 1</strong></td>
+<td style="text-align: right;"><strong>1,450</strong></td>
+<td style="text-align: right;"><strong>870</strong></td>
+<td style="text-align: right;"><strong>435</strong></td>
+<td style="text-align: right;"><strong>145</strong></td>
+<td style="text-align: right;"><strong>188.5M</strong></td>
+<td style="text-align: right;"><strong>97.2M</strong></td>
+<td style="text-align: right;"><strong>91.3M</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="reorder-cadence">Reorder Cadence</h2>
+<h3 id="first-order-month-1">First order (Month 1)</h3>
+<ul>
+<li>30 units each (90 total) = Gs 2.39M landed = Gs 6.27M all-in</li>
+<li>Runway: 4-5 months at 20u/month volume</li>
+</ul>
+<h3 id="second-order-month-3">Second order (Month 3)</h3>
+<ul>
+<li>50 units each (150 total) = Gs 3.98M landed = Gs 7.79M all-in</li>
+<li>Just-in-time for month 4-6 demand</li>
+</ul>
+<h3 id="third-order-month-6">Third order (Month 6)</h3>
+<ul>
+<li>100 units each (300 total) = Gs 7.95M landed = Gs 12.93M all-in</li>
+<li>Funded from revenue (Gs 14.3M by month 6)</li>
+<li>Covers month 7-9 demand</li>
+</ul>
+<h3 id="steady-state-month-9">Steady-state (Month 9+)</h3>
+<ul>
+<li>Order 100 units every 2-3 months</li>
+<li>Reorder trigger: when 30 units of any SKU remain</li>
+<li>Cash flow positive — can fund from monthly margin</li>
+</ul>
+<hr />
+<h2 id="volume-drivers-conversion-rate-assumptions">Volume Drivers (Conversion rate assumptions)</h2>
+<h3 id="conversion-funnel">Conversion funnel</h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Assumption</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IG impressions (Month 1)</td>
+<td>5,000</td>
+<td>20K followers × 25% reach</td>
+</tr>
+<tr>
+<td>Bio link clicks</td>
+<td>250 (5%)</td>
+<td>Standard IG CTR</td>
+</tr>
+<tr>
+<td>WA messages</td>
+<td>100 (40%)</td>
+<td>Standard click-to-msg</td>
+</tr>
+<tr>
+<td>Orders</td>
+<td>30 (30%)</td>
+<td>DTC sales playbook</td>
+</tr>
+<tr>
+<td>Repeat (90-day)</td>
+<td>7 (25%)</td>
+<td>Customer onboarding flow</td>
+</tr>
+</tbody>
+</table>
+<h3 id="volume-multipliers">Volume multipliers</h3>
+<table>
+<thead>
+<tr>
+<th>Multiplier</th>
+<th>Effect</th>
+<th>When active</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Micro-influencer collabs</td>
+<td>+50% reach per post</td>
+<td>Month 3+</td>
+</tr>
+<tr>
+<td>TikTok @kinky_py</td>
+<td>+30% discovery</td>
+<td>Month 3+</td>
+</tr>
+<tr>
+<td>Email automation</td>
+<td>+15% repeat rate</td>
+<td>Month 2+</td>
+</tr>
+<tr>
+<td>B2B wholesale</td>
+<td>+Gs 5M/mo per buyer</td>
+<td>Month 4+</td>
+</tr>
+<tr>
+<td>MercadoLibre</td>
+<td>+20% reach (if approved)</td>
+<td>Month 4+</td>
+</tr>
+<tr>
+<td>Bundle attach</td>
+<td>+30% AOV</td>
+<td>Month 1+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="break-even-analysis">Break-Even Analysis</h2>
+<h3 id="fixed-costs-monthly">Fixed costs (monthly)</h3>
+<ul>
+<li>Contador: Gs 400K</li>
+<li>Marketing (post-launch): Gs 500K</li>
+<li>Brevo paid (Month 4+): Gs 250K</li>
+<li>Misc (cloud, domain): Gs 100K</li>
+<li><strong>Total fixed:</strong> Gs 1.25M/month</li>
+</ul>
+<h3 id="variable-cost-per-unit-avg">Variable cost per unit (avg)</h3>
+<ul>
+<li>Landed cost: Gs 67K</li>
+<li>Packaging: Gs 5K</li>
+<li>Courier: Gs 30K</li>
+<li><strong>Total variable:</strong> Gs 102K/unit</li>
+</ul>
+<h3 id="revenue-per-unit">Revenue per unit</h3>
+<ul>
+<li>Avg retail: Gs 130K</li>
+</ul>
+<h3 id="contribution-margin-per-unit">Contribution margin per unit</h3>
+<ul>
+<li>130K − 102K = <strong>Gs 28K per unit</strong></li>
+</ul>
+<h3 id="break-even-units-per-month">Break-even units per month</h3>
+<ul>
+<li>1,250K / 28K = <strong>~45 units/month</strong></li>
+</ul>
+<h3 id="break-even-timeline-recommended-scenario">Break-even timeline (Recommended scenario)</h3>
+<ul>
+<li>Month 3: 50 units (just past break-even)</li>
+<li>Month 4: 70 units (clearly profitable)</li>
+<li><strong>Break-even achieved in Month 3</strong></li>
+</ul>
+<hr />
+<h2 id="pricing-variants-sensitivity">Pricing Variants Sensitivity</h2>
+<h3 id="if-sarah-drops-to-100-margin">If Sarah drops to 100% margin</h3>
+<ul>
+<li>Bitchie retail: 130K → 131K (no real change)</li>
+<li>XXX retail: 145K → 148K (slightly higher)</li>
+<li>Net effect: marginal, but more competitive vs Rivia/SexShop</li>
+</ul>
+<h3 id="if-sarah-goes-to-150-margin">If Sarah goes to 150% margin</h3>
+<ul>
+<li>Bitchie retail: 130K → 163K (+25%)</li>
+<li>XXX retail: 145K → 185K (+28%)</li>
+<li>Net effect: above market, risk of low conversion</li>
+</ul>
+<h3 id="if-sarah-goes-to-200-margin">If Sarah goes to 200% margin</h3>
+<ul>
+<li>Bitchie retail: 130K → 196K (+51%)</li>
+<li>XXX retail: 145K → 221K (+52%)</li>
+<li>Net effect: well above market, ~30% conversion drop</li>
+</ul>
+<p><strong>Recommendation:</strong> Stay at 100% margin for launch. Test 125% at month 3.</p>
+<hr />
+<h2 id="mix-optimization-over-time">Mix Optimization (over time)</h2>
+<h3 id="initial-mix-month-13">Initial mix (Month 1–3)</h3>
+<ul>
+<li>Bitchie: 60% (Sarah's flagship)</li>
+<li>XXX: 30% (premium SKU, lower volume)</li>
+<li>Wet Anal: 10% (commodity)</li>
+</ul>
+<h3 id="mature-mix-month-6">Mature mix (Month 6+)</h3>
+<ul>
+<li>Bitchie: 40% (mature market)</li>
+<li>XXX: 25%</li>
+<li>Wet Anal: 15%</li>
+<li>New SKUs (added Month 2+): 20% (Pink Pill, Like a Virgin, etc.)</li>
+</ul>
+<hr />
+<h2 id="risk-adjusted-forecast">Risk-Adjusted Forecast</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Probability</th>
+<th style="text-align: right;">Year 1 units</th>
+<th style="text-align: right;">Year 1 revenue</th>
+<th style="text-align: right;">Year 1 net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 Optimistic (viral + B2B scales)</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">2,900</td>
+<td style="text-align: right;">377M</td>
+<td style="text-align: right;">169.8M</td>
+</tr>
+<tr>
+<td>🟡 Recommended</td>
+<td style="text-align: right;">60%</td>
+<td style="text-align: right;">1,450</td>
+<td style="text-align: right;">188.5M</td>
+<td style="text-align: right;">72.7M</td>
+</tr>
+<tr>
+<td>🟠 Conservative</td>
+<td style="text-align: right;">20%</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">58.5M</td>
+<td style="text-align: right;">5.7M</td>
+</tr>
+<tr>
+<td>🔴 Failure (DINAVISA blocks + audience mismatch)</td>
+<td style="text-align: right;">5%</td>
+<td style="text-align: right;">&lt;100</td>
+<td style="text-align: right;">&lt;13M</td>
+<td style="text-align: right;">&lt;-20M</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Probability-weighted forecast:</strong>
+- Expected units: 1,485
+- Expected revenue: Gs 192.8M
+- Expected net: Gs 73.2M</p>
+<hr />
+<h2 id="monthly-tracking-spreadsheet">Monthly tracking spreadsheet</h2>
+<p>Sarah should track (Google Sheet):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Units sold</th>
+<th style="text-align: right;">Revenue</th>
+<th style="text-align: right;">COGS</th>
+<th style="text-align: right;">Marketing</th>
+<th style="text-align: right;">Ops</th>
+<th style="text-align: right;">Net</th>
+<th style="text-align: right;">Cum cash</th>
+<th style="text-align: right;">vs Forecast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: right;">...</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variance threshold:</strong> If actual is &lt;50% of forecast for 2 consecutive months → escalate (cut costs, revise strategy).</p>
+<hr />
+<h2 id="trigger-events-for-forecast-revision">Trigger events for forecast revision</h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q5 PDF arrives with different prices</td>
+<td>Re-do pricing math</td>
+</tr>
+<tr>
+<td>Month 1 actuals &lt;10 units</td>
+<td>Switch to Conservative forecast</td>
+</tr>
+<tr>
+<td>Month 3 actuals &gt;100 units</td>
+<td>Switch to Stretch forecast</td>
+</tr>
+<tr>
+<td>B2B buyer signs</td>
+<td>Add their volume to forecast</td>
+</tr>
+<tr>
+<td>DINAVISA inspection event</td>
+<td>Pause expansion, focus on existing</td>
+</tr>
+<tr>
+<td>Competitor launches similar product</td>
+<td>Adjust pricing / add differentiator</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Last updated: 2026-06-26 | Sarah: update monthly with actuals</em></p>
+</div>
+</div>
+</body>
+</html>

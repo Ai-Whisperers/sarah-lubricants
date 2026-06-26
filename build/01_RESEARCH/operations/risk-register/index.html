@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Risk Register — Enki Store — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/operations/risk-register.md</div>
+<h1 id="risk-register-enki-store">Risk Register — Enki Store</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Scope:</strong> Top 15 risks ranked by probability × impact
+<strong>Format:</strong> Probability (1-5) × Impact (1-5) = Risk Score (1-25)</p>
+<hr />
+<h2 id="risk-matrix">Risk Matrix</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Score</th>
+<th style="text-align: right;">Level</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">18+</td>
+<td style="text-align: right;">🔴 High</td>
+<td>Address immediately, monitor weekly</td>
+</tr>
+<tr>
+<td style="text-align: right;">10-17</td>
+<td style="text-align: right;">🟠 Medium</td>
+<td>Address in next sprint, monitor monthly</td>
+</tr>
+<tr>
+<td style="text-align: right;">1-9</td>
+<td style="text-align: right;">🟢 Low</td>
+<td>Accept + monitor quarterly</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="top-15-risks">Top 15 risks</h2>
+<h3 id="r1-dinavisa-inspection-event-regulatory-shutdown">R1 — DINAVISA inspection event (regulatory shutdown)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Legal / regulatory</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>5 (catastrophic)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>15 🔴</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>DINAVISA inspects Enki Store and finds non-compliance (missing NSO, wrong labels, etc.) → seizure + fine + retroactive compliance</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) File DINAVISA NSO immediately for 3 launch SKUs. (2) Use bilingual stickers on all Sexitive AR products. (3) Keep all documentation (Certificado de Origen, ANMAT certs, despacho papers) on file. (4) Engage despachante proactively.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah + despachante</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Quarterly DINAVISA compliance check</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r2-customs-seizure-modelo-detected">R2 — Customs seizure (modelo旅行者 detected)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Logistics</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>12 🔴</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Aduana PY detects pattern of personal luggage import with commercial quantities → seizure + fine + retroactive DINAVISA + criminal record possibility</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Max 1 trip/quarter. (2) Combine with personal travel (family visit). (3) Stay under 30 units/SKU per trip. (4) Switch to formal import ASAP once DINAVISA approved. (5) Never declare commercial intent.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Every trip</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r3-q5-pdf-reveals-higher-costs-than-estimated-margin-compression">R3 — Q5 PDF reveals higher costs than estimated (margin compression)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Financial</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>12 🔴</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Official Distribuidor Mayorista prices from Sexitive AR are higher than AR retail ÷ 2 estimate → 150% margin math doesn't work, retail prices need to rise or margin drops</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Build pricing model with 3 margin scenarios (already done in canonical-pricing-reference-v1.md). (2) Negotiate special "viajero" pricing with Sexitive AR. (3) Drop to 100% margin if needed (still beats all competitors on transparency). (4) Bundle SKUs to maintain AOV.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah + Erebus</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>When Q5 PDF arrives</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r4-enkis-20k-ig-audience-doesnt-convert-to-intimate-low-engagement">R4 — Enki's 20K IG audience doesn't convert to intimate (low engagement)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Marketing</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>12 🔴</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Enki's existing audience skews to general lifestyle (not intimate wellness) → low engagement on Kinky posts → slower launch</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Test small launch (10 friends/family) first to gauge response. (2) Create separate @kinky_py IG if needed. (3) Customer survey to 30 followers (already drafted in customer-survey-typeform.md). (4) Focus on B2B wholesale if DTC fails.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>First 30 days of launch</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r5-competitor-price-match-undercut-rivia-sexshopcompy">R5 — Competitor price match / undercut (Rivia, SexShop.com.py)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Competitive</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>9 🟠</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Competitors detect Enki launch + match/undercut prices → Sarah loses margin advantage</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Compete on content + brand story + DINAVISA documentation (not price). (2) Build B2B wholesale channel (insulates from DTC price war). (3) Bundle pricing obscures single-SKU comparison. (4) Customer loyalty program at month 6+.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Monthly competitor pricing check</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r6-instagram-shadowban-account-suspension-intimate-content">R6 — Instagram shadowban / account suspension (intimate content)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Platform</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>12 🔴</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Meta (IG) flags intimate product content as adult → shadowban or account suspension → lose primary channel</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Avoid explicit words in captions/hashtags. (2) Use "wellness" / "cuidado personal" framing. (3) Build email list + TikTok as backups (different moderation). (4) Never use nudity in photos. (5) Have backup IG account ready.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Daily IG analytics + reach monitoring</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r7-mercado-pago-account-blocked-high-risk-category">R7 — Mercado Pago account blocked (high-risk category)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Payment</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>9 🟠</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Mercado Pago flags intimate product sales as high-risk → freezes account + funds</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Push bank transfer as primary payment (no MP fees, no MP risk). (2) Tigo Money as secondary. (3) MP only as last resort. (4) Keep MP funds moving (don't let balance accumulate).</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Weekly MP account health check</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r8-sarah-burnout-time-constraint-sole-operator">R8 — Sarah burnout / time constraint (sole operator)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Operational</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>16 🔴</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Sarah operates alone (or with minimal help) → hours exceed capacity → orders delayed, customer service suffers, growth stalls</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Hire part-time helper at month 2 (pack + ship = 10h/week minimum). (2) Document SOPs early (this repo + whatsapp-business-setup.md). (3) Set WA auto-reply outside hours. (4) Use templates (customer-messages.md). (5) Mom or family as backup packer.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Weekly time audit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r9-counterfeit-sexitive-products-enter-py-brand-erosion">R9 — Counterfeit Sexitive products enter PY (brand erosion)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Brand</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>2 (low)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>8 🟠</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Counterfeit Sexitive products from CN or elsewhere enter PY market at lower price → erodes brand value + confuses customers</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Use unique Enki stickers on all products (visual proof of legit). (2) Marketing emphasizes "importado directo de Sexitive AR." (3) DINAVISA paperwork as proof. (4) Report counterfeits to Sexitive AR + DINAPI.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah + Erebus</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Quarterly competitor audit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r10-fx-rate-shock-gsar-moves-from-41-to-51">R10 — FX rate shock (Gs/AR$ moves from 4:1 to 5:1)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Financial</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>3 (medium)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>12 🔴</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Argentine peso devalues further against Guaraní → all input costs rise 25% → margin collapses if retail prices stay fixed</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Build 10-15% FX buffer into retail prices. (2) Order larger batches when FX is favorable. (3) Renegotiate retail prices quarterly based on FX. (4) Consider USD-denominated contracts with Sexitive AR.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Weekly FX rate check</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r11-competitor-reports-enki-to-metadinavisa-malicious-complaint">R11 — Competitor reports Enki to Meta/DINAVISA (malicious complaint)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Competitive / platform</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>2 (low)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>8 🟠</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>PY competitor reports Enki IG to Meta for "adult content" → shadowban; or reports to DINAVISA for non-compliance</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Keep DINAVISA documentation on file (full compliance). (2) Use "wellness" framing in IG content. (3) If shadowban: appeal to Meta + have backup account. (4) If DINAVISA complaint: respond with full documentation.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Monthly IG reach + DINAVISA status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r12-sexitive-ar-raises-prices-supplier-moves">R12 — Sexitive AR raises prices (supplier moves)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Supplier</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>2 (low)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>8 🟠</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Sexitive AR raises Distribuidor Mayorista prices 10-20% → Sarah's margin compressed</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Lock pricing for 6 months (contract). (2) Diversify suppliers (Bezzi AR, Brazilian brands). (3) Pass through to retail. (4) Build private-label SKU as alternative.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Per order</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r13-contador-despachante-dont-exist-no-qualified-vendors">R13 — Contador + despachante don't exist (no qualified vendors)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Vendor</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>1 (very low)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>4 (high)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>4 🟢</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Cannot find PY contador + despachante with cosmetics experience → regulatory blocked</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Multiple outreach (5 candidates each, per py-vendor-shortlist.md). (2) Backup: generalist contador + accept higher uncertainty. (3) Long-term: train someone.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Week 1 of P1 phase</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r14-customer-allergic-reaction-product-safety">R14 — Customer allergic reaction (product safety)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Product safety</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>2 (low)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>5 (catastrophic)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>10 🟠</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Customer has allergic reaction to Sexitive product → injury claim + reputational damage + potential lawsuit</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Clear warning labels (Spanish, ingredient list). (2) Sample sachet for first-time buyers (lower risk). (3) Record all ingredients per SKU. (4) Liability insurance at month 6+ (Gs 500K-1.5M/year). (5) Document all incidents (return SOP).</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Per incident</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r15-cash-flow-crisis-negative-cumulative-gs-10m">R15 — Cash flow crisis (negative cumulative &gt; Gs 10M)</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Category</strong></td>
+<td>Financial</td>
+</tr>
+<tr>
+<td><strong>Probability</strong></td>
+<td>2 (low)</td>
+</tr>
+<tr>
+<td><strong>Impact</strong></td>
+<td>5 (catastrophic)</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td><strong>10 🟠</strong></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Cumulative cash burn exceeds Gs 10M (Sarah's full capital) → business can't continue</td>
+</tr>
+<tr>
+<td><strong>Mitigation</strong></td>
+<td>(1) Track monthly cash flow (per cash-flow-model-12mo.md). (2) If trending negative at month 3-4: pause modelo旅行者, cut discretionary costs. (3) Secure bridge capital (loan from family/Gaston) by month 4 if needed. (4) Worst case: pause B2B outreach, focus DTC.</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Monthly cash flow review</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="risk-score-summary">Risk score summary</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th style="text-align: right;">Score</th>
+<th>Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R8 — Sarah burnout</td>
+<td style="text-align: right;">16</td>
+<td>🔴</td>
+</tr>
+<tr>
+<td>R1 — DINAVISA inspection</td>
+<td style="text-align: right;">15</td>
+<td>🔴</td>
+</tr>
+<tr>
+<td>R2 — Customs seizure</td>
+<td style="text-align: right;">12</td>
+<td>🔴</td>
+</tr>
+<tr>
+<td>R3 — Q5 PDF higher costs</td>
+<td style="text-align: right;">12</td>
+<td>🔴</td>
+</tr>
+<tr>
+<td>R4 — IG audience mismatch</td>
+<td style="text-align: right;">12</td>
+<td>🔴</td>
+</tr>
+<tr>
+<td>R6 — IG shadowban</td>
+<td style="text-align: right;">12</td>
+<td>🔴</td>
+</tr>
+<tr>
+<td>R10 — FX rate shock</td>
+<td style="text-align: right;">12</td>
+<td>🔴</td>
+</tr>
+<tr>
+<td>R14 — Allergic reaction</td>
+<td style="text-align: right;">10</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>R15 — Cash flow crisis</td>
+<td style="text-align: right;">10</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>R5 — Competitor price match</td>
+<td style="text-align: right;">9</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>R7 — MP account blocked</td>
+<td style="text-align: right;">9</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>R9 — Counterfeit products</td>
+<td style="text-align: right;">8</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>R11 — Malicious competitor report</td>
+<td style="text-align: right;">8</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>R12 — Sexitive price raise</td>
+<td style="text-align: right;">8</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>R13 — No qualified vendors</td>
+<td style="text-align: right;">4</td>
+<td>🟢</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total risk score:</strong> 137 (out of 375 max for 15 risks)
+<strong>Average risk:</strong> 9.1 (medium)</p>
+<hr />
+<h2 id="top-3-risks-to-address-in-week-1">Top 3 risks to address in Week 1</h2>
+<ol>
+<li><strong>R8 (burnout)</strong> — Document SOPs now (this repo). Hire part-time by month 2.</li>
+<li><strong>R1 (DINAVISA)</strong> — Engage despachante Week 1, file NSOs Week 2.</li>
+<li><strong>R4 (IG audience)</strong> — Run customer survey to 30 followers BEFORE launch to validate.</li>
+</ol>
+<hr />
+<h2 id="top-5-risks-to-monitor-monthly">Top 5 risks to monitor monthly</h2>
+<ul>
+<li>R3 (Q5 PDF costs) — when PDF arrives</li>
+<li>R6 (IG shadowban) — daily analytics</li>
+<li>R10 (FX rate) — weekly check</li>
+<li>R14 (allergic reactions) — per incident</li>
+<li>R15 (cash flow) — monthly review</li>
+</ul>
+<hr />
+<h2 id="quarterly-review">Quarterly review</h2>
+<p>Every quarter (Sept, Dec, Mar, Jun), review:
+- All 15 risks with new probability/impact scores
+- New risks identified
+- Mitigation effectiveness
+- Update this register</p>
+<hr />
+<p><em>Last updated: 2026-06-26 | Review quarterly</em></p>
+</div>
+</div>
+</body>
+</html>

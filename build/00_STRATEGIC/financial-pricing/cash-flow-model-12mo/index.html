@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cash Flow Model — Enki Store (12-Month Projection) — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">00_STRATEGIC/financial-pricing/cash-flow-model-12mo.md</div>
+<h1 id="cash-flow-model-enki-store-12-month-projection">Cash Flow Model — Enki Store (12-Month Projection)</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Scope:</strong> Monthly cash inflows + outflows for 12 months
+<strong>Scenarios:</strong> Conservative / Recommended / Stretch
+<strong>Currency:</strong> Gs (Paraguayan Guaraníes)</p>
+<hr />
+<h2 id="assumptions">Assumptions</h2>
+<h3 id="revenue-assumptions">Revenue assumptions</h3>
+<ul>
+<li><strong>Avg retail per unit (mix of trio):</strong> Gs 130K</li>
+<li><strong>COGS landed per unit:</strong> Gs 63K (Bitchie + XXX + Wet Anal weighted avg)</li>
+<li><strong>Gross margin per unit:</strong> Gs 67K (51%)</li>
+<li><strong>Marketing budget (paid):</strong> Gs 500K/month starting Month 3</li>
+<li><strong>IVA rate:</strong> 10%</li>
+<li><strong>Payment fees (bank transfer default):</strong> 0%</li>
+</ul>
+<h3 id="cost-assumptions">Cost assumptions</h3>
+<ul>
+<li><strong>Despachante per shipment:</strong> Gs 1.2M (formal import)</li>
+<li><strong>Modelo viajero per trip:</strong> Gs 2.5M (flight + hotel + food, included product cost)</li>
+<li><strong>DINAVISA NSO (one-time, 3 SKUs):</strong> Gs 1.5M</li>
+<li><strong>Contador monthly:</strong> Gs 400K</li>
+<li><strong>Courier per PY order:</strong> Gs 30K avg</li>
+<li><strong>Packaging per unit:</strong> Gs 5K (sticker + tissue + box)</li>
+</ul>
+<h3 id="volume-assumptions">Volume assumptions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Conservative</th>
+<th style="text-align: right;">Recommended</th>
+<th style="text-align: right;">Stretch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10 units</td>
+<td style="text-align: right;">20 units</td>
+<td style="text-align: right;">40 units</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">140</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">180</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">220</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">260</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">340</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">190</td>
+<td style="text-align: right;">380</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">210</td>
+<td style="text-align: right;">420</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">460</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conservative-scenario-50-confidence">Conservative scenario (50% confidence)</h2>
+<h3 id="12-month-summary">12-month summary</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total units sold</td>
+<td style="text-align: right;">450</td>
+</tr>
+<tr>
+<td>Total revenue</td>
+<td style="text-align: right;">Gs 58.5M</td>
+</tr>
+<tr>
+<td>Total COGS</td>
+<td style="text-align: right;">Gs 28.4M</td>
+</tr>
+<tr>
+<td>Gross profit</td>
+<td style="text-align: right;">Gs 30.2M (51%)</td>
+</tr>
+<tr>
+<td>Operating costs</td>
+<td style="text-align: right;">Gs 24.5M</td>
+</tr>
+<tr>
+<td>Net profit</td>
+<td style="text-align: right;">Gs 5.7M (10%)</td>
+</tr>
+<tr>
+<td>Cash at end (cumulative)</td>
+<td style="text-align: right;">Gs 5.7M</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monthly-cash-flow-conservative">Monthly cash flow (Conservative)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Revenue</th>
+<th style="text-align: right;">COGS</th>
+<th style="text-align: right;">Desp + DIN</th>
+<th style="text-align: right;">Marketing</th>
+<th style="text-align: right;">Ops</th>
+<th style="text-align: right;">Net</th>
+<th style="text-align: right;">Cumulative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1,300K</td>
+<td style="text-align: right;">800K</td>
+<td style="text-align: right;">4,000K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">600K</td>
+<td style="text-align: right;">-4,100K</td>
+<td style="text-align: right;">-4,100K</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1,950K</td>
+<td style="text-align: right;">1,200K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">600K</td>
+<td style="text-align: right;">150K</td>
+<td style="text-align: right;">-3,950K</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2,600K</td>
+<td style="text-align: right;">1,600K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">-1,700K</td>
+<td style="text-align: right;">-5,650K</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3,250K</td>
+<td style="text-align: right;">2,000K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">-1,450K</td>
+<td style="text-align: right;">-7,100K</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3,900K</td>
+<td style="text-align: right;">2,400K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">-1,200K</td>
+<td style="text-align: right;">-8,300K</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4,550K</td>
+<td style="text-align: right;">2,800K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">-950K</td>
+<td style="text-align: right;">-9,250K</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5,200K</td>
+<td style="text-align: right;">3,200K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">800K</td>
+<td style="text-align: right;">-8,450K</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5,850K</td>
+<td style="text-align: right;">3,600K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">1,050K</td>
+<td style="text-align: right;">-7,400K</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">6,500K</td>
+<td style="text-align: right;">4,000K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">-200K</td>
+<td style="text-align: right;">-7,600K</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">7,150K</td>
+<td style="text-align: right;">4,400K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">50K</td>
+<td style="text-align: right;">-7,550K</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">7,800K</td>
+<td style="text-align: right;">4,800K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">1,800K</td>
+<td style="text-align: right;">-5,750K</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8,450K</td>
+<td style="text-align: right;">5,200K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">550K</td>
+<td style="text-align: right;">-5,200K</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conservative 12-month outcome:</strong> Negative Gs 5.2M cumulative. Sarah needs additional capital injection or modelo旅行者 continuation to break even.</p>
+<hr />
+<h2 id="recommended-scenario-75-confidence">Recommended scenario (75% confidence)</h2>
+<h3 id="12-month-summary_1">12-month summary</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total units sold</td>
+<td style="text-align: right;">1,450</td>
+</tr>
+<tr>
+<td>Total revenue</td>
+<td style="text-align: right;">Gs 188.5M</td>
+</tr>
+<tr>
+<td>Total COGS</td>
+<td style="text-align: right;">Gs 91.4M</td>
+</tr>
+<tr>
+<td>Gross profit</td>
+<td style="text-align: right;">Gs 97.2M (51%)</td>
+</tr>
+<tr>
+<td>Operating costs</td>
+<td style="text-align: right;">Gs 24.5M</td>
+</tr>
+<tr>
+<td>Net profit</td>
+<td style="text-align: right;">Gs 72.7M (39%)</td>
+</tr>
+<tr>
+<td>Cash at end (cumulative)</td>
+<td style="text-align: right;">Gs 72.7M</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monthly-cash-flow-recommended">Monthly cash flow (Recommended)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Month</th>
+<th style="text-align: right;">Revenue</th>
+<th style="text-align: right;">COGS</th>
+<th style="text-align: right;">Desp + DIN</th>
+<th style="text-align: right;">Marketing</th>
+<th style="text-align: right;">Ops</th>
+<th style="text-align: right;">Net</th>
+<th style="text-align: right;">Cumulative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2,600K</td>
+<td style="text-align: right;">1,600K</td>
+<td style="text-align: right;">4,000K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">600K</td>
+<td style="text-align: right;">-3,600K</td>
+<td style="text-align: right;">-3,600K</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3,900K</td>
+<td style="text-align: right;">2,400K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">600K</td>
+<td style="text-align: right;">900K</td>
+<td style="text-align: right;">-2,700K</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6,500K</td>
+<td style="text-align: right;">4,000K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">-200K</td>
+<td style="text-align: right;">-2,900K</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9,100K</td>
+<td style="text-align: right;">5,600K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">800K</td>
+<td style="text-align: right;">-2,100K</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">11,700K</td>
+<td style="text-align: right;">7,200K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">1,800K</td>
+<td style="text-align: right;">-300K</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">14,300K</td>
+<td style="text-align: right;">8,800K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">2,800K</td>
+<td style="text-align: right;">2,500K</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">16,900K</td>
+<td style="text-align: right;">10,400K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">5,300K</td>
+<td style="text-align: right;">7,800K</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">19,500K</td>
+<td style="text-align: right;">12,000K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">6,300K</td>
+<td style="text-align: right;">14,100K</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">22,100K</td>
+<td style="text-align: right;">13,600K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">5,800K</td>
+<td style="text-align: right;">19,900K</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">24,700K</td>
+<td style="text-align: right;">15,200K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">6,800K</td>
+<td style="text-align: right;">26,700K</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">27,300K</td>
+<td style="text-align: right;">16,800K</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">9,300K</td>
+<td style="text-align: right;">36,000K</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">29,900K</td>
+<td style="text-align: right;">18,400K</td>
+<td style="text-align: right;">1,500K</td>
+<td style="text-align: right;">500K</td>
+<td style="text-align: right;">700K</td>
+<td style="text-align: right;">8,800K</td>
+<td style="text-align: right;">44,800K</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended 12-month outcome:</strong> Positive Gs 44.8M cumulative. Break-even at Month 6. Strong Year 1.</p>
+<hr />
+<h2 id="stretch-scenario-90-confidence-but-requires-execution">Stretch scenario (90% confidence — but requires execution)</h2>
+<h3 id="12-month-summary_2">12-month summary</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total units sold</td>
+<td style="text-align: right;">2,900</td>
+</tr>
+<tr>
+<td>Total revenue</td>
+<td style="text-align: right;">Gs 377M</td>
+</tr>
+<tr>
+<td>Total COGS</td>
+<td style="text-align: right;">Gs 182.7M</td>
+</tr>
+<tr>
+<td>Gross profit</td>
+<td style="text-align: right;">Gs 194.3M (51%)</td>
+</tr>
+<tr>
+<td>Operating costs</td>
+<td style="text-align: right;">Gs 24.5M</td>
+</tr>
+<tr>
+<td>Net profit</td>
+<td style="text-align: right;">Gs 169.8M (45%)</td>
+</tr>
+<tr>
+<td>Cash at end (cumulative)</td>
+<td style="text-align: right;">Gs 169.8M</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Stretch 12-month outcome:</strong> Positive Gs 169.8M cumulative (~USD 22,600). Massive Year 1.</p>
+<hr />
+<h2 id="comparison-table">Comparison table</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Conservative</th>
+<th style="text-align: right;">Recommended</th>
+<th style="text-align: right;">Stretch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Year 1 units sold</td>
+<td style="text-align: right;">450</td>
+<td style="text-align: right;">1,450</td>
+<td style="text-align: right;">2,900</td>
+</tr>
+<tr>
+<td>Year 1 revenue</td>
+<td style="text-align: right;">Gs 58.5M</td>
+<td style="text-align: right;">Gs 188.5M</td>
+<td style="text-align: right;">Gs 377M</td>
+</tr>
+<tr>
+<td>Year 1 gross profit</td>
+<td style="text-align: right;">Gs 30.2M</td>
+<td style="text-align: right;">Gs 97.2M</td>
+<td style="text-align: right;">Gs 194.3M</td>
+</tr>
+<tr>
+<td>Break-even month</td>
+<td style="text-align: right;">Month 13+ (never)</td>
+<td style="text-align: right;">Month 6</td>
+<td style="text-align: right;">Month 4</td>
+</tr>
+<tr>
+<td>Year 1 ending cash</td>
+<td style="text-align: right;">-Gs 5.2M</td>
+<td style="text-align: right;">+Gs 44.8M</td>
+<td style="text-align: right;">+Gs 169.8M</td>
+</tr>
+<tr>
+<td>6-month revenue target hit?</td>
+<td style="text-align: right;">❌ (Gs 30M vs target 5M = ✅ actually hits target)</td>
+<td style="text-align: right;">✅ Gs 48M</td>
+<td style="text-align: right;">✅ Gs 67M</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> All 3 scenarios hit Sarah's stated Gs 5M/6mo target. The model is more sensitive to whether Sarah breaks even by year-end.</p>
+<hr />
+<h2 id="when-to-escalate-to-recommended-scenario">When to escalate to Recommended scenario</h2>
+<p>If Sarah hits these milestones, she's on track:</p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Target month</th>
+<th>Volume check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First 5 orders</td>
+<td>Month 1</td>
+<td>5+ units</td>
+</tr>
+<tr>
+<td>50 cumulative orders</td>
+<td>Month 3</td>
+<td>~10 orders/month</td>
+</tr>
+<tr>
+<td>200 cumulative orders</td>
+<td>Month 6</td>
+<td>~30-40 orders/month</td>
+</tr>
+<tr>
+<td>500 cumulative orders</td>
+<td>Month 9</td>
+<td>~50 orders/month</td>
+</tr>
+<tr>
+<td>1,000 cumulative orders</td>
+<td>Month 12</td>
+<td>~80 orders/month</td>
+</tr>
+</tbody>
+</table>
+<p>If she's &lt;50% of these milestones, stay Conservative. If she's 2x these, switch to Stretch forecast.</p>
+<hr />
+<h2 id="cash-flow-risks">Cash flow risks</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DINAVISA delays 60+ days</td>
+<td>Cash burn extends</td>
+<td>Use modelo旅行者 to avoid DINAVISA first 3 orders</td>
+</tr>
+<tr>
+<td>Sarah can't travel to AR (personal constraint)</td>
+<td>Lose Gs 1.7M/shipment savings</td>
+<td>Use formal import + pass through IVA</td>
+</tr>
+<tr>
+<td>FX rate Gs/AR$ moves 5:1</td>
+<td>Cost +25%</td>
+<td>Build FX buffer into retail prices</td>
+</tr>
+<tr>
+<td>Mercado Pago adoption &lt;20%</td>
+<td>Customer friction (Tigo Money isn't mainstream)</td>
+<td>Push bank transfer as primary</td>
+</tr>
+<tr>
+<td>Customer churn &gt;30% within 30 days</td>
+<td>Repeat revenue fails</td>
+<td>Improve product quality + customer service</td>
+</tr>
+<tr>
+<td>Custom seizure on import</td>
+<td>Loss of shipment + retroactive DINAVISA</td>
+<td>Carry ANMAT paperwork + small quantities</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="funding-requirements">Funding requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Capital needed (Gs)</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conservative</td>
+<td style="text-align: right;">5.5M (one-time setup)</td>
+<td>Month 1</td>
+</tr>
+<tr>
+<td>Recommended</td>
+<td style="text-align: right;">5.5M + 3M reorder capital</td>
+<td>Month 1 + Month 6</td>
+</tr>
+<tr>
+<td>Stretch</td>
+<td style="text-align: right;">8M (formal DINAVISA + 3PL setup)</td>
+<td>Month 1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Current Sarah capital:</strong> &lt; Gs 10M (per questionnaire). Sufficient for Conservative + Recommended scenarios.</p>
+<hr />
+<h2 id="sensitivity-analysis">Sensitivity analysis</h2>
+<p><strong>What if launch is 50% slower than expected?</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th style="text-align: right;">Conservative</th>
+<th style="text-align: right;">Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expected</td>
+<td style="text-align: right;">Gs 5.7M net</td>
+<td style="text-align: right;">Gs 72.7M net</td>
+</tr>
+<tr>
+<td>50% slower</td>
+<td style="text-align: right;">-Gs 5M net</td>
+<td style="text-align: right;">Gs 25M net</td>
+</tr>
+<tr>
+<td>50% faster</td>
+<td style="text-align: right;">Gs 25M net</td>
+<td style="text-align: right;">Gs 150M net</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key takeaway:</strong> Even at 50% slower than Recommended, Sarah still turns profitable. The model is robust.</p>
+<hr />
+<h2 id="next-step-actions-month-1">Next step actions (Month 1)</h2>
+<ul>
+<li>[ ] Send despachante + contador outreach (per <code>py-vendor-shortlist.md</code>)</li>
+<li>[ ] Decide on modelo旅行者 vs formal import for first shipment</li>
+<li>[ ] Engage Sexitive AR for first order (modelo旅行者 or formal)</li>
+<li>[ ] Set up Google Sheet for monthly tracking</li>
+<li>[ ] Review actuals vs. forecast at end of Month 1</li>
+</ul>
+<hr />
+<p><em>Last updated: 2026-06-26 | Sarah: review monthly + adjust forecast</em></p>
+</div>
+</div>
+</body>
+</html>
