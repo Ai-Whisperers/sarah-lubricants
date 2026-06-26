@@ -1,11 +1,20 @@
 # Canonical Pricing Reference v1 — Launch Trio
 
-**Status:** v1 — uses Sexitive AR consumer retail prices as cost basis reference (since Q5 PDF not yet received)
-**Date:** June 26, 2026
-**Author:** Erebus
-**Next revision:** After Q5 PDF arrives from Sarah (Sexitive AR mayorista official list)
-
-> ⚠️ **AUDIT DISCLAIMER:** Until Sarah sends the official Sexitive AR wholesale PDF (Q5 from June 22 question list), all pricing below uses Sexitive's AR consumer retail prices (shop.sexitive.com) divided by 2 to estimate Sarah's **Distribuidor Mayorista** wholesale cost. This is a conservative estimate — Sarah's actual cost may be 20–40% lower if the gerente gave her a special "viaje" discount on June 17.
+> ⚠️⚠️⚠️ **CRITICAL — READ BEFORE USING THESE NUMBERS** ⚠️⚠️⚠️
+>
+> **THREE THINGS ARE PROBABLY WRONG:**
+>
+> 1. **Cost basis is ESTIMATE, not real.** We assume Sexitive AR Distribuidor Mayorista = AR retail ÷ 2. We have NOT seen the actual Q5 PDF. Real prices could be 30%+ different.
+> 2. **FX rate is MOVING.** Argentina wholesale inflation is 34.5% YoY (INDEC May 2026). Our 4 Gs/AR$ assumption will likely break within 6 months. Run `fx-tracker` monthly.
+> 3. **Competitor pricing has NOT been validated.** We have observational ranges, not real SKU-by-SKU competitor prices. Actual market may be tighter or wider.
+>
+> **HOW TO USE THIS DOC:**
+> - Use these numbers for **planning + budgeting** — they're directionally right
+> - Use **WhatsApp-quoted pricing** for sales, not website pricing (we don't have a website anyway)
+> - **Re-run all calculations when Q5 PDF arrives** (Sarah's responsibility)
+> - **Re-run every 3 months** as FX shifts
+>
+> **This is v1 — by definition outdated. Do not lock these in writing until Q5 PDF arrives.**
 
 ---
 

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Validation Status — What We Know vs. What We Assume — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/operations/validation-status.md</div>
+<h1 id="validation-status-what-we-know-vs-what-we-assume">Validation Status — What We Know vs. What We Assume</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Purpose:</strong> Honest inventory of what's been validated vs. what we're guessing
+<strong>Critical for risk awareness</strong></p>
+<hr />
+<h2 id="validated-we-have-real-data">✅ VALIDATED (we have real data)</h2>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Source</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sexitive AR has 158 active SKUs</td>
+<td>sitemap.xml scrape (shop.sexitive.com)</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>Sexitive AR has a dropship program for LATAM</td>
+<td>sexshopmayorista.com</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>Sexitive AR retail prices (153/158 SKUs)</td>
+<td>shop.sexitive.com JSON-LD</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>5 PY competitor sites exist + reachable</td>
+<td>Direct scrape</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>As Bajo La Manga resells Sexitive Lube Premium</td>
+<td>Direct site scrape</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>PY has MercadorLibre "Lubricantes y Fluidos" category</td>
+<td>Category map</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>Mencanta has 10+ product categories + visible pricing</td>
+<td>Direct scrape</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>AR wholesale inflation is 34.5% YoY (May 2026)</td>
+<td>INDEC via Indexbox</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>Sarah confirmed brand = Enki Store, Kinky = sub</td>
+<td>WhatsApp June 22</td>
+<td>June 22</td>
+</tr>
+<tr>
+<td>Sarah confirmed launch trio = Bitchie + XXX + Wet Anal</td>
+<td>WhatsApp June 22</td>
+<td>June 22</td>
+</tr>
+<tr>
+<td>Sarah has Sexitive AR Distribuidor Mayorista tier</td>
+<td>WhatsApp June 22</td>
+<td>June 22</td>
+</tr>
+<tr>
+<td>Sarah dropped Pink Sexy Pill from v1 launch</td>
+<td>WhatsApp June 22</td>
+<td>June 22</td>
+</tr>
+<tr>
+<td>Sarah has RUC 4978694-6 with "venta de productos por internet"</td>
+<td>Questionnaire</td>
+<td>June 19</td>
+</tr>
+<tr>
+<td>Sarah has IG @enkistore with 20K followers</td>
+<td>Public IG</td>
+<td>June 19</td>
+</tr>
+<tr>
+<td>Sarah traveled to AR on June 17, brought goods as personal luggage</td>
+<td>WhatsApp June 16-19</td>
+<td>June 17</td>
+</tr>
+<tr>
+<td>50 PY Instagram micro-influencers identified with engagement data</td>
+<td>Modash + StarNgage</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>6 PY imprentas identified with real pricing</td>
+<td>Web research</td>
+<td>June 26</td>
+</tr>
+<tr>
+<td>PY packaging customs: 4 Gs per AR$ (Sarah's verbal rate)</td>
+<td>Sarah WhatsApp</td>
+<td>June 22</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="partially-validated-some-data-key-assumptions">🟡 PARTIALLY VALIDATED (some data, key assumptions)</h2>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>What we have</th>
+<th>What's missing</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sarah's IG engagement is good</strong></td>
+<td>Follower count (20K)</td>
+<td>Engagement rate, audience demographics, content preferences</td>
+<td>If &lt;1%, entire DTC strategy fails</td>
+</tr>
+<tr>
+<td><strong>100% margin fits market</strong></td>
+<td>PY competitor price ranges (observational)</td>
+<td>Real competitor prices for same SKUs</td>
+<td>20-30% off on competitor prices</td>
+</tr>
+<tr>
+<td><strong>Modelo旅行者 saves 30% per shipment</strong></td>
+<td>Compared formal vs modelo math</td>
+<td>Actual Sarah savings (Qs 5, 8 unanswered)</td>
+<td>Customs seizure risk</td>
+</tr>
+<tr>
+<td><strong>MERCOSUR origin cert saves 14-18% DI</strong></td>
+<td>Standard procedure</td>
+<td>Whether Sexitive AR provides it (Qs unanswered)</td>
+<td>If no, +14-18% landed cost</td>
+</tr>
+<tr>
+<td><strong>Launch budget fits Gs 10M</strong></td>
+<td>Estimated breakdown (Gs 6.3M)</td>
+<td>Actual vendor quotes</td>
+<td>Could be Gs 8-12M range</td>
+</tr>
+<tr>
+<td><strong>B2B wholesale demand exists</strong></td>
+<td>23 PY shops identified</td>
+<td>None actually contacted</td>
+<td>Assumed willingness</td>
+</tr>
+<tr>
+<td><strong>Customer survey will validate Gs 5M/6mo target</strong></td>
+<td>Survey drafted</td>
+<td>Survey not sent</td>
+<td>Target is unvalidated guess</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="unvalidated-assumptions-no-data">🔴 UNVALIDATED (assumptions, no data)</h2>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Why unvalidated</th>
+<th>Impact if wrong</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sarah's 20K followers will engage with Kinky</strong></td>
+<td>Never tested with Kinky content</td>
+<td>All DTC revenue projection fails</td>
+</tr>
+<tr>
+<td><strong>Real Sexitive AR Mayorista pricing matches our estimate</strong></td>
+<td>Q5 PDF not received</td>
+<td>Pricing model completely wrong</td>
+</tr>
+<tr>
+<td><strong>Sexitive AR ships within 7 days</strong></td>
+<td>Sarah's verbal only</td>
+<td>Launch delays</td>
+</tr>
+<tr>
+<td><strong>Sexitive AR provides MERCOSUR origin certificate</strong></td>
+<td>Q8 not answered</td>
+<td>+14-18% landed cost</td>
+</tr>
+<tr>
+<td><strong>Contador + despachante available with cosmetics experience</strong></td>
+<td>Outreach not done</td>
+<td>Regulatory process blocked</td>
+</tr>
+<tr>
+<td><strong>Gs 7,500/USD FX rate holds</strong></td>
+<td>Current blue rate only</td>
+<td>10-30% cost increase</td>
+</tr>
+<tr>
+<td><strong>34.5% AR inflation continues</strong></td>
+<td>Single data point (May 2026)</td>
+<td>Sexitive raises prices</td>
+</tr>
+<tr>
+<td><strong>Sarah has time for 10h/week of Enki work</strong></td>
+<td>Unknown</td>
+<td>Launch slips, customer service fails</td>
+</tr>
+<tr>
+<td><strong>Mencanta + others don't match Sexitive pricing</strong></td>
+<td>We haven't tested</td>
+<td>Sarah loses on price</td>
+</tr>
+<tr>
+<td><strong>WA Business catalog drives 30% of sales</strong></td>
+<td>Industry assumption, not tested</td>
+<td>Lower conversion than expected</td>
+</tr>
+<tr>
+<td><strong>B2B wholesale margins (30-50%) justify the outreach effort</strong></td>
+<td>Not modeled with real buyer feedback</td>
+<td>Time spent vs. ROI unknown</td>
+</tr>
+<tr>
+<td><strong>Email list will reach 200 in Month 3</strong></td>
+<td>Brevo flow ready, no list yet</td>
+<td>Email channel is 0% of revenue</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="critical-unknowns-not-even-assumptions-we-dont-know-what-we-dont-know">🔴 CRITICAL UNKNOWNS (not even assumptions — we don't know what we don't know)</h2>
+<ol>
+<li><strong>What does Sexitive AR's actual Mayorista PDF look like?</strong>
+   - We have an estimate (AR retail ÷ 2). Real PDF could be 30% off or 30% on.</li>
+<li><strong>Can Sarah get DINAVISA NSO in 15-30 days?</strong>
+   - We assume yes (industry standard). Could take 60+ days.</li>
+<li><strong>What does the customs experience at PY airport actually look like?</strong>
+   - Sarah did it once on June 17. We have no notes on the experience.</li>
+<li><strong>What's Sarah's actual IG engagement rate?</strong>
+   - We have follower count. Engagement could be 0.5% (bad) or 8% (great).</li>
+<li><strong>Does the Sexitive AR gerente actually have authority to give "viaje" pricing?</strong>
+   - We assume yes. Could be that Sarah paid full price on the June 17 trip.</li>
+<li><strong>What's the real cost of despacho + DINAVISA + freight in PY?</strong>
+   - We have ranges (Gs 800K-1.5M despachante). Could be Gs 2M+ for a complicated import.</li>
+<li><strong>How many PY consumers actually buy intimate products online?</strong>
+   - Survey draft ready. Never sent. Real demand unknown.</li>
+<li><strong>Is the PY e-commerce customer willing to wait 3-5 days for delivery?</strong>
+   - We assume yes (most competitors do this). Could be a deal-breaker.</li>
+</ol>
+<hr />
+<h2 id="risk-assessment-of-unvalidated-assumptions">🚦 Risk assessment of unvalidated assumptions</h2>
+<table>
+<thead>
+<tr>
+<th>Assumption</th>
+<th>If wrong...</th>
+<th style="text-align: right;">Likelihood</th>
+<th style="text-align: right;">Severity</th>
+<th style="text-align: right;">Composite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q5 PDF pricing higher than estimate</td>
+<td>Price hike, lose customers</td>
+<td style="text-align: right;">🟠 Medium</td>
+<td style="text-align: right;">🔴 High</td>
+<td style="text-align: right;">🟠 Medium-High</td>
+</tr>
+<tr>
+<td>20K IG followers don't engage</td>
+<td>DTC strategy fails</td>
+<td style="text-align: right;">🟠 Medium</td>
+<td style="text-align: right;">🔴 High</td>
+<td style="text-align: right;">🟠 Medium-High</td>
+</tr>
+<tr>
+<td>B2B wholesale not interested</td>
+<td>Revenue forecast wrong</td>
+<td style="text-align: right;">🟡 Low-Med</td>
+<td style="text-align: right;">🟡 Med</td>
+<td style="text-align: right;">🟡 Medium</td>
+</tr>
+<tr>
+<td>DINAVISA takes 60+ days</td>
+<td>Launch delays</td>
+<td style="text-align: right;">🟡 Med</td>
+<td style="text-align: right;">🟡 Med</td>
+<td style="text-align: right;">🟡 Medium</td>
+</tr>
+<tr>
+<td>FX rate moves 5:1 or 6:1</td>
+<td>Cost up 25-50%</td>
+<td style="text-align: right;">🟠 High</td>
+<td style="text-align: right;">🟡 Med</td>
+<td style="text-align: right;">🟠 Medium</td>
+</tr>
+<tr>
+<td>Mercado Pago blocks account</td>
+<td>Payment friction</td>
+<td style="text-align: right;">🟡 Low</td>
+<td style="text-align: right;">🟡 Med</td>
+<td style="text-align: right;">🟢 Low-Med</td>
+</tr>
+<tr>
+<td>Customs seizure (modelo旅行者)</td>
+<td>Loss + retroactive DINAVISA</td>
+<td style="text-align: right;">🟡 Low</td>
+<td style="text-align: right;">🔴 High</td>
+<td style="text-align: right;">🟡 Medium</td>
+</tr>
+<tr>
+<td>Sarah runs out of time</td>
+<td>Launch slips</td>
+<td style="text-align: right;">🟠 Med</td>
+<td style="text-align: right;">🟠 Med</td>
+<td style="text-align: right;">🟠 Medium</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-to-do-about-it">What to do about it</h2>
+<h3 id="this-week-sarahs-actions">This week (Sarah's actions)</h3>
+<ul>
+<li>[ ] Get Q5 PDF → validates pricing math</li>
+<li>[ ] Get 3 vendor quotes each → validates budget</li>
+<li>[ ] Schedule IG engagement audit → validates DTC assumption</li>
+</ul>
+<h3 id="before-launch-week-2-3">Before launch (Week 2-3)</h3>
+<ul>
+<li>[ ] Distribute customer survey → validates demand</li>
+<li>[ ] File DINAVISA NSO → validates regulatory timeline</li>
+<li>[ ] First B2B visit → validates B2B channel</li>
+<li>[ ] First modelo旅行者 OR formal shipment → validates logistics</li>
+</ul>
+<h3 id="post-launch-month-2">Post-launch (Month 2+)</h3>
+<ul>
+<li>[ ] First month actual sales data → validates revenue projections</li>
+<li>[ ] First repeat customer → validates retention assumption</li>
+<li>[ ] First competitor price match → validates differentiation</li>
+</ul>
+<hr />
+<h2 id="how-to-use-this-doc">How to use this doc</h2>
+<p><strong>Before any major decision:</strong> Review this doc. Check what's actually validated vs. what you're assuming.</p>
+<p><strong>When in doubt:</strong> The bigger the decision, the more it should depend on VALIDATED data, not assumptions.</p>
+<p><strong>When something is unvalidated:</strong> Either validate it (cheap test) or budget for the worst case (it might be wrong).</p>
+<hr />
+<p><em>Last updated: June 26, 2026 — Session 10 Repo Upgrade</em>
+<em>Companion: <code>01_RESEARCH/operations/gaps-and-unknowns.md</code></em></p>
+</div>
+</div>
+</body>
+</html>

@@ -1,5 +1,7 @@
 # Cash Flow Model — Enki Store (12-Month Projection)
 
+> ⚠️ **CRITICAL CAVEAT:** This model uses the same cost basis as `canonical-pricing-reference-v1.md` — i.e., ESTIMATES, not confirmed Sexitive AR Mayorista prices. The monthly numbers below are directionally right but could be 20-40% different once Q5 PDF arrives. Treat all dollar figures as **planning + budgeting**, not locked in stone.
+
 **Date:** June 26, 2026
 **Scope:** Monthly cash inflows + outflows for 12 months
 **Scenarios:** Conservative / Recommended / Stretch

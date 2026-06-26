@@ -1,4 +1,6 @@
-# Launch Budget — Under Gs 10M Scenario (v2, June 26, 2026)
+# Launch Budget — Under Gs 10M Scenario (v3, June 26, 2026)
+
+> ⚠️ **CRITICAL CAVEAT:** This budget uses estimated costs. See `canonical-pricing-reference-v1.md` (CRITICAL banner at top) for the full disclaimer. Actual vendor quotes (despachante, contador, imprentas, courier) will replace estimates within 2-3 weeks of Sarah's outreach.
 
 **Status:** Provisional, updated for confirmed launch trio (Bitchie + XXX For Her + Wet Anal)
 **Date:** June 26, 2026 — supersedes June 20, 2026 v1

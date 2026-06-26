@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repo Audit &amp; Roast — June 26, 2026 — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/operations/repo-audit-roast-jun26.md</div>
+<h1 id="repo-audit-roast-june-26-2026">Repo Audit &amp; Roast — June 26, 2026</h1>
+<p><strong>This is not a roast to be cruel. It's a roast to be useful. Every repo gets bloated when built fast. The question is: what's signal, what's noise, what's missing.</strong></p>
+<p><strong>Method:</strong> I read every key file. I ran quality metrics across all 84 docs. I checked what's actually load-bearing vs. decorative. Then I built the upgrade list.</p>
+<hr />
+<h2 id="what-the-repo-actually-is">What the repo actually IS</h2>
+<p><strong>A 6-session research binge that produced 84 markdown files, 100K words, 15K lines, 98 HTML pages.</strong></p>
+<p>It's:
+- ✅ Strategy-heavy (correct)
+- ✅ Spanish-first (correct for PY market)
+- ✅ Single source of truth for products/pricing/brand (correct)
+- ❌ Bloated — multiple docs say similar things
+- ❌ Lacking actual <em>data</em> — most numbers are estimates
+- ❌ No real vendor quotes (just templates)
+- ❌ Index rot — COMPLETE-INDEX and README drift from each other
+- ❌ Decision-fatigue for Sarah — too many docs to read
+- ❌ Sarah's actual decisions are buried</p>
+<hr />
+<h2 id="the-roast">🔥 THE ROAST</h2>
+<h3 id="roast-1-sarah-cant-read-this">Roast 1 — Sarah can't read this</h3>
+<p>84 docs. 100K words. That's a 6-hour read minimum.</p>
+<p><strong>The most important document for Sarah</strong> (the operator) is <code>start-here.md</code>. <strong>It's 4 months stale</strong> — it still says "Sexitive has 12 SKUs" (we have 158). It still says "Sarah needs to answer 3 questions" (she already did). It still says the trio is "to be confirmed" (it's locked).</p>
+<p>A new visitor to this repo would conclude the project is at the <em>very beginning</em>. The actual state is "we have everything except vendor quotes, a logo, and Sarah's actual data."</p>
+<p><strong>Sarah would land on <code>start-here.md</code> and not understand what's already been done or what's still needed.</strong></p>
+<h3 id="roast-2-the-pricing-math-is-wrong">Roast 2 — The pricing math is wrong</h3>
+<p>We modeled at <strong>4 Gs/AR$</strong> when:
+- Argentina wholesale inflation is <strong>34.5% YoY</strong> (INDEC May 2026)
+- Sarah's verbal June 17 trip prices (Bitchie Gs 19,700) are <em>already below</em> our "Mayorista ÷ 2" estimate
+- We have <strong>zero confirmed Sexitive AR Mayorista pricing</strong>
+- The 4:1 FX assumption will likely be 5:1 or 6:1 within 12 months</p>
+<p><strong>The entire pricing model is built on top of an unvalidated estimate, with a known-moving FX rate, against a supplier whose prices we haven't seen.</strong></p>
+<p>This isn't unique to us — every startup does this — but we should be screaming about it louder. The "AUDIT DISCLAIMER" at the top of <code>canonical-pricing-reference-v1.md</code> is too quiet for the stakes.</p>
+<h3 id="roast-3-we-over-engineered-and-under-validated">Roast 3 — We over-engineered and under-validated</h3>
+<p>84 docs. 10 of them are blog posts. 5 of them are 1-line templates. We have:
+- <strong>30+ SKU battle cards</strong> but <strong>0 customer interviews</strong>
+- <strong>6 marketing channels</strong> but <strong>0 customers acquired</strong>
+- <strong>3 payment options documented</strong> but <strong>0 payments processed</strong>
+- <strong>4 B2B pricing tiers designed</strong> but <strong>0 B2B meetings held</strong>
+- <strong>4 influencer outreach templates</strong> but <strong>0 influencers contacted</strong></p>
+<p><strong>Documentation is not validation.</strong> We have a beautiful strategy repo. Sarah still has to do the actual work.</p>
+<h3 id="roast-4-the-sarah-has-20k-followers-assumption-is-unverified">Roast 4 — The "Sarah has 20K followers" assumption is unverified</h3>
+<p>We assume Enki's existing IG audience will convert to Kinky (intimate wellness). <strong>Never validated.</strong> Could be:
+- 20K lifestyle followers who reject intimate content
+- 20K followers with 1% engagement (= 200 real people)
+- 20K followers mostly outside Paraguay
+- 20K bot followers</p>
+<p><strong>This single assumption underlies every revenue projection.</strong> If it's wrong by 50%, our cash flow model is wrong by 50%.</p>
+<h3 id="roast-5-documentation-drift">Roast 5 — Documentation drift</h3>
+<ul>
+<li>README's quick-link table has 24 entries; COMPLETE-INDEX has different organization</li>
+<li><code>start-here.md</code> contradicts current state</li>
+<li><code>kinky-store-assessment.md</code> still exists as deprecated, confusing readers</li>
+<li><code>enki-store-assessment.md</code> doesn't link to it explicitly</li>
+<li>Date stamps are inconsistent ("June 26, 2026" everywhere, no time, no author)</li>
+</ul>
+<h3 id="roast-6-the-launch-roadmap-is-too-long">Roast 6 — The launch roadmap is too long</h3>
+<p>The 90-day launch roadmap is 262 lines. Sarah's day-to-day reality will be:
+- Respond to WhatsApp
+- Pack orders
+- Post 1 IG story
+- Maybe write a thank-you card</p>
+<p><strong>The roadmap should be 1 page Sarah prints and sticks on the wall.</strong> Not a long-form doc.</p>
+<h3 id="roast-7-we-have-no-customer-voice">Roast 7 — We have no customer voice</h3>
+<p>Out of 100K words:
+- 0 customer testimonials
+- 0 customer quotes
+- 0 customer pain points articulated in their words
+- 0 user research beyond the questionnaire Sarah filled out</p>
+<p>The blog posts are educated guesswork. The "competitor battle cards" are inferences. <strong>Nothing has been tested against a real person.</strong></p>
+<h3 id="roast-8-the-158-sku-catalog-is-bloat">Roast 8 — The 158-SKU catalog is bloat</h3>
+<p><strong>Sarah is launching with 3 SKUs.</strong> The 158-SKU catalog master is reference material. But it's been treated as a marketing deliverable. It includes products Sarah will never sell (Pink Pill = 90-180 day DINAVISA, My Hemp = zona gris, supplements Sarah can't launch yet).</p>
+<p>For the actual launch, what Sarah needs is <strong>a 3-SKU launch catalog</strong> + <strong>a "future SKUs" roadmap</strong>. Not a 158-row table.</p>
+<h3 id="roast-9-the-risk-register-is-theoretical">Roast 9 — The risk register is theoretical</h3>
+<p>"R8 — Sarah burnout" is rated 16/25 (highest). But it has <strong>no mitigation that's actionable today</strong>. "Hire part-time helper at month 2" — but no job description, no cost, no time to hire.</p>
+<p>Compare to <strong>R3 — Q5 PDF higher costs (score 12)</strong> — mitigation says "negotiate special viajero pricing with Sexitive AR." But we don't know if Sexitive will agree. There's no backup for "what if they don't."</p>
+<p>The risk register reads like an academic exercise, not an operational tool.</p>
+<h3 id="roast-10-kinky-store-assessmentmd-still-exists">Roast 10 — <code>kinky-store-assessment.md</code> still exists</h3>
+<p>This deprecated file contradicts current state. <strong>First-time visitors will hit it.</strong> Confusing.</p>
+<h3 id="roast-11-toolsdeploysh-still-hardcoded-path">Roast 11 — <code>tools/deploy.sh</code> still hardcoded path</h3>
+<p>Wait — actually fixed in Session 8. Good. But the <code>tools/build_site.py</code> <em>output</em> structure changed (per-folder index.html) and the new structure isn't documented anywhere. A new Erebus session would have to reverse-engineer it.</p>
+<h3 id="roast-12-02_meetings2026-06-20-clarifying-questionsmd-mixes-questions-and-answers">Roast 12 — <code>02_MEETINGS/2026-06-20-clarifying-questions.md</code> mixes questions and answers</h3>
+<p>Document title says "clarifying questions" but it contains both the questions AND Sarah's answers. Confusing. Should be split: <code>2026-06-20-clarifying-questions-asked.md</code> and <code>2026-06-22-clarifying-questions-answered.md</code>.</p>
+<h3 id="roast-13-the-sexitive-has-12-skus-zombie-data">Roast 13 — The "Sexitive has 12 SKUs" zombie data</h3>
+<ul>
+<li><code>start-here.md</code> still says 12</li>
+<li><code>validacion-cliente-sarah.md</code> (the questionnaire) says 12</li>
+<li>These were correct in June but wrong by June 26</li>
+<li>No note that the questionnaire is "stale, see sexitive-catalog-master.md for current"</li>
+</ul>
+<h3 id="roast-14-no-whats-unblocking-you-right-now-page">Roast 14 — No "what's unblocking you right now" page</h3>
+<p>The most actionable question — "what does Sarah need to do this week to unblock launch?" — is buried across 4 different files. Should be 1 page.</p>
+<hr />
+<h2 id="quantitative-audit">📊 Quantitative Audit</h2>
+<h3 id="quality-metrics-84-docs">Quality metrics (84 docs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Have H1 heading</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">100% ✅</td>
+</tr>
+<tr>
+<td>Have date stamp</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">60%</td>
+</tr>
+<tr>
+<td>Have "Last updated" footer</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">55%</td>
+</tr>
+<tr>
+<td>Have internal links</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"><strong>1% ❌</strong></td>
+</tr>
+<tr>
+<td>Have tables</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">95% ✅</td>
+</tr>
+<tr>
+<td>Have checkboxes</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">13%</td>
+</tr>
+<tr>
+<td>Have code blocks</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">36%</td>
+</tr>
+<tr>
+<td>&gt;10 headings (deep structure)</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">71%</td>
+</tr>
+<tr>
+<td>&lt;100 lines (shallow)</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">19%</td>
+</tr>
+<tr>
+<td>&gt;500 lines (bloated)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0% ✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="biggest-issues-by-impact">Biggest issues by impact</h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th style="text-align: right;">Severity</th>
+<th style="text-align: right;">Fix effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start-here.md</code> contradicts current state</td>
+<td style="text-align: right;">🔴 Critical</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>Pricing math built on FX guess + unverified estimates</td>
+<td style="text-align: right;">🔴 Critical</td>
+<td style="text-align: right;">4h</td>
+</tr>
+<tr>
+<td>No customer voice / research validation</td>
+<td style="text-align: right;">🟠 High</td>
+<td style="text-align: right;">8h</td>
+</tr>
+<tr>
+<td>Internal link graph missing (1% have internal links)</td>
+<td style="text-align: right;">🟠 High</td>
+<td style="text-align: right;">4h</td>
+</tr>
+<tr>
+<td>Multiple deprecated/zombie files</td>
+<td style="text-align: right;">🟠 High</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>Doc drift between README / COMPLETE-INDEX</td>
+<td style="text-align: right;">🟡 Medium</td>
+<td style="text-align: right;">2h</td>
+</tr>
+<tr>
+<td>Risk register mitigations not actionable</td>
+<td style="text-align: right;">🟡 Medium</td>
+<td style="text-align: right;">4h</td>
+</tr>
+<tr>
+<td>Launch roadmap too long</td>
+<td style="text-align: right;">🟡 Medium</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>158-SKU catalog not pruned to launch trio</td>
+<td style="text-align: right;">🟡 Medium</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>No "this week for Sarah" action page</td>
+<td style="text-align: right;">🔴 Critical</td>
+<td style="text-align: right;">1h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total upgrade effort:</strong> ~28 hours</p>
+<hr />
+<h2 id="what-actually-is-good-dont-touch">✅ What actually IS good (don't touch)</h2>
+<p>These are well-built. Don't refactor for the sake of it:</p>
+<ul>
+<li>✅ <code>sexitive-catalog-master.md</code> — accurate 158-SKU reference</li>
+<li>✅ <code>competitor-pricing-scraped.md</code> — real scraped data</li>
+<li>✅ <code>py-compliance-roadmap.md</code> — comprehensive + accurate</li>
+<li>✅ <code>risk-register.md</code> — comprehensive, just needs actionable mitigations</li>
+<li>✅ <code>business-model-canvas.md</code> — solid Osterwalder</li>
+<li>✅ <code>cash-flow-model-12mo.md</code> — good scenario modeling (if estimates are right)</li>
+<li>✅ <code>customer-messages.md</code> — 12 ready-to-paste templates</li>
+<li>✅ <code>glossary.md</code> — necessary reference</li>
+<li>✅ The 10 SEO blog posts — quality content</li>
+</ul>
+<hr />
+<h2 id="the-upgrade-plan-in-priority-order">🎯 THE UPGRADE PLAN (in priority order)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Upgrade</th>
+<th>Why</th>
+<th style="text-align: right;">Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Rewrite <code>start-here.md</code></strong></td>
+<td>Sarah's first read, contradicts state</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Create <code>this-week-for-sarah.md</code></strong></td>
+<td>Action page, replaces 4-doc hunt</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Prune <code>sexitive-catalog-master.md</code></strong> to launch-focused</td>
+<td>Drop what's not in launch</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Add WARNING banner to pricing math</strong></td>
+<td>FX + estimate reality</td>
+<td style="text-align: right;">0.5h</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Fix <code>kinky-store-assessment.md</code></strong> → archived with redirect</td>
+<td>Zombie file</td>
+<td style="text-align: right;">0.5h</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Split clarifying questions doc</strong></td>
+<td>Title vs content mismatch</td>
+<td style="text-align: right;">0.5h</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Add internal link graph</strong> (one-pass)</td>
+<td>1% internal links = 99% orphan</td>
+<td style="text-align: right;">4h</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Make risk mitigations actionable</strong> (owner + due date)</td>
+<td>Risk register usability</td>
+<td style="text-align: right;">4h</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Compress launch roadmap to 1 page</strong></td>
+<td>Print-and-stick version</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Sync README + COMPLETE-INDEX</strong></td>
+<td>Single source for index</td>
+<td style="text-align: right;">2h</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Add decision log</strong> (chronological decisions made)</td>
+<td>Historical context</td>
+<td style="text-align: right;">2h</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Add "what we don't know" page</strong></td>
+<td>Honest gaps</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Add validation status doc</strong> (what's tested vs. assumed)</td>
+<td>Critical for risk awareness</td>
+<td style="text-align: right;">2h</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Write 1-page "Day 1" operational checklist</strong></td>
+<td>Sarah's actual daily work</td>
+<td style="text-align: right;">1h</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Add "Sarah's roadmap to launch"</strong> (decision tree)</td>
+<td>Help Sarah decide</td>
+<td style="text-align: right;">1h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total:</strong> ~21 hours</p>
+<hr />
+<h2 id="executing-upgrade-now">🚀 EXECUTING UPGRADE NOW</h2>
+<p>I'll do these in order of value. Starting with the critical ones (Sarah's read + action), then structural (link graph + drift fix), then quick wins.</p>
+<p>Skipping: blog post production (we have 10 of 38, that's enough for v1).</p>
+<p>Continuing to: <strong>what data we still need to validate</strong> (separate doc).</p>
+<p>Let me know if you want any specific upgrades prioritized differently.</p>
+</div>
+</div>
+</body>
+</html>

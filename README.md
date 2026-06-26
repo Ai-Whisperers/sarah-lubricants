@@ -114,9 +114,21 @@ See [`00_STRATEGIC/financial-pricing/canonical-pricing-reference-v1.md`](./00_ST
 | Glossary (Sexitive/PY terms) | [`docs/glossary.md`](./docs/glossary.md) |
 | Sarah's intake form | [`01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md`](./01_RESEARCH/legal-regulatory/validacion-cliente-sarah.md) |
 | Sarah's questionnaire response | [`02_MEETINGS/2026-06-20-questionnaire-response.md`](./02_MEETINGS/2026-06-20-questionnaire-response.md) |
-| 5 clarifying questions to Sarah | [`02_MEETINGS/2026-06-20-clarifying-questions.md`](./02_MEETINGS/2026-06-20-clarifying-questions.md) |
 | 21 Round 2 questions (A-F) | [`02_MEETINGS/2026-06-22-round-2-questions.md`](./02_MEETINGS/2026-06-22-round-2-questions.md) |
-| Audio prompt pack for Sarah | [`02_MEETINGS/2026-06-22-audio-prompt-pack.md`](./02_MEETINGS/2026-06-22-audio-prompt-pack.md) |
+| | Audio prompt pack for Sarah | [`02_MEETINGS/2026-06-22-audio-prompt-pack.md`](./02_MEETINGS/2026-06-22-audio-prompt-pack.md) |
+| | Sarah's action checklist (this week) | [`01_RESEARCH/operations/this-week-for-sarah.md`](./01_RESEARCH/operations/this-week-for-sarah.md) |
+| | What we KNOW vs ASSUMED | [`01_RESEARCH/operations/validation-status.md`](./01_RESEARCH/operations/validation-status.md) |
+| | What we DON'T know | [`01_RESEARCH/operations/gaps-and-unknowns.md`](./01_RESEARCH/operations/gaps-and-unknowns.md) |
+| | Decisions made (chronological) | [`01_RESEARCH/operations/decision-log.md`](./01_RESEARCH/operations/decision-log.md) |
+| | Sarah's daily/weekly/monthly work | [`05_OPERATIONS/daily-checklist.md`](./05_OPERATIONS/daily-checklist.md) |
+| | 1-page launch roadmap (print) | [`03_LAUNCH/launch-roadmap-1page.md`](./03_LAUNCH/launch-roadmap-1page.md) |
+| | Repo audit + critique | [`01_RESEARCH/operations/repo-audit-roast-jun26.md`](./01_RESEARCH/operations/repo-audit-roast-jun26.md) |
+| | 5 questions SENT to Sarah (June 20) | [`02_MEETINGS/2026-06-20-clarifying-questions-asked.md`](./02_MEETINGS/2026-06-20-clarifying-questions-asked.md) |
+| | 5 questions ANSWERED by Sarah (June 22) | [`02_MEETINGS/2026-06-22-clarifying-questions-answered.md`](./02_MEETINGS/2026-06-22-clarifying-questions-answered.md) |
+| | Pricing calculator (Python tool) | [`tools/pricing_calculator.py`](./tools/pricing_calculator.py) |
+| | TikTok PY audit | [`06_MARKETING/tiktok-py-audit.md`](./06_MARKETING/tiktok-py-audit.md) |
+| | Customer onboarding flow | [`04_SALES/customer-onboarding-flow.md`](./04_SALES/customer-onboarding-flow.md) |
+| | 90-day KPI dashboard | [`03_LAUNCH/90-day-kpi-dashboard.md`](./03_LAUNCH/90-day-kpi-dashboard.md) |
 
 ---
 
@@ -175,4 +187,4 @@ When blockers clear, launch is feasible in 3–4 weeks.
 
 ---
 
-*Last updated: 2026-06-26 — 60 markdown docs, 9,200+ LOC, 74 HTML build files, 2 commits pushed today*
+*Last updated: 2026-06-26 — 90 markdown docs (was 84), 5 Python scripts, 100+ HTML build files, **repo audit + upgrade complete (Session 10)**

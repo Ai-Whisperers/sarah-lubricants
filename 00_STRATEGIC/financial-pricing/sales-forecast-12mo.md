@@ -1,5 +1,7 @@
 # Sales Forecast Model — 12-Month Detail
 
+> ⚠️ **CRITICAL CAVEAT:** Volume projections assume 100% margin fits the PY market. Margin math is based on ESTIMATED Sexitive AR Mayorista pricing (AR retail ÷ 2). Once Q5 PDF arrives, recalculate. See `canonical-pricing-reference-v1.md` for the CRITICAL warning at the top.
+
 **Date:** June 26, 2026
 **Scope:** Per-SKU monthly unit projection + revenue + margin
 **Use:** Monthly tracking + reorder decisions
