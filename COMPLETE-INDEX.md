@@ -10,10 +10,22 @@
 
 | If you are... | Read this first |
 |---------------|-----------------|
-| **Sarah** (operator) | `start-here.md` → `01_RESEARCH/operations/this-week-for-sarah.md` |
-| **Ivan / Kiki** (stakeholder) | `docs/executive-summary.md` |
-| **Erebus** (next session) | `01_RESEARCH/operations/decision-log.md` + `01_RESEARCH/operations/validation-status.md` |
+| **Sarah** (operator) | [`/sarah/`](https://sarah.paragu-ai.com/sarah/) — your working surface. Hub, vendor pack, action checklists, all in one place. |
+| **Ivan / Kiki** (stakeholder) | [`docs/executive-summary.md`](./docs/executive-summary.md) |
+| **Erebus** (next session) | [`01_RESEARCH/operations/decision-log.md`](./01_RESEARCH/operations/decision-log.md) + [`01_RESEARCH/operations/validation-status.md`](./01_RESEARCH/operations/validation-status.md) |
 | **New AI session** | This index → read `start-here.md` → scan `TODO.md` |
+
+---
+
+## 📁 Sarah's Working Surface (`/sarah/`)
+
+**Sarah's complete working surface is in the [`/sarah/`](https://sarah.paragu-ai.com/sarah/) folder.** This is a curated index of the questionnaire pack, action checklist, and reference docs she needs.
+
+- `/sarah/index.md` — Sarah's homepage (questionnaire hub)
+- `/sarah/questionnaires/` — Active + historical questionnaires
+- `/sarah/actions/this-week.md` — 1-page action checklist
+- `/sarah/reference/` — Reference docs (audit guide, sales scripts, B2B pricing, etc.)
+- `/sarah/vendor-pack/` — Complete vendor questionnaire pack (10 files)
 
 ---
 

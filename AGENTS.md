@@ -1,6 +1,7 @@
 # AGENTS.md — Sarah's Lubricant Business Strategy Repo
 
 **Canonical location:** `/root/repos/sarah-lubricants` (NOT `/root/sarah-lubricants` — that was a stale snapshot, renamed to `sarah-lubricants.OLD` on June 26, 2026)
+**Live site:** https://sarah.paragu-ai.com (Sarah's hub is at https://sarah.paragu-ai.com/sarah/)
 
 **Client:** Sarah (entrepreneur entering intimate-wellness distribution in Paraguay)
 **Source brand:** Sexitive (Argentina) — imported and resold in PY
