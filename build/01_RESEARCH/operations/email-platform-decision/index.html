@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email + Subscription Platform Decision — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">01_RESEARCH/operations/email-platform-decision.md</div>
+<h1 id="email-subscription-platform-decision">Email + Subscription Platform Decision</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Scope:</strong> Email marketing + subscription billing for Enki Store
+<strong>Use:</strong> P4 (Month 2+) — email list, lead nurturing, future subscription box</p>
+<hr />
+<h2 id="email-platform-comparison-4-options">Email platform comparison (4 options)</h2>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th style="text-align: right;">Plan free</th>
+<th style="text-align: right;">Plan pago</th>
+<th style="text-align: right;">LatAm deliverability</th>
+<th>Spanish UI</th>
+<th>SMS</th>
+<th>WhatsApp</th>
+<th>CRM</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Brevo (ex Sendinblue)</strong></td>
+<td style="text-align: right;">✅ 300 emails/day</td>
+<td style="text-align: right;">USD 25/mo (20K emails)</td>
+<td style="text-align: right;">✅ Excellent (SMTP regional)</td>
+<td>✅</td>
+<td>✅ Add-on</td>
+<td>⚠️ Limited</td>
+<td>✅ Basic</td>
+<td><strong>PY/LATAM businesses</strong></td>
+</tr>
+<tr>
+<td><strong>Mailchimp</strong></td>
+<td style="text-align: right;">✅ 500 contacts</td>
+<td style="text-align: right;">USD 13/mo (Essentials)</td>
+<td style="text-align: right;">⚠️ Known issues some ISPs</td>
+<td>⚠️ Limited</td>
+<td>⚠️ Add-on (US only)</td>
+<td>❌</td>
+<td>✅ Basic</td>
+<td>Brand recognition, simple use</td>
+</tr>
+<tr>
+<td><strong>ActiveCampaign</strong></td>
+<td style="text-align: right;">❌</td>
+<td style="text-align: right;">USD 29/mo (Lite)</td>
+<td style="text-align: right;">✅ Good</td>
+<td>⚠️ Limited</td>
+<td>⚠️ Add-on</td>
+<td>❌</td>
+<td>✅ Advanced</td>
+<td>Automation-heavy</td>
+</tr>
+<tr>
+<td><strong>Mailrelay</strong></td>
+<td style="text-align: right;">✅ 80K emails/mo (!)</td>
+<td style="text-align: right;">EUR 10/mo</td>
+<td style="text-align: right;">⚠️ EU-focused</td>
+<td>⚠️ Limited</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>EU-style, big free tier</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="recommendation-brevo-ex-sendinblue">🏆 Recommendation: <strong>Brevo</strong> (ex Sendinblue)</h2>
+<p><strong>Why Brevo wins for Sarah:</strong></p>
+<ol>
+<li><strong>Best LATAM deliverability</strong> — SMTP servers optimized for region, known to avoid Mailchimp's deliverability issues with Paraguayan ISPs</li>
+<li><strong>Pago en moneda local</strong> en varios países LATAM (can pay in Gs equivalent via credit card or local payment)</li>
+<li><strong>Spanish soporte</strong> + Spanish UI</li>
+<li><strong>Generous free tier</strong> — 300 emails/day = 9,000/month = enough for first 6 months of Enki</li>
+<li><strong>Email + SMS + WhatsApp + CRM</strong> in one platform (won't need to add pieces later)</li>
+<li><strong>Cheap paid plan</strong> — USD 25/mo includes 20,000 emails, basic CRM, landing pages</li>
+</ol>
+<p><strong>For Sarah's needs:</strong>
+- Launch (Month 1–3): Free tier (9K emails/mo)
+- Growth (Month 4–12): Lite plan USD 25/mo (20K emails)
+- Scale (Year 2): Standard plan USD 65/mo (unlimited sends + advanced automation)</p>
+<hr />
+<h2 id="email-strategy-for-sarah">Email strategy for Sarah</h2>
+<h3 id="phase-1-month-13-list-building">Phase 1 (Month 1–3): List building</h3>
+<ul>
+<li>Lead magnet: "10 Consejos para Mejorar tu Bienestar Íntimo" (free PDF)</li>
+<li>Capture: IG bio link → Typeform → email</li>
+<li>Welcome sequence: 5 emails over 14 days (product intro, education, soft pitch)</li>
+</ul>
+<h3 id="phase-2-month-46-nurture-conversion">Phase 2 (Month 4–6): Nurture + conversion</h3>
+<ul>
+<li>Weekly newsletter: educational content + new arrivals</li>
+<li>Segmented lists: by interest (lubricants vs. stimulants vs. wellness)</li>
+<li>Abandoned cart recovery (when e-com launches)</li>
+<li>Win-back campaigns (90-day inactive)</li>
+</ul>
+<h3 id="phase-3-month-7-retention-ltv">Phase 3 (Month 7+): Retention + LTV</h3>
+<ul>
+<li>VIP segment (top 10% customers) → early access + exclusive bundles</li>
+<li>Subscription box waitlist (when launched)</li>
+<li>Birthday emails (10% off)</li>
+<li>Reorder reminders (60 days post-purchase)</li>
+</ul>
+<hr />
+<h2 id="email-automation-recipes-brevo">Email automation recipes (Brevo)</h2>
+<h3 id="welcome-flow-5-emails-14-days">Welcome flow (5 emails, 14 days)</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Subject</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>"¡Bienvenida a Enki! 💕 Tu guía gratis"</td>
+<td>Deliver lead magnet + introduce brand</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"5 cosas que no sabías sobre lubricantes"</td>
+<td>Educate, build trust</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"Cómo Sarah empezó Enki (mi historia)"</td>
+<td>Personal connection</td>
+</tr>
+<tr>
+<td>8</td>
+<td>"Conocé el bestseller: Bitchie 20ml"</td>
+<td>Soft product pitch</td>
+</tr>
+<tr>
+<td>14</td>
+<td>"15% off en tu primera compra — código BIENVENIDA15"</td>
+<td>Conversion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="abandoned-cart-flow-3-emails-7-days">Abandoned cart flow (3 emails, 7 days)</h3>
+<table>
+<thead>
+<tr>
+<th>Hour</th>
+<th>Subject</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"¿Olvidaste algo? Tu carrito te espera"</td>
+<td>Reminder</td>
+</tr>
+<tr>
+<td>24</td>
+<td>"Tu carrito sigue disponible — te lo dejamos reservado"</td>
+<td>Urgency</td>
+</tr>
+<tr>
+<td>168 (7d)</td>
+<td>"Última oportunidad: 10% off con código VOLVER10"</td>
+<td>Discount</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-purchase-flow-3-emails-30-days">Post-purchase flow (3 emails, 30 days)</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Subject</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>"¿Te llegó tu pedido? Contanos"</td>
+<td>Check-in + soft review ask</td>
+</tr>
+<tr>
+<td>14</td>
+<td>"Probá algo nuevo: tu guía de productos"</td>
+<td>Cross-sell</td>
+</tr>
+<tr>
+<td>30</td>
+<td>"Reorder reminder + 5% off"</td>
+<td>Repeat purchase</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="subscription-billing-for-future-subscription-box">Subscription billing (for future subscription box)</h2>
+<p><strong>When to activate:</strong> Month 6+ (once regular monthly orders are stable)</p>
+<h3 id="platform-options">Platform options</h3>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Cost</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stripe Billing</strong></td>
+<td>2.9% + Gs 250/tx</td>
+<td>Best for international. Requires Stripe Atlas (foreign entity) for PY</td>
+</tr>
+<tr>
+<td><strong>Mercado Pago Suscripciones</strong></td>
+<td>4–6% + Gs variable</td>
+<td>PY-native, recurring billing built-in</td>
+</tr>
+<tr>
+<td><strong>Brevo Payments</strong></td>
+<td>Included with Brevo paid</td>
+<td>Add-on for email platform</td>
+</tr>
+<tr>
+<td><strong>Manual WhatsApp subscription</strong></td>
+<td>Gs 0</td>
+<td>Sarah tracks + bills monthly via MP link</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation:</strong> Start with <strong>manual WhatsApp subscription</strong> (Month 6–9) → migrate to <strong>Mercado Pago Suscripciones</strong> once 50+ active subscribers.</p>
+<hr />
+<h2 id="subscription-box-model-for-month-6">Subscription box model (for Month 6+)</h2>
+<h3 id="tier-1-discovery-box-gs-89000month">Tier 1: Discovery Box (Gs 89,000/month)</h3>
+<ul>
+<li>1 lubricant (Wet line)</li>
+<li>1 sample sachet</li>
+<li>1 Love Potion mini (15ml)</li>
+<li>1 thank-you card</li>
+<li>Surprise item (candle / game)</li>
+</ul>
+<h3 id="tier-2-enamorado-box-gs-149000month">Tier 2: Enamorado Box (Gs 149,000/month)</h3>
+<ul>
+<li>2 products (lubricant + massage oil)</li>
+<li>1 sachet</li>
+<li>1 candle</li>
+<li>1 special gift (kit / lingerie sample)</li>
+</ul>
+<h3 id="tier-3-wellness-box-gs-249000quarter">Tier 3: Wellness Box (Gs 249,000/quarter)</h3>
+<ul>
+<li>Quarterly box with 3–5 products</li>
+<li>Exclusive Kinky merchandise</li>
+<li>Discount code for full-size purchases</li>
+</ul>
+<hr />
+<h2 id="email-content-calendar-month-1">Email content calendar (Month 1)</h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Email topic</th>
+<th>Segment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W1</td>
+<td>Welcome + lead magnet delivery</td>
+<td>New subscribers</td>
+</tr>
+<tr>
+<td>W2</td>
+<td>"How Sarah started Enki"</td>
+<td>All</td>
+</tr>
+<tr>
+<td>W3</td>
+<td>"Top 3 lubricants and how to use them"</td>
+<td>All</td>
+</tr>
+<tr>
+<td>W4</td>
+<td>"Behind the scenes: packing your order"</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="kpis-to-track">KPIs to track</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open rate</td>
+<td style="text-align: right;">&gt; 25%</td>
+</tr>
+<tr>
+<td>Click rate</td>
+<td style="text-align: right;">&gt; 3%</td>
+</tr>
+<tr>
+<td>Conversion (email → sale)</td>
+<td style="text-align: right;">&gt; 2%</td>
+</tr>
+<tr>
+<td>List growth</td>
+<td style="text-align: right;">+100/month</td>
+</tr>
+<tr>
+<td>Unsubscribe rate</td>
+<td style="text-align: right;">&lt; 0.5%/send</td>
+</tr>
+<tr>
+<td>Spam complaint</td>
+<td style="text-align: right;">&lt; 0.1%</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="implementation-timeline">Implementation timeline</h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W1 (launch)</td>
+<td>Create Brevo account (free), import IG followers as subscribers (with consent)</td>
+</tr>
+<tr>
+<td>W2</td>
+<td>Build welcome flow (5 emails)</td>
+</tr>
+<tr>
+<td>W3</td>
+<td>Build lead magnet PDF "10 Consejos para Bienestar Íntimo"</td>
+</tr>
+<tr>
+<td>W4</td>
+<td>First newsletter send</td>
+</tr>
+<tr>
+<td>Month 2</td>
+<td>Abandoned cart flow (when e-com launches)</td>
+</tr>
+<tr>
+<td>Month 3</td>
+<td>Segmented lists by interest</td>
+</tr>
+<tr>
+<td>Month 6</td>
+<td>Subscription box beta (manual WhatsApp)</td>
+</tr>
+<tr>
+<td>Month 9</td>
+<td>Migrate to Mercado Pago Suscripciones</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Last updated: 2026-06-26 | Decision: Brevo</em></p>
+</div>
+</div>
+</body>
+</html>

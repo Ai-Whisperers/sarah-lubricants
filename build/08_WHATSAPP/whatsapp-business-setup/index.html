@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WhatsApp Business Setup Guide — Sarah's Lubricant Business</title>
+<style>
+:root{--bg:#0e0d12;--panel:#1a1820;--line:#2a2730;--text:#f0eef5;--muted:#a09cae;--accent:#e8a4c5;--accent2:#a4c5e8;--warn:#e8c5a4;--ok:#a4e8b8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0 0 80px}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px}
+.topbar{background:var(--panel);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}
+.topbar a{color:var(--muted);text-decoration:none;font-size:13px}
+.topbar a:hover{color:var(--accent)}
+.topbar .home{font-weight:600;color:var(--accent)}
+.content{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:40px 48px;margin-top:24px}
+.content h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px;border-bottom:2px solid var(--accent);padding-bottom:12px}
+.content h2{font-size:22px;margin:32px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.content h3{font-size:17px;margin:24px 0 8px;color:var(--accent)}
+.content p{margin:12px 0;font-size:15px}
+.content a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(164,197,232,.3)}
+.content a:hover{border-bottom-color:var(--accent2)}
+.content ul,.content ol{margin:12px 0;padding-left:24px}
+.content li{margin:6px 0;font-size:15px}
+.content code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:var(--warn)}
+.content pre{background:#0a0910;border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content pre code{background:transparent;padding:0;color:var(--text)}
+.content blockquote{border-left:3px solid var(--accent);background:rgba(232,164,197,.05);padding:12px 16px;margin:16px 0;border-radius:0 6px 6px 0}
+.content blockquote p{color:var(--muted);font-style:italic;margin:0}
+.content table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.content th{background:#0a0910;text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);color:var(--accent);font-weight:600}
+.content td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.content tr:hover td{background:rgba(232,164,197,.04)}
+.content hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.content strong{color:var(--text);font-weight:700}
+.content em{color:var(--muted)}
+.path{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;margin-top:4px}
+.checkbox-item{padding:10px 14px;background:#0a0910;border:1px solid var(--line);border-radius:6px;margin:8px 0;display:flex;align-items:flex-start;gap:10px}
+.checkbox-item .box{width:18px;height:18px;border:2px solid var(--accent);border-radius:4px;flex-shrink:0;margin-top:2px}
+.checkbox-item .label{flex:1;font-size:15px}
+.checkbox-item .label strong{color:var(--accent)}
+.section-num{display:inline-block;background:var(--accent);color:#0e0d12;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:700;margin-right:8px}
+@media(max-width:600px){.content{padding:24px 20px}.wrap{padding:20px 16px}.content h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+<a href="/" class="home">✨ Sarah's Lubricant Business</a>
+<div>
+<a href="/index" style="margin-right:14px">📚 Index</a>
+<a href="/questionnaire">📋 Questionnaire</a>
+</div>
+</div>
+<div class="wrap">
+<div class="content">
+<div class="path">08_WHATSAPP/whatsapp-business-setup.md</div>
+<h1 id="whatsapp-business-setup-guide">WhatsApp Business Setup Guide</h1>
+<p><strong>Date:</strong> June 26, 2026
+<strong>Audience:</strong> Sarah Roig
+<strong>Goal:</strong> Configure WhatsApp Business for Enki Store in &lt;30 minutes
+<strong>Reference:</strong> Meta WhatsApp Business API + standard WA Business app setup</p>
+<hr />
+<h2 id="step-1-download-whatsapp-business-app-not-regular-whatsapp">Step 1: Download WhatsApp Business app (NOT regular WhatsApp)</h2>
+<ul>
+<li>iOS: https://apps.apple.com/app/whatsapp-business/id1386412985</li>
+<li>Android: https://play.google.com/store/apps/details?id=com.whatsapp.w4b</li>
+</ul>
+<p><strong>Why separate:</strong> Personal number stays personal, business number is for customers.</p>
+<p><strong>Decision needed:</strong> Does Sarah want to use her existing +595 number, or get a new dedicated number?
+- <strong>Existing:</strong> No transition cost, but mixes personal + business contacts
+- <strong>New number:</strong> Clean separation, requires new SIM (~Gs 50K from Tigo/Claro/Personal)</p>
+<p><strong>Recommendation:</strong> Use existing number for launch. Migrate to new number if volume warrants.</p>
+<hr />
+<h2 id="step-2-business-profile-setup">Step 2: Business Profile setup</h2>
+<h3 id="profile-fields">Profile fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business name</strong></td>
+<td>Enki Store</td>
+</tr>
+<tr>
+<td><strong>Category</strong></td>
+<td>Health/Beauty (or Retail)</td>
+</tr>
+<tr>
+<td><strong>Profile photo</strong></td>
+<td>Enki logo (circular crop)</td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>"Bienestar íntimo, con privacidad 💕 Envíos a todo Paraguay 🇵🇾"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="about-section">About section</h3>
+<pre><code>Enki Store es la primera distribuidora oficial de Sexitive 
+Argentina en Paraguay. Ofrecemos lubricantes, estimulantes, 
+aceites y velas de masaje con registro DINAVISA.
+
+🛒 Comprá por WhatsApp: este chat
+📦 Envíos discretos en 24-72h a todo el país
+🔒 Privacidad garantizada — packaging genérico
+</code></pre>
+<h3 id="address">Address</h3>
+<ul>
+<li><strong>Use:</strong> Skip physical address for privacy (or use depósito address if Sarah has a commercial dirección)</li>
+<li><strong>Coordinates:</strong> Optional, helps customers find pickup point</li>
+</ul>
+<h3 id="business-hours">Business hours</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lunes a Viernes</td>
+<td>9:00 – 21:00</td>
+</tr>
+<tr>
+<td>Sábado</td>
+<td>9:00 – 18:00</td>
+</tr>
+<tr>
+<td>Domingo</td>
+<td>Cerrado (auto-reply on)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="step-3-catalog-setup-wa-business-native">Step 3: Catalog setup (WA Business native)</h2>
+<h3 id="upload-3-product-cards-launch-trio">Upload 3 product cards (launch trio)</h3>
+<p><strong>Card 1: Bitchie 20ml</strong>
+- Photo: Sexitive product shot (high-res)
+- Name: "Bitchie Spray multiorgásmico — 20ml"
+- Price: Gs 130,000
+- Description: "Spray de Sexitive Argentina con L-Arginina + ácido láctico. Efecto calor + sensibilidad aumentada. Rinde 30-40 aplicaciones."
+- Link: https://kinky.enki.com.py/producto/bitchie
+- Code: SEFB</p>
+<p><strong>Card 2: XXX For Her 15ml</strong>
+- Photo: Sexitive product shot
+- Name: "XXX For Her óleo orgasmico — 15ml"
+- Price: Gs 145,000
+- Description: "Óleo cosmético para ella. 1-2 gotas, efecto hasta 45 min. Sensibilidad aumentada + orgasmos más intensos."
+- Link: https://kinky.enki.com.py/producto/xxx-for-her
+- Code: XXX01</p>
+<p><strong>Card 3: Wet Anal 75ml</strong>
+- Photo: Sexitive product shot
+- Name: "Wet Gel Lubricante Anal — 75ml"
+- Price: Gs 125,000
+- Description: "Lubricante anal base agua, 75ml. No mancha, no irrita, larga duración. Cosmético certificado."
+- Link: https://kinky.enki.com.py/producto/wet-anal
+- Code: WET02</p>
+<h3 id="how-to-add-catalog-items">How to add catalog items</h3>
+<ol>
+<li>Open WA Business → Settings → Business Tools → Catalog</li>
+<li>Tap "+" to add new item</li>
+<li>Add photo, name, price, description, link, code</li>
+<li>Save</li>
+<li>Repeat for each product</li>
+</ol>
+<hr />
+<h2 id="step-4-quick-replies-saved-responses">Step 4: Quick Replies (saved responses)</h2>
+<h3 id="how-to-set-up">How to set up</h3>
+<ol>
+<li>Settings → Business Tools → Quick Replies</li>
+<li>Tap "+" to add</li>
+<li>Set shortcut (e.g. "hola")</li>
+<li>Set message (full response)</li>
+<li>Save</li>
+</ol>
+<h3 id="10-essential-quick-replies">10 essential quick replies</h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Full message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hola</code></td>
+<td>¡Hola! 👋 Soy Sarah de Enki Store. ¿En qué te puedo ayudar?</td>
+</tr>
+<tr>
+<td><code>catalogo</code></td>
+<td>Te paso nuestro catálogo: https://kinky.enki.com.py. ¿Qué producto te interesa?</td>
+</tr>
+<tr>
+<td><code>precios</code></td>
+<td>Los precios son: Bitchie Gs 130,000 · XXX For Her Gs 145,000 · Wet Anal Gs 125,000. Envío gratis en Asunción.</td>
+</tr>
+<tr>
+<td><code>envio</code></td>
+<td>Envío gratis en Asunción (24-48h). Interior: Gs 25-50K según destino (3-5 días).</td>
+</tr>
+<tr>
+<td><code>pago</code></td>
+<td>Aceptamos transferencia bancaria (Bancard, Itaú, Continental), Tigo Money o Mercado Pago. ¿Cuál te queda mejor?</td>
+</tr>
+<tr>
+<td><code>trio</code></td>
+<td>El trio completo (Bitchie + XXX + Wet Anal) sale Gs 350,000 con envío gratis. ¡Ahorrás Gs 50,000!</td>
+</tr>
+<tr>
+<td><code>gracias</code></td>
+<td>¡Gracias por tu compra! 🙌 Te confirmo el envío apenas despache.</td>
+</tr>
+<tr>
+<td><code>privacidad</code></td>
+<td>Tu privacidad es prioridad. Empaque genérico, sin logos, sin marca visible. Nadie sabe qué es.</td>
+</tr>
+<tr>
+<td><code>mayorista</code></td>
+<td>Hola! Sí, hacemos ventas mayoristas a tiendas. ¿Me pasás tu WhatsApp y te contacto con el catálogo B2B?</td>
+</tr>
+<tr>
+<td><code>horario</code></td>
+<td>Nuestro horario: Lun-Vie 9-21h, Sáb 9-18h. Domingo cerrado. Te respondo en cuanto pueda.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="auto-reply-outside-hours">Auto-reply outside hours</h3>
+<p><strong>Message:</strong></p>
+<pre><code>¡Hola! Gracias por escribir a Enki Store 🌙
+
+Nuestro horario de atención es Lun-Vie 9-21h y Sáb 9-18h. 
+Te respondemos mañana en horario comercial.
+
+Si tenés una consulta urgente, escribinos a 
++595 [número] con el mensaje &quot;URGENTE&quot; y te respondemos 
+lo antes posible.
+
+¡Gracias por tu paciencia! 💕
+</code></pre>
+<h3 id="how-to-enable">How to enable</h3>
+<p>Settings → Business Tools → Away Message → Enable
+- Schedule: Outside business hours
+- Recipients: All</p>
+<hr />
+<h2 id="step-5-labels-organize-customers">Step 5: Labels (organize customers)</h2>
+<h3 id="how-to-set-up_1">How to set up</h3>
+<ol>
+<li>Settings → Business Tools → Labels</li>
+<li>Create custom labels</li>
+<li>Apply to chats</li>
+</ol>
+<h3 id="8-labels-to-create">8 labels to create</h3>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Color</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Nuevo</code></td>
+<td>Blue</td>
+<td>First-time customer</td>
+</tr>
+<tr>
+<td><code>Compró</code></td>
+<td>Green</td>
+<td>Confirmed order, awaiting payment</td>
+</tr>
+<tr>
+<td><code>Pagó</code></td>
+<td>Yellow</td>
+<td>Payment received, ready to ship</td>
+</tr>
+<tr>
+<td><code>Enviado</code></td>
+<td>Orange</td>
+<td>Order shipped</td>
+</tr>
+<tr>
+<td><code>VIP</code></td>
+<td>Red</td>
+<td>Top customer (3+ orders)</td>
+</tr>
+<tr>
+<td><code>Mayorista</code></td>
+<td>Purple</td>
+<td>B2B buyer</td>
+</tr>
+<tr>
+<td><code>Consulta</code></td>
+<td>Gray</td>
+<td>Just asking questions</td>
+</tr>
+<tr>
+<td><code>Pendiente</code></td>
+<td>Brown</td>
+<td>Waiting on customer response</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="step-6-catalog-link-in-instagram-bio">Step 6: Catalog link in Instagram bio</h2>
+<p><strong>Update IG bio to:</strong></p>
+<pre><code>Enki Store 💕
+Bienestar íntimo · Envíos a todo 🇵🇾
+📲 Pedí por WhatsApp: wa.me/595XXXXXXXX
+📦 Catálogo: linktr.ee/enkipy
+</code></pre>
+<p><strong>Use Linktree (free) to centralize:</strong>
+- WhatsApp link
+- Catalog page
+- Instagram
+- Email signup</p>
+<hr />
+<h2 id="step-7-click-to-whatsapp-ads-optional-p3">Step 7: Click-to-WhatsApp ads (optional, P3+)</h2>
+<p>WA Business allows running ads that open a chat directly.</p>
+<p><strong>Setup:</strong> https://business.facebook.com/wa/click-to-whatsapp-ads</p>
+<p><strong>Use case:</strong> IG Story ad → "Pedí ya" → opens WA chat with pre-filled message</p>
+<p><strong>Cost:</strong> USD 0.10–0.50 per message received (vs. Gs 50–200 per organic message)</p>
+<p><strong>Recommendation:</strong> Activate when launch metrics justify (Month 2+).</p>
+<hr />
+<h2 id="step-8-backup-privacy">Step 8: Backup + privacy</h2>
+<h3 id="auto-backup">Auto-backup</h3>
+<ul>
+<li>Settings → Chats → Chat backup → Daily to Google Drive</li>
+<li>Includes photos, voice notes, contacts</li>
+</ul>
+<h3 id="two-step-verification">Two-step verification</h3>
+<ul>
+<li>Settings → Account → Two-step verification → Enable PIN</li>
+<li>Prevents account takeover</li>
+</ul>
+<h3 id="privacy-settings">Privacy settings</h3>
+<ul>
+<li>Profile photo: My contacts</li>
+<li>Last seen: My contacts</li>
+<li>About: Public (for branding)</li>
+<li>Status: My contacts</li>
+</ul>
+<hr />
+<h2 id="setup-checklist-week-1">Setup checklist (Week 1)</h2>
+<ul>
+<li>[ ] Download WA Business app</li>
+<li>[ ] Verify phone number (Sarah's existing or new)</li>
+<li>[ ] Set business profile (name, photo, description)</li>
+<li>[ ] Upload 3 launch SKUs to catalog</li>
+<li>[ ] Create 10 quick replies</li>
+<li>[ ] Set away message (outside hours)</li>
+<li>[ ] Create 8 labels</li>
+<li>[ ] Enable auto-backup to Google Drive</li>
+<li>[ ] Enable two-step verification</li>
+<li>[ ] Update IG bio with WA link</li>
+<li>[ ] Set up Linktree (or similar) for centralized links</li>
+</ul>
+<p><strong>Total time:</strong> 30 minutes</p>
+<hr />
+<h2 id="what-not-to-do">What NOT to do</h2>
+<ul>
+<li>❌ Don't use personal WhatsApp for business (mixed contacts)</li>
+<li>❌ Don't broadcast without consent (will get banned)</li>
+<li>❌ Don't auto-send "Hola, te interesa..." cold messages</li>
+<li>❌ Don't share customer data with anyone</li>
+<li>❌ Don't take payments outside WA (loses audit trail)</li>
+<li>❌ Don't use WA status for promotions (use IG for that)</li>
+</ul>
+<hr />
+<p><em>Last updated: 2026-06-26 — Sarah: complete setup before launch</em></p>
+</div>
+</div>
+</body>
+</html>
